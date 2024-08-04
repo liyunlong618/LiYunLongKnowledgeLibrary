@@ -155,9 +155,9 @@ ________________________________________________________________________________
 ###### 1. GetLifetimeReplicatedProps 此函数在U0bject中 开启 属性复制(RepNotify)后 需要重写这个函数!//此函数规定了:1.哪些参数同步 以及 2.同步的条件
 ###### 2. 根据AttributeSet基类中写好的宏Get/set/lnit 属性；
 ###### 3. 为每个属性创建属性复制和相关函数；调用同步函数,设置同步参数；DOREPLIFETIME_CONDITION_NOTIFY宏使用（在UnrealNetwork.h中）
-4. GAS调试debug命令showdebug abilitysystem
-5. overlap委托和回调绑定
-6. 使用const_cast把const变量转化为非const变量
+###### 4. GAS调试debug命令showdebug abilitysystem
+###### 5. overlap委托和回调绑定
+###### 6. 使用const_cast把const变量转化为非const变量
 
 5. ### [GAS 005 设置属性；创建一个加血的血瓶](./DetailContent/GAS_005.md)
 
