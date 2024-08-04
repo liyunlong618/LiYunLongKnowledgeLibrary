@@ -10,7 +10,16 @@ ________________________________________________________________________________
 # 目录
 
 
-[TOC]
+- [概念和联网 GA(GameplayAbilities)](#概念和联网-gagameplayabilities)
+- [目录](#目录)
+	- [GameplayAbilities](#gameplayabilities)
+	- [AbilityTask](#abilitytask)
+	- [联网！](#联网)
+	- [整个激活技能的流程](#整个激活技能的流程)
+		- [完整流程总结](#完整流程总结)
+			- [详细解释](#详细解释)
+			- [后台发送RPC激活服务器端的TryActivateAbility](#后台发送rpc激活服务器端的tryactivateability)
+
 
 ___________________________________________________________________________________________
 
@@ -136,8 +145,8 @@ ________________________________________________________________________________
                 
      
   #### 后台发送RPC激活服务器端的TryActivateAbility  
-            
-   
+
+
 2. RPC调用服务器端的ServerTryActivateAbility：  
           
 	- 如果能力需要服务器端授权，客户端会发送一个RPC请求到服务器，调用ServerTryActivateAbility。  
