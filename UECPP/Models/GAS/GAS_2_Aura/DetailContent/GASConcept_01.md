@@ -17,24 +17,24 @@ ________________________________________________________________________________
 ## GameplayAbilities
 
 #### 使用的GA派生自UGameplayAbility
-![img](https://api2.mubu.com/v3/document_image/25165450_0979664e-80d3-42b3-f8ee-7da544d0da3c.png)
+![img](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GASConcept_01/01.png?raw=true)
 
 #### 它定义了一个能力的作用以及可以使用该能力的条件。
 
 #### 与使用简单函数执行操作不同，gas 游戏能力是一个异步运行的实例对
 
 #### 这意味着它可以在某个时间点被激活，并运行可能跨越时间段的多阶段任务
-![img](https://api2.mubu.com/v3/document_image/25165450_c075475d-0c19-4ebc-8c87-1ee2e0599ccc.png)
+![img](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GASConcept_01/02.png?raw=true)
 
 #### 游戏能力具有内置的复制和预测支持，就像游戏效果一样
-![img](https://api2.mubu.com/v3/document_image/25165450_642d3e6f-97e1-42cc-e900-1f0a9e775d51.png)
+![img](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GASConcept_01/03.png?raw=true)
 
 #### 游戏玩法能力还具有成本和冷却时间的内置概念属性资源必须以足够的数量存在以支付能力激活。
 
 #### 在这门课程中，我们将使用法力作为资源来实现这种成本机制，但实际上可以是任何东西。
-![img](https://api2.mubu.com/v3/document_image/25165450_543bcacf-f530-4c42-a212-99f946c521ef.png)
+![img](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GASConcept_01/04.png?raw=true)
 
-![img](https://api2.mubu.com/v3/document_image/25165450_d1ecc332-1336-40d9-9d6c-0f22e0159b51.png)
+![img](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GASConcept_01/05.png?raw=true)
 
 #### GameplayAbilities使用AbilityTask，尽管不一定需要
 
@@ -44,14 +44,14 @@ ________________________________________________________________________________
 ## AbilityTask
 
 #### 使用的AbilityTask派生自UAbilityTask
-![img](https://api2.mubu.com/v3/document_image/25165450_de195d7c-fdb2-4e25-d0c8-0936f21ccfed.png)
+![img](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GASConcept_01/06.png?raw=true)
 
 #### 这些在游戏能力执行期间执行异步工作。
 
 #### 它们可以通过广播委托来影响执行流程。
 
 #### 这些任务可以在C++中使用，但也可以以专门的蓝图节点的形式出现在蓝图中
-![img](https://api2.mubu.com/v3/document_image/25165450_3470f4f6-d5dc-4919-daa1-11994e463cef.png)
+![img](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GASConcept_01/07.png?raw=true)
 
 #### 这些是根据开发人员确定的事件而进行的委托广播执行
 
@@ -62,7 +62,7 @@ ________________________________________________________________________________
 #### 这使我们能够轻松地在蓝图中映射出一个能力的控制流程，同时仍然能够享受C++的最佳性能优势。
 
 #### 由于任务所做的工作通常在C++端完成，尽管不一定非得如此。
-![img](https://api2.mubu.com/v3/document_image/25165450_c7a1e6dd-6260-406c-ea7e-5bab2ba5a055.png)
+![img](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GASConcept_01/08.png?raw=true)
 
 #### 但是因为我们可以制作这些能力任务并让它们大部分工作在C++中，我们获得了灵活性，可以设计游戏能力的机制在能力的蓝图中，并允许那些无法访问C++领域的设计师更多地控制能力，而不会牺牲性能。
 ___________________________________________________________________________________________
@@ -71,31 +71,22 @@ ________________________________________________________________________________
 
 #### 要使用游戏能力，必须授予能力系统组件该能力
 
-#### 当这种情况发生时，将创建一个游戏能力规范FGameplayAbilitySpec，该规范定义了与该特定能力相关的详细信息，包括游戏能力类本身、能力的级别以及可以在运行时更改的任何动态信息![img](https://api2.mubu.com/v3/document_image/25165450_d251118d-0dd1-4394-99d9-4d3e5558941d.png)
+>当这种情况发生时，将创建一个游戏能力规范FGameplayAbilitySpec，该规范定义了与该特定能力相关的详细信息，包括游戏能力类本身、能力的级别以及可以在运行时更改的任何动态信息
+
+![img](https://api2.mubu.com/v3/document_image/25165450_d251118d-0dd1-4394-99d9-4d3e5558941d.png)
 
 #### 通常能力是在服务器上授予的，但当这种情况发生时，能力规范会复制到拥有客户端，以便他们可以从那里激活它。
-![img](https://api2.mubu.com/v3/document_image/25165450_e69dbf7a-f93e-4947-8cf0-fcb10d6e6b53.png)
+
+![img](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GASConcept_01/09.png?raw=true)
 
 #### 游戏能力具有激活的概念。一旦激活，能力被认为是处于活动状态，直到它们被结束或取消。能力可以自行终止，也可以被外部取消。
-![img](https://api2.mubu.com/v3/document_image/25165450_6e74eaa2-4386-45c6-d75f-1d953e24a2fb.png)
 
-#### 因此，简而言之，游戏能力是定义给定技能、法术或任何演员可以执行的能力的类。
+![img](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GASConcept_01/10.png?raw=true)
 
-#### 必须授予能力系统组件能力才能使用，我们在服务器上执行此操作，此时授予能力规范，并复制到拥有客户端。
+>因此，简而言之，游戏能力是定义给定技能、法术或任何演员可以执行的能力的类。必须授予能力系统组件能力才能使用，我们在服务器上执行此操作，此时授予能力规范，并复制到拥有客户端。要使用一项能力，必须激活它。然后，它被视为处于活动状态，直到结束或取消。能力具有内置的成本和冷却概念能力可以异步运行，并且多个能力可以同时激活。能力可以运行能力任务，这些任务是将行为封装到各个类中的异步操作，每个类可以执行自己特定的工作。
 
-#### 要使用一项能力，必须激活它。然后，它被视为处于活动状态，直到结束或取消。
 
-#### 能力具有内置的成本和冷却概念
-
-#### 能力可以异步运行，并且多个能力可以同时激活。
-
-#### 能力可以运行能力任务，这些任务是将行为封装到各个类中的异步操作，每个类可以执行自己特定的工作。
-
-#### 
-
-    
-
-![img](https://api2.mubu.com/v3/document_image/25165450_49f18a60-24c0-45dc-ad71-d84e0495459a.png)
+![img](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GASConcept_01/11.png?raw=true)
 
 
 
@@ -191,19 +182,6 @@ ________________________________________________________________________________
 	- 由于生成的Actor开启了replicated属性，服务器端生成的Actor会自动同步到所有客户端。  
      
 	- 客户端会接收到这个Actor的生成信息，并在本地创建相应的Actor副本。
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
