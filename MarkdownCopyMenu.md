@@ -4,6 +4,8 @@ ____________________________________
 
 [**【使用Markdown】**](https://blog.csdn.net/qq_40818172/article/details/126260661)
 
+[GitHub格式文档参考](https://docs.github.com/zh/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables)
+
 ____________________________________
 # 个人常用快捷输入
 ____________________________________
