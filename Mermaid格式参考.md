@@ -121,7 +121,26 @@ classDiagram
 ```
 ````
 
-
+```mermaid
+---
+title: 这是一个类图
+---
+classDiagram
+    note "全局注释"
+    基类 <|--子类:继承自
+    note for 子类 "子类的备注"
+    基类 <-- 子类2:调用基类函数
+    基类 : +int 基类int变量
+    基类 : +String 基类String变量
+    基类: +基类函数1()
+    基类: +基类函数2()
+    class 子类{
+        +String 子类1 public String变量
+        -float 子类1 私有 float变量
+        +子类public函数1()
+        -子类Private函数1()
+        }
+```
 
 ______________________________________________________________
 
