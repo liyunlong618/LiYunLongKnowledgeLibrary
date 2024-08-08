@@ -16,6 +16,7 @@ ______________________________________________________________
   - [类图参考2左右  `LR`](#类图参考2左右--lr)
 
 
+
 ______________________________________________________________
 
 ## 使用尖括号
@@ -71,13 +72,32 @@ ______________________________________________________________
 
 ## 树形图 
 
+```mermaid
+graph LR;
+
+    A[AuraEnemy中]-->|BeginPlay时调用|B[InitAbilityActorInfo函数];
+    
+    B--调用-->C[InitializeDefaultAttributes函数];
+    
+    subgraph "在基类中创建的函数"
+        C[InitializeDefaultAttributes函数]  
+    end
+```
+
 ````
 ```mermaid
-graph TD;
-    Content-->BP;
-    BP-->AbilitySystem;
+graph LR;
+
+    A[AuraEnemy中]-->|BeginPlay时调用|B[InitAbilityActorInfo函数];
+    
+    B--调用-->C[InitializeDefaultAttributes函数];
+    
+    subgraph "在基类中创建的函数"
+        C[InitializeDefaultAttributes函数]  
+    end
 ```
 ````
+
 ### 树形图 参考1上下  `TD` 
 
 ```mermaid
