@@ -147,7 +147,7 @@ title: 这是一个类图
 ---
 classDiagram
 
-	note"+ 表示 public(公共)\n- 表示 private(私有)\n# 表示 protected(受保护)"
+	note"+ 表示 public(公共)\n- 表示 private(私有)\n# 表示 protected(受保护)\nVirtual_ 表示虚函数"
     
     class 基类{
         +int 基类int变量
@@ -174,7 +174,7 @@ title: 这是一个类图
 ---
 classDiagram
 
-	note"+ 表示 public(公共)\n- 表示 private(私有)\n# 表示 protected(受保护)"
+	note"+ 表示 public(公共)\n- 表示 private(私有)\n# 表示 protected(受保护)\nVirtual_ 表示虚函数"
     
     class 基类{
         +int 基类int变量
