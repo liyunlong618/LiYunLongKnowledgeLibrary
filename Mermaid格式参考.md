@@ -84,17 +84,50 @@ graph LR;
     end
 ```
 
+
+```mermaid
+---
+title: 这是一个标题
+---
+graph LR;
+	A[ 11111 ]-->B[ 22222 ]
+	B-->C[ 33333 ]
+	
+	subgraph "XXX"
+		A
+	end
+	
+	subgraph "XXX"
+		B
+	end
+	
+	subgraph "XXX"
+		C
+	end
+```
+
+
+
 ````
 ```mermaid
+---
+title: 这是一个标题
+---
 graph LR;
-
-    A[AuraEnemy中]-->|BeginPlay时调用|B[InitAbilityActorInfo函数];
-    
-    B--调用-->C[InitializeDefaultAttributes函数];
-    
-    subgraph "在基类中创建的函数"
-        C[InitializeDefaultAttributes函数]  
-    end
+	A[ 11111 ]-->B[ 22222 ]
+	B-->C[ 33333 ]
+	
+	subgraph "XXX"
+		A
+	end
+	
+	subgraph "XXX"
+		B
+	end
+	
+	subgraph "XXX"
+		C
+	end
 ```
 ````
 
