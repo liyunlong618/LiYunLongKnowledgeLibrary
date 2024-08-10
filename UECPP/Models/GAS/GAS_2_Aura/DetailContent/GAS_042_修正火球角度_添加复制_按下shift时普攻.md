@@ -1,0 +1,119 @@
+___________________________________________________________________________________________
+
+###### [Go主菜单](../MainMenu.md)
+___________________________________________________________________________________________
+
+# GAS_042_修正火球角度_添加复制_按下shift时普攻
+___________________________________________________________________________________________
+## 处理关键点
+1. 使用: `向量.Rotation();` 获取角度FRotator
+2. 使用: `角度.Quaternion();` 获取该角度的四元数
+3. C++中设置 碰撞通道
+4. DS / LS网络复制相关
+___________________________________________________________________________________________
+
+
+# 目录
+- [GAS 042 修正火球角度,添加复制,按下shift时普攻](#gas-042-修正火球角度添加复制按下shift时普攻)
+  - [处理关键点](#处理关键点)
+- [目录](#目录)
+    - [视频链接](#视频链接)
+    - [生成抛射物的函数 SpawnProjectile 中,](#生成抛射物的函数-spawnprojectile-中)
+      - [头文件,添加形参,传入位置](#头文件添加形参传入位置)
+      - [源文件,计算方向,设置Rotation](#源文件计算方向设置rotation)
+    - [GA蓝图 *GA\_FireBolt* 中,获取HitResult后保存 Location ,传参](#ga蓝图-ga_firebolt-中获取hitresult后保存-location-传参)
+    - [此时有个问题,一个角色会把另一个角色弹簧臂挡住,需要C++中设置一下角色capsule和mesh的碰撞通道,对camera为忽略](#此时有个问题一个角色会把另一个角色弹簧臂挡住需要c中设置一下角色capsule和mesh的碰撞通道对camera为忽略)
+    - [此时希望添加一个功能,按下shift时,不用点到敌人,也可以发射普通攻击火球](#此时希望添加一个功能按下shift时不用点到敌人也可以发射普通攻击火球)
+      - [步骤](#步骤)
+        - [1.添加`InputAction`,并设置为`1d`输入](#1添加inputaction并设置为1d输入)
+        - [2.配置`InputAction`](#2配置inputaction)
+        - [3. `AAuraPlayerController` 中](#3-aauraplayercontroller-中)
+        - [*BP\_AuraPlayerController* 中配置](#bp_auraplayercontroller-中配置)
+    - [记得火球 `AAuraProjectile` 中开启复制`bReplicates`,否则客户端无法看见](#记得火球-aauraprojectile-中开启复制breplicates否则客户端无法看见)
+    - [此时效果gif](#此时效果gif)
+
+
+___________________________________________________________________________________________
+
+
+
+### 视频链接
+  - [视频链接](https://b23.tv/IGADhLV)
+
+### 生成抛射物的函数 SpawnProjectile 中,
+#### 头文件,添加形参,传入位置
+
+![图片](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_042/961957_992405.png?raw=true)
+#### 源文件,计算方向,设置Rotation
+
+![图片](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_042/490988_422038.png?raw=true)
+___________________________________________________________________________________________
+
+
+### GA蓝图 *GA_FireBolt* 中,获取HitResult后保存 Location ,传参
+
+![图片](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_042/38746_241064.png?raw=true)
+___________________________________________________________________________________________
+
+
+### 此时有个问题,一个角色会把另一个角色弹簧臂挡住,需要C++中设置一下角色capsule和mesh的碰撞通道,对camera为忽略
+
+![图片](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_042/524165_147260.jpeg)  
+![图片](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_042/90885_151804.jpeg)
+     
+![图片](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_042/930303_727834.png?raw=true)
+     
+![图片](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_042/487670_288832.png?raw=true)  
+![图片](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_042/240330_303387.png?raw=true)
+___________________________________________________________________________________________
+
+
+### 此时希望添加一个功能,按下shift时,不用点到敌人,也可以发射普通攻击火球
+
+#### 步骤
+
+##### 1.添加`InputAction`,并设置为`1d`输入
+
+![图片](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_042/465808_918237.png?raw=true)
+             
+![图片](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_042/269944_514892.png?raw=true)
+___________________________________________________________________________________________
+
+
+##### 2.配置`InputAction`
+
+![图片](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_042/806636_765333.png?raw=true)
+___________________________________________________________________________________________
+
+
+##### 3. `AAuraPlayerController` 中
+
+![图片](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_042/194644_212719.png?raw=true)
+             
+![图片](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_042/200742_288778.png?raw=true)
+             
+![图片](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_042/354795_15479.png?raw=true)  
+![图片](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_042/434919_253064.png?raw=true)
+___________________________________________________________________________________________
+
+
+##### *BP_AuraPlayerController* 中配置
+
+![图片](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_042/741910_348769.png?raw=true)
+___________________________________________________________________________________________
+
+
+### 记得火球 `AAuraProjectile` 中开启复制`bReplicates`,否则客户端无法看见
+
+![图片](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_042/497501_850138.png?raw=true)
+___________________________________________________________________________________________
+
+
+### 此时效果gif 
+
+![图片](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_042/431364_932439.gif?raw=true)
+
+___________________________________________________________________________________________
+
+[返回最上面](#Go主菜单)
+___________________________________________________________________________________________
