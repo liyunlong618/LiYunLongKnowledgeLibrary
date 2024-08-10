@@ -18,13 +18,11 @@ ________________________________________________________________________________
 
 </details>
 
+- 使用时在头文件或者源文件最上面引入头文件之后即可
 
-- UE_LOG宏使用
-  使用时在头文件或者源文件都可
-
-  ```CPP
-     DECLARE_LOG_CATEGORY_EXTERN(这里是自定义log名字, error, All);
-  ```
+```CPP
+DECLARE_LOG_CATEGORY_EXTERN(这里是自定义log名字, error, All);
+```
 
 - 参考网页
 
@@ -48,6 +46,8 @@ ________________________________________________________________________________
 > 源码：![](./Image/CommonMacrosUE/1.png)
 
 </details>
+
+- 使用API：
 
 ```CPP
 GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, TEXT("This message will appear on the screen!"));
