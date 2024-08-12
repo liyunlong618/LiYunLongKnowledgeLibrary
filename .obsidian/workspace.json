@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/TEMP/GAS_058.md",
+                "file": "MarkdownCopyMenu_Image/MarkdownCopyMenuOld.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4cade4a25c7408f8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "解决Rider中查看GitHub的md图片丢失.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/TEMP/GAS_058.md",
+                "file": "解决Rider中查看GitHub的md图片丢失.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/TEMP/GAS_058.md",
+                "file": "解决Rider中查看GitHub的md图片丢失.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/TEMP/GAS_058.md"
+                "file": "解决Rider中查看GitHub的md图片丢失.md"
               }
             }
           }
@@ -148,8 +161,14 @@
       "vscode-editor:新建代码文件": false
     }
   },
-  "active": "8568479f59d462cd",
+  "active": "4cade4a25c7408f8",
   "lastOpenFiles": [
+    "MarkdownCopyMenu_Image/3.png",
+    "MarkdownCopyMenu_Image/2.png",
+    "MarkdownCopyMenu_Image/MarkdownCopyMenuOld.md",
+    "解决Rider中查看GitHub的md图片丢失.md",
+    "MarkdownCopyMenu_Image/未命名.md",
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/TEMP/GAS_058.md",
     "未命名.canvas",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_020.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_019.md",
