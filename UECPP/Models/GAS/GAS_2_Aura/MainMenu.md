@@ -9,6 +9,8 @@ ________________________________________________________________________________
 1. ### [GameplayAbility](./DetailContent/_GameplayAbility_.md)
 
 2. ### [GameplayEffect](./DetailContent/_GameplayEffect_.md)
+	- #### [ExecutionCalculations(执行计算)](./DetailContent/GAS_061.md)
+
 
 >(整理中)
 ___________________________________________________________________________________________
