@@ -176,57 +176,81 @@ ______________________________________________________________
 
 ```mermaid
 ---
-title: 这是一个类图
+title: 这里是标题
 ---
 classDiagram
 direction TB
+    class FloatText {
+        +Overlay /*UI组件*/
+        +Text_Damage /*文本块*/
+        +DamageAnim /*动画*/
+        +PlayAnimation() /*调用动画*/
+    }
 
-	note"+ 表示 public(公共)\n- 表示 private(私有)\n# 表示 protected(受保护)\nVirtual_ 表示虚函数"
-    
-    class 基类{
-        +int 基类int变量
-        +TSubclassOf&lt;UGameplayEffect&gt; SecondaryAttributes
-        +基类函数1()
-        +基类函数2()
-        }
+    class DamageTextComponent {
+        <<abstract>>
+        +SetDamageText(Damage float)/*设置伤害文本*/
+    }
 
-    class 子类{
-        +String 子类1 public String变量
-        -float 子类1 私有 float变量
-        +子类public函数1()
-        -子类Private函数1()
-        }
-        
-        基类 <|--子类:继承自
-        note for 子类 "子类的备注"
+    class BP_DamageTextComponent {
+        +UpdateDamageText(Damage float) /*更新伤害文本*/
+        +SetDamageText(Damage float) /*实现伤害文本设置*/
+    }
+
+    class AAuraPlayerController {
+        -TSubclassOf&lt;UDamageTextComponent&gt DamageTextComponentClass
+        +ShowDamageNumber()/*RPC_Client事件显示伤害数字*/
+    }
+
+    class UAuraAttributeSet {
+        -ShowFloatingText(FEffectProperties Props, Damage float) /*显示浮动文本*/
+    }
+
+    AAuraPlayerController --> DamageTextComponent : 创建
+    AAuraPlayerController --> UAuraAttributeSet : 调用
+    DamageTextComponent <|-- BP_DamageTextComponent : 继承
+    FloatText --> BP_DamageTextComponent : 使用
+    AAuraPlayerController --> FloatText : 使用
 ```
 
 ````
 ```mermaid
 ---
-title: 这是一个类图
+title: 这里是标题
 ---
 classDiagram
 direction TB
+    class FloatText {
+        +Overlay /*UI组件*/
+        +Text_Damage /*文本块*/
+        +DamageAnim /*动画*/
+        +PlayAnimation() /*调用动画*/
+    }
 
-	note"+ 表示 public(公共)\n- 表示 private(私有)\n# 表示 protected(受保护)\nVirtual_ 表示虚函数"
-    
-    class 基类{
-        +int 基类int变量
-        +TSubclassOf&lt;UGameplayEffect&gt; SecondaryAttributes
-        +基类函数1()
-        +基类函数2()
-        }
+    class DamageTextComponent {
+        <<abstract>>
+        +SetDamageText(Damage float)/*设置伤害文本*/
+    }
 
-    class 子类{
-        +String 子类1 public String变量
-        -float 子类1 私有 float变量
-        +子类public函数1()
-        -子类Private函数1()
-        }
-        
-        基类 <|--子类:继承自
-        note for 子类 "子类的备注"
+    class BP_DamageTextComponent {
+        +UpdateDamageText(Damage float) /*更新伤害文本*/
+        +SetDamageText(Damage float) /*实现伤害文本设置*/
+    }
+
+    class AAuraPlayerController {
+        -TSubclassOf&lt;UDamageTextComponent&gt DamageTextComponentClass
+        +ShowDamageNumber()/*RPC_Client事件显示伤害数字*/
+    }
+
+    class UAuraAttributeSet {
+        -ShowFloatingText(FEffectProperties Props, Damage float) /*显示浮动文本*/
+    }
+
+    AAuraPlayerController --> DamageTextComponent : 创建
+    AAuraPlayerController --> UAuraAttributeSet : 调用
+    DamageTextComponent <|-- BP_DamageTextComponent : 继承
+    FloatText --> BP_DamageTextComponent : 使用
+    AAuraPlayerController --> FloatText : 使用
 ```
 ````
 
