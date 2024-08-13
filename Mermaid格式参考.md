@@ -179,6 +179,7 @@ ______________________________________________________________
 title: 这是一个类图
 ---
 classDiagram
+direction TB
 
 	note"+ 表示 public(公共)\n- 表示 private(私有)\n# 表示 protected(受保护)\nVirtual_ 表示虚函数"
     
@@ -206,6 +207,7 @@ classDiagram
 title: 这是一个类图
 ---
 classDiagram
+direction TB
 
 	note"+ 表示 public(公共)\n- 表示 private(私有)\n# 表示 protected(受保护)\nVirtual_ 表示虚函数"
     
