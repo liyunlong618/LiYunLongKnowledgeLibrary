@@ -11,6 +11,7 @@ ________________________________________________________________________________
 2. ### [GameplayEffect](./DetailContent/_GameplayEffect_.md)
 	- #### [ExecutionCalculations(执行计算)](./DetailContent/GAS_061.md)
 
+3. ### [AbilitySystemComponent](./DetailContent/_AbilitySystemComponent_.md)
 
 >(整理中)
 ___________________________________________________________________________________________
