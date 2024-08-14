@@ -18,6 +18,8 @@ ________________________________________________________________________________
 
 > - 头文件片段的语法是DECLARE_LOG_CATEGORY_EXTERN(CategoryName, DefaultVerbosity, CompileTimeVerbosity). DefaultVerbosity 是在 ini 文件或命令行中未指定详细级别时使用的详细级别。不会记录任何比这更详细的内容。CompileTimeVerbosity 是要在代码中编译的最大详细程度。任何比这更详细的内容都不会被编译。  
 
+------
+
 </details>
 
 - 使用时在头文件或者源文件最上面引入头文件之后即可
@@ -53,6 +55,8 @@ DECLARE_LOG_CATEGORY_EXTERN(这里是自定义log名字, Log, All);
 >
 > 源码：![](./Image/CommonMacrosUE/1.png)
 
+------
+
 </details>
 
 - 使用API：
@@ -61,3 +65,6 @@ DECLARE_LOG_CATEGORY_EXTERN(这里是自定义log名字, Log, All);
 GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, TEXT("This message will appear on the screen!"));
 ```
 
+## 宏的创建和使用
+
+可以使用 `##` 拼接
