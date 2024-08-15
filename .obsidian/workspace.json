@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_062.md",
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/temp111/GAS_063.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_062.md",
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/temp111/GAS_063.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_062.md",
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/temp111/GAS_063.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_062.md"
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/temp111/GAS_063.md"
               }
             }
           }
@@ -163,6 +163,8 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "formatto-format:Format Document": false,
+      "vscode-editor:新建代码文件": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -173,6 +175,8 @@
   },
   "active": "3690b1228f28e2fa",
   "lastOpenFiles": [
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/temp111/GAS_063/5.png",
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_062.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/temp/GAS_062/11.png",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/temp/GAS_062/10.png",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/temp/GAS_062/7.png",
