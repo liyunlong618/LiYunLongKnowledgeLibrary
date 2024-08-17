@@ -9,6 +9,7 @@ ________________________________________________________________________________
 1. ### [GameplayAbility](./DetailContent/_GameplayAbility_.md)
 
 2. ### [GameplayEffect](./DetailContent/_GameplayEffect_.md)
+	- #### [FGameplayEffectContext 源码阅读](./DetailContent/GAS_066.md)
 	- #### [ExecutionCalculations(执行计算)](./DetailContent/GAS_061.md)
 
 3. ### [AbilitySystemComponent](./DetailContent/_AbilitySystemComponent_.md)
@@ -149,8 +150,6 @@ ________________________________________________________________________________
 64. ### [GAS 064 计算护甲穿透;捕获Source和Target属性；C++中获取曲线表格数据](./DetailContent/GAS_064.md)
 
 65. ### [GAS 065 实现暴击率/暴伤/暴击抗性](./DetailContent/GAS_065.md)
-
-66. ### [GAS 066](./DetailContent/GAS_066.md)
 
 67. ### [GAS 067](./DetailContent/GAS_067.md)
 
@@ -1007,12 +1006,6 @@ ________________________________________________________________________________
 ___________________________________________________________________________________________
 
 65. ### [GAS 065 实现暴击率/暴伤/暴击抗性](./DetailContent/GAS_065.md)
-
-___________________________________________________________________________________________
-
-##### 处理关键点
-
-66. ### [GAS 066](./DetailContent/GAS_066.md)
 
 ___________________________________________________________________________________________
 
