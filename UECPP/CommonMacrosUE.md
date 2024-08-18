@@ -40,6 +40,8 @@ DECLARE_LOG_CATEGORY_EXTERN(这里是自定义log名字, Log, All);
 
 
 
+------
+
 ## UEC++中使用`GEngine`将消息打印到屏幕
 
 <details>
@@ -65,6 +67,67 @@ DECLARE_LOG_CATEGORY_EXTERN(这里是自定义log名字, Log, All);
 GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, TEXT("This message will appear on the screen!"));
 ```
 
+------
+
 ## 宏的创建和使用
 
 可以使用 `##` 拼接
+
+
+
+------
+
+### 内联函数宏
+
+- `FORCEINLINE`
+
+<details>
+<summary>FORCEINLINE 宏介绍</summary>
+
+
+>`FORCEINLINE` 是一个宏，用于强制内联函数。这个宏通常在C++代码中使用，尤其是在性能关键的代码部分，如游戏开发中。
+>
+>### 作用
+>
+>1. **强制内联**：`FORCEINLINE` 通常用于提示编译器将函数体嵌入到调用该函数的代码中，而不是单独生成一个函数调用。这有助于减少函数调用的开销，提高性能，尤其是对于短小的函数或频繁调用的函数。
+>2. **优化性能**：内联函数可以减少函数调用的开销（如栈操作和跳转），特别是对于频繁调用的简单函数。这有助于提高程序的执行速度。
+>3. **编译器提示**：尽管`FORCEINLINE` 提示编译器进行内联，编译器可能会根据其他优化考虑忽略这个提示。`FORCEINLINE` 只是一个建议，并不是强制编译器必须内联该函数。
+>
+>### 示例
+>
+>```cpp
+>#define FORCEINLINE __forceinline
+>
+>class MyClass {
+>public:
+>    FORCEINLINE int Add(int a, int b) {
+>        return a + b;
+>    }
+>};
+>```
+>
+>在这个例子中，`FORCEINLINE` 宏被定义为 `__forceinline`，这是MSVC编译器中的内联指令。这个宏的具体定义可能会依赖于不同的编译器。
+>
+>### 编译器依赖性
+>
+>- **MSVC**: 使用 `__forceinline`。
+>- **GCC/Clang**: 通常会使用 `inline`，但实际内联决定由编译器做出。
+>
+>### 结论
+>
+>`FORCEINLINE` 是一种编译器优化提示，建议将函数内联以提高性能，但最终的决定仍由编译器根据具体情况做出。在编写性能敏感的代码时，使用 `FORCEINLINE` 可以帮助优化执行速度，但应该根据实际需求和编译器文档使用。
+
+------
+
+</details>
+
+```CPP
+FORCEINLINE
+```
+
+示例：
+
+```cpp
+public:
+	FORCEINLINE bool IsCriticalHit() const { return bIsCriticalHit; }
+```
