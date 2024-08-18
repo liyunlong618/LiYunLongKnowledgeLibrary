@@ -6,13 +6,16 @@ ________________________________________________________________________________
 
 ## 目录1
 
-1. ### [GameplayAbility](./DetailContent/_GameplayAbility_.md)
+1. ### [**GameplayAbility**](./DetailContent/_GameplayAbility_.md)
 
-2. ### [GameplayEffect](./DetailContent/_GameplayEffect_.md)
-	- #### [FGameplayEffectContext 源码阅读](./DetailContent/_FGameplayEffectContext_.md)
-	- #### [ExecutionCalculations(执行计算)](./DetailContent/GAS_061.md)
-
-3. ### [AbilitySystemComponent](./DetailContent/_AbilitySystemComponent_.md)
+2. ### [**GameplayEffect**](./DetailContent/_GameplayEffect_.md)
+	- #### [**FGameplayEffectContext** 源码阅读](./DetailContent/_FGameplayEffectContext_.md)
+	
+	  - [网络序列化函数 **NetSerialize** 的作用](./DetailContent/GAS_067.md)
+	
+	- #### [**ExecutionCalculations**(执行计算)](./DetailContent/GAS_061.md)
+	
+3. ### [**AbilitySystemComponent**](./DetailContent/_AbilitySystemComponent_.md)
 
 >(整理中)
 ___________________________________________________________________________________________
@@ -151,7 +154,8 @@ ________________________________________________________________________________
 
 65. ### [GAS 065 实现暴击率/暴伤/暴击抗性](./DetailContent/GAS_065.md)
 
-67. ### [GAS 067](./DetailContent/GAS_067.md)
+
+67. ### [GAS 067 创建FGameplayEffectContext(1)；了解 网络序列化函数 NetSerialize 的作用](./DetailContent/GAS_067.md)
 
 68. ### [GAS 068](./DetailContent/GAS_068.md)
 
@@ -1009,9 +1013,13 @@ ________________________________________________________________________________
 
 ___________________________________________________________________________________________
 
-##### 处理关键点
+##### 了解关键点
+###### 1. 了解 脚本化结构体 函数 `GetScriptStruct` 
+###### 2. 了解 `网络序列化函数`  `NetSerialize` 的作用
+###### 3. 了解 `uint8`
+###### 4. `FArchive` 结构体 在网络序列化中的作用
 
-67. ### [GAS 067](./DetailContent/GAS_067.md)
+67. ### [GAS 067 创建FGameplayEffectContext(1);了解 网络序列化函数 NetSerialize 的作用](./DetailContent/GAS_067.md)
 
 ___________________________________________________________________________________________
 
