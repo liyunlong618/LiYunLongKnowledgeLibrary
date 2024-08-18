@@ -12,6 +12,7 @@ ________________________________________________________________________________
 	- #### [**FGameplayEffectContext** 源码阅读](./DetailContent/_FGameplayEffectContext_.md)
 	
 	  - [自建**FGameplayEffectContext**(1);了解 网络序列化函数 NetSerialize 的作用](./DetailContent/GAS_067.md)
+	  - [自建FGameplayEffectContext需要的步骤梳理  UE_5.2和UE_5.3这里的区别](./DetailContent/GAS_068.md)
 	
 	- #### [**ExecutionCalculations**(执行计算)](./DetailContent/GAS_061.md)
 	
@@ -157,7 +158,7 @@ ________________________________________________________________________________
 
 67. ### [GAS 067 自建**FGameplayEffectContext**(1);了解 网络序列化函数 NetSerialize 的作用](./DetailContent/GAS_067.md)
 
-68. ### [GAS 068](./DetailContent/GAS_068.md)
+68. ### [GAS 068 自建FGameplayEffectContext(2)；重写 模板结构体TStructOpsTypeTraits；重写 虚函数Duplicate；UE_5.2和UE_5.3这里的区别；自建FGameplayEffectContext需要的步骤梳理](./DetailContent/GAS_068.md)
 
 69. ### [GAS 069](./DetailContent/GAS_069.md)
 
@@ -1025,7 +1026,15 @@ ________________________________________________________________________________
 
 ##### 处理关键点
 
-68. ### [GAS 068](./DetailContent/GAS_068.md)
+###### 1. 重写 网络序列化函数 `NetSerialize`，使用 `uint32` 无符号整数来 重新记录序列化信息
+###### 2. 自建FGameplayEffectContext需要的步骤：
+   - ###### 第一步：**继承** `FGameplayEffectContext`
+   - ###### 第二步：**重写 `GetScriptStruct`**: 实现该函数以使自定义结构在反射系统中被正确识别和处理。 `(UE_5.3有变更)`
+   - ###### 第三步：**重写 `NetSerialize`**: 定义如何在网络传输时序列化和反序列化自定义数据。
+   - ###### 第四步：**重写 `Duplicate`**: 确保自定义上下文能够被深拷贝以支持复杂数据的复制。 `(UE_5.3有变更)`
+   - ###### 第五步：**重写 `TStructOpsTypeTraits`**: 设置结构体的操作特性，以控制其复制、序列化和比较行为。 `(UE_5.3有变更)
+
+68. ### [GAS 068 自建FGameplayEffectContext(2)；重写 模板结构体TStructOpsTypeTraits；重写 虚函数Duplicate；UE_5.2和UE_5.3这里的区别；自建FGameplayEffectContext需要的步骤梳理](./DetailContent/GAS_068.md)
 
 ___________________________________________________________________________________________
 
