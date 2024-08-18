@@ -11,7 +11,7 @@ ________________________________________________________________________________
 2. ### [**GameplayEffect**](./DetailContent/_GameplayEffect_.md)
 	- #### [**FGameplayEffectContext** 源码阅读](./DetailContent/_FGameplayEffectContext_.md)
 	
-	  - [网络序列化函数 **NetSerialize** 的作用](./DetailContent/GAS_067.md)
+	  - [自建**FGameplayEffectContext**(1);了解 网络序列化函数 NetSerialize 的作用](./DetailContent/GAS_067.md)
 	
 	- #### [**ExecutionCalculations**(执行计算)](./DetailContent/GAS_061.md)
 	
@@ -155,7 +155,7 @@ ________________________________________________________________________________
 65. ### [GAS 065 实现暴击率/暴伤/暴击抗性](./DetailContent/GAS_065.md)
 
 
-67. ### [GAS 067 创建FGameplayEffectContext(1)；了解 网络序列化函数 NetSerialize 的作用](./DetailContent/GAS_067.md)
+67. ### [GAS 067 自建**FGameplayEffectContext**(1);了解 网络序列化函数 NetSerialize 的作用](./DetailContent/GAS_067.md)
 
 68. ### [GAS 068](./DetailContent/GAS_068.md)
 
@@ -1019,7 +1019,7 @@ ________________________________________________________________________________
 ###### 3. 了解 `uint8`
 ###### 4. `FArchive` 结构体 在网络序列化中的作用
 
-67. ### [GAS 067 创建FGameplayEffectContext(1);了解 网络序列化函数 NetSerialize 的作用](./DetailContent/GAS_067.md)
+67. ### [GAS 067 自建**FGameplayEffectContext**(1);了解 网络序列化函数 NetSerialize 的作用](./DetailContent/GAS_067.md)
 
 ___________________________________________________________________________________________
 
