@@ -7,12 +7,20 @@ ________________________________________________________________________________
 
 # 目录
 
-- [GameplayEffect](#gameplayeffect)
+- [GameplayTag](#gameplaytag)
 - [目录](#目录)
   - [介绍](#介绍)
-  - [Modifiers](#modifiers)
-    - [ModifierMagnitude](#modifiermagnitude)
-      - [MagnitudeCalculationType](#magnitudecalculationtype)
+    - [1. **GameplayTag 对比 API**](#1-gameplaytag-对比-api)
+      - [**1.1 `MatchesTag`**](#11-matchestag)
+      - [**1.2 `MatchesAnyTags`**](#12-matchesanytags)
+      - [**1.3 `HasTag`**](#13-hastag)
+      - [**1.4 `HasAnyExact` 和 `HasAllExact`**](#14-hasanyexact-和-hasallexact)
+    - [2. **GameplayTag 相关函数**](#2-gameplaytag-相关函数)
+      - [**2.1 `RequestGameplayTag`**](#21-requestgameplaytag)
+      - [**2.2 `GetTagName`**](#22-gettagname)
+      - [**2.3 `GetParentTag`**](#23-getparenttag)
+    - [3. **实际使用案例**](#3-实际使用案例)
+
 
 
 ------
