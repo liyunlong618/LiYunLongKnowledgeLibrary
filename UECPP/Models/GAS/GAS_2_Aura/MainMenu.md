@@ -162,7 +162,7 @@ ________________________________________________________________________________
 
 69. ### [GAS 069 创建自建的全局管理类AbilitySystemGlobles应用自建的FGameplayEffectContext类](./DetailContent/GAS_069.md)
 
-70. ### [GAS 070](./DetailContent/GAS_070.md)
+70. ### [GAS 070 现在需要在 ExecCalc_Damage 中设置参数，并在AS的后处理函数中获取 自建 Context 上携带的 bool](./DetailContent/GAS_070.md)
 
 71. ### [GAS 071](./DetailContent/GAS_071.md)
 
@@ -1054,7 +1054,13 @@ ________________________________________________________________________________
 
 ##### 处理关键点
 
-70. ### [GAS 070](./DetailContent/GAS_070.md)
+###### 1. 如何把拿到的 `FGameplayEffectContext` 类型转换成自己的 `FAuraGameplayEffectContext`
+###### 2. 结构梳理：
+   - ###### 谁送 —— 在 `ExecCalc_Damage` 中设置参数
+   - ###### 谁拿 —— 在 `AS` 的后处理函数中获取 自建 `Context` 上携带的 `bool`
+   - ###### 怎么拿 —— 通过蓝图函数库 `AuraAbilitySystemLibrary` 创建 `Set` / `Get` 函数
+
+70. ### [GAS 070 现在需要在 ExecCalc_Damage 中设置参数，并在AS的后处理函数中获取 自建 Context 上携带的 bool](./DetailContent/GAS_070.md)
 
 ___________________________________________________________________________________________
 
