@@ -160,7 +160,7 @@ ________________________________________________________________________________
 
 68. ### [GAS 068 自建FGameplayEffectContext(2)；重写 模板结构体TStructOpsTypeTraits；重写 虚函数Duplicate；UE_5.2和UE_5.3这里的区别；自建FGameplayEffectContext需要的步骤梳理](./DetailContent/GAS_068.md)
 
-69. ### [GAS 069](./DetailContent/GAS_069.md)
+69. ### [GAS 069 创建自建的全局管理类AbilitySystemGlobles应用自建的FGameplayEffectContext类](./DetailContent/GAS_069.md)
 
 70. ### [GAS 070](./DetailContent/GAS_070.md)
 
@@ -1040,7 +1040,15 @@ ________________________________________________________________________________
 
 ##### 处理关键点
 
-69. ### [GAS 069](./DetailContent/GAS_069.md)
+###### 1. 应用 `FGameplayEffectContext` 的步骤
+
+###### 2. 应用自建的 `AbilitySystemGlobles`的步骤
+
+   - ###### 创建 `AbilitySystemGlobles` c++类
+
+   - ###### `DefaultGame.ini` 中配置
+
+69. ### [GAS 069 创建自建的全局管理类AbilitySystemGlobles应用自建的FGameplayEffectContext类](./DetailContent/GAS_069.md)
 
 ___________________________________________________________________________________________
 
