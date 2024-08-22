@@ -178,7 +178,7 @@ ________________________________________________________________________________
 
 76. ### [GAS 076 创建AIController/行为树/黑板/自定义的行为树服务BTService](./DetailContent/GAS_076.md)
 
-77. ### [GAS 077](./DetailContent/GAS_077.md)
+77. ### [GAS 077 通过服务获取黑板中的变量；设置黑板中的值](./DetailContent/GAS_077.md)
 
 78. ### [GAS 078](./DetailContent/GAS_078.md)
 
@@ -1108,7 +1108,15 @@ ________________________________________________________________________________
 
 ##### 处理关键点
 
-77. ### [GAS 077](./DetailContent/GAS_077.md)
+1. ###### 设置黑板中的值API：
+
+   - ###### `UBTFunctionLibrary::SetBlackboardValueAsObject`
+
+2. ###### Actor的源码有一个好用的直接获取距离的API：
+
+   - ###### `float GetDistanceTo(const AActor* OtherActor)`
+
+77. ### [GAS 077 通过服务获取黑板中的变量；设置黑板中的值](./DetailContent/GAS_077.md)
 
 ___________________________________________________________________________________________
 
