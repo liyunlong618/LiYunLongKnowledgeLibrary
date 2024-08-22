@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_076.md",
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_077.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_076.md",
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_077.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_076.md",
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_077.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_076.md"
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_077.md"
               }
             }
           }
@@ -138,8 +138,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "formatto-format:Format Document": false,
-      "vscode-editor:新建代码文件": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -150,6 +148,11 @@
   },
   "active": "8568479f59d462cd",
   "lastOpenFiles": [
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_077/13.gif",
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_077/2024-08-22 22-28-09_x264.gif",
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/2024-08-22 22-28-09_x264.gif",
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/2024-08-22 22-28-09_x264.gif.crdownload",
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_077/12.png",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_078.md",
     "UECPP/Unreal_Insights.md",
     "UECPP/UE_Tips.md",
@@ -175,7 +178,6 @@
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/_GameplayAbility_.md",
     "解决Rider中查看GitHub的md图片丢失.md",
     "MarkdownCopyMenu_Image/3.png",
-    "MarkdownCopyMenu_Image/2.png",
     "MarkdownCopyMenu_Image/未命名.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/TEMP/GAS_058.md",
     "未命名.canvas",
@@ -183,7 +185,6 @@
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_019.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_013.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_012.md",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_001.md",
-    "MarkdownCopyMenu.md"
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_001.md"
   ]
 }
