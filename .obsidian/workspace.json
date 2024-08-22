@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_078.md",
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_076.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_078.md",
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_076.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_078.md",
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_076.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_078.md"
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_076.md"
               }
             }
           }
@@ -150,6 +150,7 @@
   },
   "active": "8568479f59d462cd",
   "lastOpenFiles": [
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_078.md",
     "UECPP/Unreal_Insights.md",
     "UECPP/UE_Tips.md",
     "UECPP/Models/GAS/GAS_2_Aura/MainMenu.md",
@@ -183,7 +184,6 @@
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_013.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_012.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_001.md",
-    "MarkdownCopyMenu.md",
-    "README.md"
+    "MarkdownCopyMenu.md"
   ]
 }
