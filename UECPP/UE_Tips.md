@@ -60,6 +60,15 @@ ________________________________________________________________________________
 ### 检查目标对象是否实现了接口,使用 `Implements` 函数
 
 ```CPP
-const bool ImplementsCombatInfenface = Actor()->Implements<UCombatInterface>();
+const bool 布尔变量 = 对象Actor->Implements<U开头的接口名>();
 ```
 
+**举例：**`bool ImplementsCombatInfenface = Actor()->Implements<UCombatInterface>();`
+
+### 接口的全局静态函数
+
+```CPP
+bool 布尔变量 = I开头的接口名::Execute_函数名(对象Actor);
+```
+
+**举例：**`bool A = ICombatInterface::Execute_IsDead(Overlap.GetActor());`
