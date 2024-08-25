@@ -56,3 +56,10 @@ ________________________________________________________________________________
 > ```
 
 </details>
+
+### 检查目标对象是否实现了接口,使用 `Implements` 函数
+
+```CPP
+const bool ImplementsCombatInfenface = Actor()->Implements<UCombatInterface>();
+```
+
