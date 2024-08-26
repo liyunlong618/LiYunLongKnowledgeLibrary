@@ -213,7 +213,7 @@ ________________________________________________________________________________
 
 ### [GAS 084 敌人行为树触发GA攻击](./DetailContent/GAS_084.md)
 
-### [GAS 085](./DetailContent/GAS_085.md)
+### [GAS 085敌人攻击时转向玩家使用 MotionWarping ；使用接口Get和Set获Player位置](./DetailContent/GAS_085.md)
 
 ### [GAS 086](./DetailContent/GAS_086.md)
 
@@ -1233,7 +1233,29 @@ ________________________________________________________________________________
 
 ##### 处理关键点
 
-### [GAS 085](./DetailContent/GAS_085.md)
+1. ###### 使用 Motion Warping 的基本流程
+
+   - ###### //1.添加 MotionWarping 组件
+
+     - ###### 在敌人或角色的 Blueprint 或 C++ 类中，添加 MotionWarpingComponent。
+
+     - ###### 这个组件负责在播放蒙太奇时进行动态调整，以实现精确的定位和对齐。
+
+   - ###### //2.实现 AddOrUpdateWarpTargetFromLocation 函数
+
+   - ###### //3.在动画蓝图中添加 MotionWarping 动画通知
+
+     - ###### 在需要进行运动扭曲的动画中添加 MotionWarping 通知。
+
+     - ###### 该通知通常只对 root 动画生效，因此要确保动画符合要求。
+
+     - ###### 在 Animation Notify 中配置 Warp Target Name，比如设置为 FacingTarget。
+
+   - ###### //4.在行为树或代码中调用
+
+     - ###### 在行为树或相关逻辑中，确保目标位置的更新。
+
+### [GAS 085敌人攻击时转向玩家使用 MotionWarping ；使用接口Get和Set获Player位置](./DetailContent/GAS_085.md)
 
 ___________________________________________________________________________________________
 
