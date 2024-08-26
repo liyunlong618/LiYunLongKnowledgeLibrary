@@ -211,7 +211,7 @@ ________________________________________________________________________________
 
 ### [GAS 083 使用EQS环境查询 整个流程](./DetailContent/GAS_083.md)
 
-### [GAS 084](./DetailContent/GAS_084.md)
+### [GAS 084 敌人行为树触发GA攻击](./DetailContent/GAS_084.md)
 
 ### [GAS 085](./DetailContent/GAS_085.md)
 
@@ -1217,7 +1217,17 @@ ________________________________________________________________________________
 
 ##### 处理关键点
 
-### [GAS 084](./DetailContent/GAS_084.md)
+1. ###### 通过 `GameplayTag` 触发 `GA` 的流程
+
+   - ###### 添加 `GameplayTag`
+
+   - ###### 需要构造一个 `FGameplayAbilitySpec`
+
+   - ###### 通过 `ASC组件` 给予技能 `ASC->GiveAbility(AbilitySpec);`
+
+   - ###### 然后才能通过 `GameplayTag` 触发 `GA` 调用API：`TryActivateAbilitiesByTag`
+
+### [GAS 084 敌人行为树触发GA攻击](./DetailContent/GAS_084.md)
 
 ___________________________________________________________________________________________
 
