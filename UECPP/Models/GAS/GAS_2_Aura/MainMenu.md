@@ -1351,6 +1351,26 @@ ________________________________________________________________________________
 
 ##### 处理关键点
 
+1. ###### 创建并应用 `GameplayCue` 的流程
+
+   - ###### 创建 `GameplayCueNotify_Static` 子类
+
+   - ###### 重写 `OnExecute` 函数，使用 `Parameters` 参数
+
+   - ###### 调用时使用API：`ExecuteGameplayCueWithParamsOnOwner`，并配置 `Parameters` 参数
+
+   - ###### 创建和配置触发 `GameplayCue` 的 `GameplayTag`
+
+2. ###### 本节通过 `Parameters` 传递的参数
+
+   - ###### `Location`
+
+   - ###### `SourceObject`
+
+   - ###### `EffectCauser`
+
+   - ###### `TagContainer`
+
 ### [GAS 098 使用 GameplayCue 制作DS模式下的音效特效同步](./DetailContent/GAS_098.md)
 
 ___________________________________________________________________________________________
