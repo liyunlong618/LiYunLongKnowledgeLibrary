@@ -64,6 +64,8 @@ ________________________________________________________________________________
 
 </details>
 
+[UE 提示：可视化记录器 (unrealdirective.com)](https://unrealdirective.com/tips/the-visual-logger)
+
 [使用虚幻引擎4可视化记录器 (unrealengine.com)](https://www.unrealengine.com/zh-CN/blog/using-the-ue4-visual-logger)
 
 [虚幻引擎(UE4) Visual Logger 可视化调试器_ue visual log-CSDN博客](https://blog.csdn.net/zhang1461376499/article/details/113522874)
