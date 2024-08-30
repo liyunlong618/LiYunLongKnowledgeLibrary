@@ -102,13 +102,13 @@ GetAbilitySystemComponent()->ApplyGameplayEffectSpecToSelf(*GameplayEffectSpec.D
 >
 >我们在 `UAuraAttributeSet` 的后处理函数 **PostGameplayEffectExecute** 中可以拿到实参 `(const FGameplayEffectModCallbackData& Data)` ,传入自建函数 **SetEffectProperties** ，使用 `Data.EffectSpec` 拿到 `FGameplayEffectSpec` 通过 `FGameplayEffectSpec` 拿到了 `FGameplayEffectContext`
 >
->![](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_066/1.png?raw=true)
+>![](./Image/GAS_066/1.png)
 >
 >
 >
 >## 可以看到这些黄色框内的内容被设置了，红色的没有被设置
 >
->![](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_066/2.png?raw=true)
+>![](./Image/GAS_066/2.png)
 >
 ><details>
 ><summary>参数列表</summary>
@@ -191,7 +191,7 @@ GetAbilitySystemComponent()->ApplyGameplayEffectSpecToSelf(*GameplayEffectSpec.D
 >
 >####  `Instigator` 和 `EffectCauser` 是在这里被设置的
 >
->![](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_066/3.png?raw=true)![](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_066/4.png?raw=true)
+>![](./Image/GAS_066/3.png)![](./Image/GAS_066/4.png)
 >
 >#### Data调用的函数内
 >
@@ -201,9 +201,9 @@ GetAbilitySystemComponent()->ApplyGameplayEffectSpecToSelf(*GameplayEffectSpec.D
 >4. 设置了 `Instigator 的 ASC组件`
 >5. 设置了 bool **是否复制 EffectCauser**  `bReplicateEffectCauser`
 >
->#### ![](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_066/5.png?raw=true)![](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_066/6.png?raw=true)
+>#### ![](./Image/GAS_066/5.png)![](./Image/GAS_066/6.png)
 >
->![](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_066/7.png?raw=true)
+>![](./Image/GAS_066/7.png)
 >
 >#### 来到FGameplayEffectContext结构体中
 >
@@ -211,43 +211,43 @@ GetAbilitySystemComponent()->ApplyGameplayEffectSpecToSelf(*GameplayEffectSpec.D
 >- AbilityLevel = 1;
 >- WorldOrigin = (0,0,0);
 >
->![](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_066/8.png?raw=true)
+>![](./Image/GAS_066/8.png)
 >
 >------
 >
 >### 当调用GetOwnedGameplayTags函数时
 >
->![](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_066/9.png?raw=true)
+>![](./Image/GAS_066/9.png)
 >
 >#### 看目标是否实现了：游戏标签资产接口
 >
->![](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_066/10.png?raw=true)
+>![](./Image/GAS_066/10.png)
 >
 >------
 >
 >### 看一下GetAbility函数
 >
->![](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_066/13.png?raw=true)
+>![](./Image/GAS_066/13.png)
 >
->返回的是 `AbilityCDO`![](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_066/14.png?raw=true)
+>返回的是 `AbilityCDO`![](./Image/GAS_066/14.png)
 >
 >------
 >
 >### 看一下SetAbility函数
 >
->![](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_066/11.png?raw=true)![](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_066/12.png?raw=true)
+>![](./Image/GAS_066/11.png)![](./Image/GAS_066/12.png)
 >
 >------
 >
 >### 看一下 `GetAbilityInstance_NotReplicated`函数
 >
->![](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_066/15.png?raw=true)![](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_066/16.png?raw=true)
+>![](./Image/GAS_066/15.png)![](./Image/GAS_066/16.png)
 >
 >------
 >
 >### 还有添加AActors和HitResult的函数
 >
->![](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_066/17.png?raw=true)![](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_066/18.png?raw=true)
+>![](./Image/GAS_066/17.png)![](./Image/GAS_066/18.png)
 >
 >------
 >
@@ -257,21 +257,21 @@ GetAbilitySystemComponent()->ApplyGameplayEffectSpecToSelf(*GameplayEffectSpec.D
 >
 >#### 后面将创建自己 `FGameplayEffectContext` 类，设置结构序列化并通过网络发送
 >
->![](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_066/19.png?raw=true)
+>![](./Image/GAS_066/19.png)
 >
->![](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_066/20.png?raw=true)
+>![](./Image/GAS_066/20.png)
 >
 >------
 >
 >### 检查是否为本地玩家 `IsLocallyControlled` 函数
 >
->![](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_066/21.png?raw=true)
+>![](./Image/GAS_066/21.png)
 >
 >------
 >
 >### 设置世界原点的函数 `AddOrigin`
 >
->![](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_066/22.png?raw=true)
+>![](./Image/GAS_066/22.png)
 >
 ># 这样我们就可以在FGameplayEffectContext中传递更多数据
 
@@ -290,7 +290,7 @@ GetAbilitySystemComponent()->ApplyGameplayEffectSpecToSelf(*GameplayEffectSpec.D
 - `HitResult` —— 自己设置
 - `WorldOrigin` —— 自己设置
 
-![](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_066/23.png?raw=true)
+![](./Image/GAS_066/23.png)
 
 #### 添加 `AbilityCDO` 和 `AbilityIstanceNotReplicated`
 
@@ -298,7 +298,7 @@ GetAbilitySystemComponent()->ApplyGameplayEffectSpecToSelf(*GameplayEffectSpec.D
 GE_ContextHandle.SetAbility(this);
 ```
 
-看到就有了![](https://github.com/liyunlong618/LiYunLongKnowledgeLibrary/blob/main/UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_066/24.png?raw=true)
+看到就有了![](./Image/GAS_066/24.png)
 
 #### 添加 `Source` 
 
