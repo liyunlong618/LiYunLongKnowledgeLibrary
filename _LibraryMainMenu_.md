@@ -19,6 +19,8 @@ ________________________________________________________________________________
 ## 虚幻模块
 ### [UE小知识点](./UECPP/UE_Tips.md)
 ### [UE中的常用宏](./UECPP/CommonMacrosUE.md)
+### [UE性能分析工具 Unreal Insights](./UECPP/Unreal_Insights.md)
+### [UELog调试工具 VisualLog](./UECPP/UE_VisualLog.md)
 
 ### GAS
 #### [GAS第二季Aura案例(俯视角2.5D暗黑like游戏)](./UECPP/Models/GAS/GAS_2_Aura/MainMenu.md)
