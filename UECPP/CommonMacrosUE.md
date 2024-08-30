@@ -37,7 +37,11 @@ DECLARE_LOG_CATEGORY_EXTERN(这里是自定义log名字, Log, All);
 - 参考网页
 
   [知乎——虚幻UE_LOG使用教程](https://zhuanlan.zhihu.com/p/463724067)
+使用示例：
 
+```cpp
+DECLARE_LOG_CATEGORY_CLASS(MYlog, Log, All);
+```
 
 
 ------
@@ -73,7 +77,7 @@ GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, TEXT("This message will
 
 可以使用 `##` 拼接
 
-
+//TODO
 
 ------
 
@@ -125,7 +129,7 @@ GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, TEXT("This message will
 FORCEINLINE
 ```
 
-示例：
+使用示例：
 
 ```cpp
 public:
