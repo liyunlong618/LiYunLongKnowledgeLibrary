@@ -138,8 +138,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "formatto-format:Format Document": false,
-      "vscode-editor:新建代码文件": false,
+      "3d-graph-new:Global 3D Graph": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
