@@ -10,17 +10,11 @@ ________________________________________________________________________________
 - [GameplayTag](#gameplaytag)
 - [目录](#目录)
   - [介绍](#介绍)
-    - [1. **GameplayTag 对比 API**](#1-gameplaytag-对比-api)
-      - [**1.1 `MatchesTag`**](#11-matchestag)
-      - [**1.2 `MatchesAnyTags`**](#12-matchesanytags)
-      - [**1.3 `HasTag`**](#13-hastag)
-      - [**1.4 `HasAnyExact` 和 `HasAllExact`**](#14-hasanyexact-和-hasallexact)
-    - [2. **GameplayTag 相关函数**](#2-gameplaytag-相关函数)
-      - [**2.1 `RequestGameplayTag`**](#21-requestgameplaytag)
-      - [**2.2 `GetTagName`**](#22-gettagname)
-      - [**2.3 `GetParentTag`**](#23-getparenttag)
-    - [3. **实际使用案例**](#3-实际使用案例)
-
+    - [检查一个标签是否与另一个标签匹配，或者是否是该标签的子标签。使用 ：`MatchesTag`](#检查一个标签是否与另一个标签匹配或者是否是该标签的子标签使用-matchestag)
+    - [检查一个标签是否与一组标签中的任意一个匹配。：`MatchesAnyTags`](#检查一个标签是否与一组标签中的任意一个匹配matchesanytags)
+    - [获取 `GameplayTag` 的名称 ：`GetTagName`](#获取-gameplaytag-的名称-gettagname)
+    - [创建一个 `GameplayTag` ：`RequestGameplayTag`](#创建一个-gameplaytag-requestgameplaytag)
+    - [创建一个 `GameplayTag` ：](#创建一个-gameplaytag-)
 
 
 ------
@@ -57,78 +51,106 @@ ________________________________________________________________________________
 
 </details>
 
-在虚幻引擎中，`GameplayTag` 是一个强大的系统，用于标识和管理标签（Tags），这些标签可以用于角色、技能、物品等对象的标记和管理。`GameplayTag` 系统允许你通过API来对比和查询标签，以便在游戏逻辑中做出决策。
+------
 
-### 1. **GameplayTag 对比 API**
+>## GameplayTag 对比 API：
 
-你可以通过多种方式对比 `GameplayTag`，以下是一些常用的方法：
+------
 
-#### **1.1 `MatchesTag`**
+### 检查一个标签是否与另一个标签匹配，或者是否是该标签的子标签。使用 ：`MatchesTag`
 
-- **功能**: 检查一个标签是否与另一个标签匹配，或者是否是该标签的子标签。
+> #### **需要注意这里是源码中的备注： `"A.1".MatchesTagExact("A") will return False`**
+>
+> #### 也就是说只能父查子节点，子查父用这个会返回 false！！！！！！！！！！！！！！！！！！
+>
+> ```cpp
+> bool bIsMatch = SomeTag.MatchesTag(OtherTag);
+> ```
+>
+> - 举例:
+>
+>   > ```cpp
+>   > FGameplayTag SomeTag = FGameplayTag::RequestGameplayTag(FName("Character.Status.Stunned"));
+>   > FGameplayTag OtherTag = FGameplayTag::RequestGameplayTag(FName("Character.Status"));
+>   > 
+>   > bool bIsMatch = SomeTag.MatchesTag(OtherTag);
+>   > // 返回 true，因为 "Character.Status.Stunned" 是 "Character.Status" 的子标签。
+>   > ```
 
-- 用法:
+------
 
-  ```cpp
-  bool bIsMatch = SomeTag.MatchesTag(OtherTag);
-  ```
-  
-- 例子:
+### 检查一个标签是否与一组标签中的任意一个匹配。：`MatchesAnyTags`
 
-  ```cpp
-  FGameplayTag SomeTag = FGameplayTag::RequestGameplayTag(FName("Character.Status.Stunned"));
-  FGameplayTag OtherTag = FGameplayTag::RequestGameplayTag(FName("Character.Status"));
-  
-  bool bIsMatch = SomeTag.MatchesTag(OtherTag);
-  // 返回 true，因为 "Character.Status.Stunned" 是 "Character.Status" 的子标签。
-  ```
+> ```c++
+> bool bIsMatch = SomeTag.MatchesAnyTags(TagContainer);
+> ```
+>
+> - 举例：
+>
+>   ```cpp
+>   FGameplayTagContainer TagContainer;
+>   TagContainer.AddTag(FGameplayTag::RequestGameplayTag(FName("Character.Status")));
+>   TagContainer.AddTag(FGameplayTag::RequestGameplayTag(FName("Character.Action.Jump")));
+>         
+>   FGameplayTag SomeTag = FGameplayTag::RequestGameplayTag(FName("Character.Status.Stunned"));
+>         
+>   bool bIsMatch = SomeTag.MatchesAnyTags(TagContainer);
+>   // 返回 true，因为 "Character.Status.Stunned" 是 "Character.Status" 的子标签。
+>   ```
 
-#### **1.2 `MatchesAnyTags`**
+------
 
-- **功能**: 检查一个标签是否与一组标签中的任意一个匹配。
+### 获取 `GameplayTag` 的名称 ：`GetTagName`
 
-- 用法:
+> ```cpp
+> FName TagName = MyTag.GetTagName();
+> ```
 
-  ```cpp
-  bool bIsMatch = SomeTag.MatchesAnyTags(TagContainer);
-  ```
-  
-- 例子:
+------
 
-  ```cpp
-  FGameplayTagContainer TagContainer;
-  TagContainer.AddTag(FGameplayTag::RequestGameplayTag(FName("Character.Status")));
-  TagContainer.AddTag(FGameplayTag::RequestGameplayTag(FName("Character.Action.Jump")));
-  
-  FGameplayTag SomeTag = FGameplayTag::RequestGameplayTag(FName("Character.Status.Stunned"));
-  
-  bool bIsMatch = SomeTag.MatchesAnyTags(TagContainer);
-  // 返回 true，因为 "Character.Status.Stunned" 是 "Character.Status" 的子标签。
-  ```
+### 创建一个 `GameplayTag` ：`RequestGameplayTag`
 
-#### **1.3 `HasTag`**
+> ```c++
+> FGameplayTag MyTag = FGameplayTag::RequestGameplayTag(FName("Character.Status.Stunned"));
+> ```
 
-- **功能**: 检查一个 `GameplayTagContainer` 是否包含某个标签。
+------
 
-- 用法:
+### 创建一个 `GameplayTag` ：
 
-  ```cpp
-  bool bHasTag = TagContainer.HasTag(SomeTag);
-  ```
-  
-- 例子:
+> ```CPP
+> UGameplayTagsManager::Get().AddNativeGameplayTag(FName("CombatSocket.LeftHand"), FString("CombatSocket LeftHand"));
+> ```
+>
+> #### 这样就创建了一个 `CombatSocket` 下的 `LeftHand` 标签，备注是 `CombatSocket LeftHand`
 
-  ```cpp
-  FGameplayTagContainer TagContainer;
-  TagContainer.AddTag(FGameplayTag::RequestGameplayTag(FName("Character.Status.Stunned")));
-  
-  FGameplayTag SomeTag = FGameplayTag::RequestGameplayTag(FName("Character.Status.Stunned"));
-  
-  bool bHasTag = TagContainer.HasTag(SomeTag);
-  // 返回 true，因为容器中包含 "Character.Status.Stunned"。
-  ```
+------
 
-#### **1.4 `HasAnyExact` 和 `HasAllExact`**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### **`HasAnyExact` 和 `HasAllExact`**
+`"A.1".MatchesTagExact("A") will return False`
+
+
+
 
 - **功能**: 直接比较标签，不考虑继承关系。
 
@@ -153,29 +175,6 @@ ________________________________________________________________________________
   // 返回 false，因为 "Character.Status.Stunned" 不是 "Character.Status" 的精确匹配。
   ```
 
-### 2. **GameplayTag 相关函数**
-
-除了对比功能外，`GameplayTag` 系统还提供了一些辅助函数：
-
-#### **2.1 `RequestGameplayTag`**
-
-- **功能**: 用于请求（或创建）一个 `GameplayTag`。
-
-- 用法:
-
-  ```cpp
-  FGameplayTag MyTag = FGameplayTag::RequestGameplayTag(FName("Character.Status.Stunned"));
-  ```
-
-#### **2.2 `GetTagName`**
-
-- **功能**: 获取 `GameplayTag` 的名称。
-
-- 用法:
-
-  ```cpp
-  FName TagName = MyTag.GetTagName();
-  ```
 
 #### **2.3 `GetParentTag`**
 
@@ -205,47 +204,6 @@ if (CurrentStatus.MatchesAnyTags(NegativeStatusTags))
 ```
 
 这种方式能够方便地通过`GameplayTag`系统管理游戏中的各种状态和条件。如果你有更具体的需求或场景，我可以帮助你进一步优化。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ___________________________________________________________________________________________
