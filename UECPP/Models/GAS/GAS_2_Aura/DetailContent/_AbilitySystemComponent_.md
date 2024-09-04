@@ -21,70 +21,101 @@ ________________________________________________________________________________
 
 >### AbilitySystemComponent 的基本概念
 >
->`GameplayAbility` 是一种数据驱动的对象，可以通过 Blueprint 或 C++ 实现。它封装了技能的启动、执行、冷却以及结束的完整流程，并且能够与 `GameplayEffect`、`GameplayTags`、`GameplayCue` 等其他 GAS 组件紧密集成。
+>`AbilitySystemComponent`（ASC）是Unreal Engine中的Gameplay Ability System（GAS）的核心组件之一。它用于管理和处理与游戏玩法相关的能力（Abilities）、效果（Effects）、属性（Attributes）以及状态（Gameplay Tags）等。ASC为角色或其他具有能力的对象（例如AI、可破坏的物体等）提供了一套框架，使得能力和效果的实现更加模块化和数据驱动。以下是ASC的一些主要功能和特点：
 >
->### Gameplay Ability 的关键组件
+>### 1. **管理能力（Abilities）**
 >
->1. **Ability Input**:
+>- ASC负责激活、取消和管理与其关联的所有Gameplay Abilities。
+>- 每个Ability都可以通过ASC来请求激活或取消，并且ASC会处理Ability的冷却、成本、条件等逻辑。
+> 
+> ### 2. **处理效果（Gameplay Effects）**
 >
->   - **描述**：指定触发该技能的输入事件或按键，可以通过输入映射（Input Mapping）配置。
->   - **示例**：按下键盘上的“F”键触发一个火球技能。
+>- Gameplay Effects用于修改对象的属性值（例如生命值、速度等），并且ASC负责应用、移除和管理这些效果。
+>- ASC可以处理效果的堆叠规则、持续时间和周期性效果（例如每秒伤害）。
+> 
+> ### 3. **属性系统（Attributes）**
 >
->2. **Ability Activation**:
+>- ASC与Attribute Set配合使用，用于管理角色的各类属性，例如力量、敏捷、耐力等。
+>- ASC提供了获取和修改属性值的接口，并可以通过Gameplay Effects来调整这些属性。
+> 
+> ### 4. **状态管理（Gameplay Tags）**
 >
->   - **描述**：定义了技能何时以及如何被激活。可以在满足特定条件时手动或自动激活。
->   - **示例**：当玩家按下技能按钮并且法力值足够时，激活该技能。
+>- ASC利用Gameplay Tags来标识和管理角色或对象的状态，如“中毒”、“隐形”、“晕眩”等。
+>- 这些标签可以与Abilities和Effects联动，用于控制能力的激活条件或效果的应用规则。
+> 
+> ### 5. **网络同步**
 >
->3. **Ability Cost**:
+>- ASC设计上支持网络同步，使得在多人游戏中能力和效果的应用能够正确同步到客户端和服务器。
+>- 它处理客户端预测、服务端验证等关键网络游戏开发中的同步问题。
+> 
+> ### 6. **事件与通知**
 >
->   - **描述**：技能激活时的消耗，例如法力值、体力值等，可以通过 `GameplayEffect` 来实现。
->   - **示例**：每次使用火球技能消耗 20 点法力值。
+>- ASC提供了事件和委托，允许在Ability激活、效果应用、属性变化等事件发生时触发自定义逻辑。
+>- 开发者可以利用这些事件来实现复杂的游戏机制，例如连击、特效触发等。
+> 
+> ### 7. **性能优化**
 >
->4. **Cooldown**:
+>- ASC和GAS框架本身是为性能优化而设计的，通过数据驱动的方式减少了蓝图逻辑的复杂性，并提升了大规模多人环境下的表现。
 >
->   - **描述**：定义技能的冷却时间，即再次激活技能之前需要等待的时间。
->   - **示例**：火球技能使用后需要等待 5 秒才能再次使用。
->
->5. **Ability Tasks**:
->
->   - **描述**：用于定义技能的具体执行流程，可以通过内置的 Ability Task 或自定义的任务来实现复杂的行为。
->   - **示例**：创建一个任务链，依次执行移动、施法、击中效果等操作。
->
->6. **Gameplay Tags**:
->
->   - **描述**：用于标记技能的特性、类型或其他属性，可以用于筛选、限制或触发其他行为。
->   - **示例**：给火球技能添加“火焰”标签，可以在游戏中识别并处理与火焰相关的逻辑。
->
->7. **Commit Ability**:
->
->   - **描述**：在技能成功激活后，执行与资源消耗、状态改变等相关的操作。
->
->   - **示例**：成功释放火球技能后，扣除玩家的法力值并进入冷却状态。
+> ASC是GAS体系中非常灵活且功能强大的组件，适合用于实现复杂的游戏机制和效果。你在开发中可以通过继承和扩展它来实现自定义的行为，以满足特定的游戏需求。
 
 ------
 
 </details>
 
-### 常用API
+------
 
+>## 常用API
 
+------
 
-#### 获取ASC所属的Actor
+### 获取 `AbilitySystemComponent` 所属的 `Actor`
 
-```CPP
-ASC->GetAvatarActor();
-```
+> ```CPP
+> AbilitySystemComponent->GetAvatarActor();
+> ```
 
+------
 
+### 为组件授予一个能力 `Ability`
 
+> ```CPP
+> GiveAbility(FGameplayAbilitySpec)
+> ```
 
+------
 
+### 尝试激活指定的能力
 
+> ```CPP
+> TryActivateAbility(FGameplayAbilitySpecHandle)
+> ```
 
+------
 
+### 取消指定的能力。用来中止正在执行的Ability
 
+> ```CPP
+> CancelAbility(FGameplayAbilitySpecHandle)
+> ```
 
+------
 
+### 清除组件的所有能力
+
+> ```CPP
+> ClearAllAbilities()
+> ```
+
+------
+
+### 获取当前可以激活的所有能力列表
+
+> ```CPP
+> GetActivatableAbilities()
+> ```
+
+------
 
 
 

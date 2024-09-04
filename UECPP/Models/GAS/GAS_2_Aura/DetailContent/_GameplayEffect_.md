@@ -65,34 +65,79 @@ ________________________________________________________________________________
 
 
 
-## Modifiers
-- **Modifier（修改器）** 是一种机制，用于改变游戏中角色或对象的属性值。
-
-### ModifierMagnitude
-- **Modifier Magnitude** 是一个关键概念，用于控制 Gameplay Effect 对属性（Attributes）施加的影响程度。
-
-#### MagnitudeCalculationType
-- **MagnitudeCalculationType** 决定了 `GameplayEffectModifier` 的数值大小是如何计算的。
-- 分为以下几种类型：
-  1. **ScalableFloat** (`EGameplayEffectMagnitudeCalculation::ScalableFloat`)
-    - 可以通过曲线表获取值。
-    - 直接设置固定值。
-  2. **AttributeBased** (`EGameplayEffectMagnitudeCalculation::AttributeBased`)
-    - 基于另一个属性的当前值来计算修改器的数值。
-  3. **CustomCalculationClass** (`EGameplayEffectMagnitudeCalculation::CustomCalculationClass`)
-    - 使用自定义的 C++ 或 Blueprint 脚本来计算修改器的数值。
-  4. **SetByCaller** (`EGameplayEffectMagnitudeCalculation::SetByCaller`)
-    - 数值由调用方（如技能或效果）在运行时动态设置，比如GA中的值。调用方需要在应用效果前设置好数值。
 
 
 
 
+## `Modifiers`
+>- **Modifier（修改器）** 是一种机制，用于改变游戏中角色或对象的属性值。
+
+### `ModifierMagnitude`
+>- **Modifier Magnitude** 是一个关键概念，用于控制 Gameplay Effect 对属性（Attributes）施加的影响程度。
+
+#### `MagnitudeCalculationType`
+>- **MagnitudeCalculationType** 决定了 `GameplayEffectModifier` 的数值大小是如何计算的。
+>- #### **分为以下几种类型：**
+>  
+>  1. **ScalableFloat** (`EGameplayEffectMagnitudeCalculation::ScalableFloat`)
+>    - 可以通过曲线表获取值。
+>    - 直接设置固定值。
+>  2. **AttributeBased** (`EGameplayEffectMagnitudeCalculation::AttributeBased`)
+>    - 基于另一个属性的当前值来计算修改器的数值。
+>  3. **CustomCalculationClass** (`EGameplayEffectMagnitudeCalculation::CustomCalculationClass`)
+>    - 使用自定义的 C++ 或 Blueprint 脚本来计算修改器的数值。
+>  4. **SetByCaller** (`EGameplayEffectMagnitudeCalculation::SetByCaller`)
+>    - 数值由调用方（如技能或效果）在运行时动态设置，比如GA中的值。调用方需要在应用效果前设置好数值。
 
 
 
 
 
 
+
+
+
+
+
+
+
+------
+
+> ## 常用API：
+
+------
+
+### 将一个 `Gameplay Effect` 应用到自身
+
+> ```CPP
+> ApplyGameplayEffectToSelf(UGameplayEffect*, float, FGameplayEffectContextHandle)
+> ```
+
+------
+
+### 将一个 `Gameplay Effect` 应用到指定的目标
+
+> ```CPP
+> ApplyGameplayEffectToTarget(UGameplayEffect*, UAbilitySystemComponent*, float, FGameplayEffectContextHandle)
+> ```
+
+------
+
+### 移除指定的活动 `Gameplay Effect` 通常用于取消持续性效果。
+
+> ```CPP
+> RemoveActiveGameplayEffect(FActiveGameplayEffectHandle)
+> ```
+
+------
+
+### 获取当前所有激活的 `Gameplay Effects`列表。用于调试或查询角色当前状态。
+
+> ```CPP
+> GetActiveEffects()
+> ```
+
+------
 
 
 

@@ -67,6 +67,163 @@ ________________________________________________________________________________
 
 
 
+------
+
+> ## 常用API：
+
+------
+
+### 启动Ability的主要逻辑。通常在子类中重写这个函数，定义Ability的具体行为。
+
+> ```cpp
+> ActivateAbility()
+> ```
+
+------
+
+### 检查能力是否可以被激活。通常用于检测条件是否满足，如资源充足、没有被沉默等。
+
+> ```cpp
+> CanActivateAbility(FGameplayAbilitySpecHandle, const FGameplayAbilityActorInfo*, const FGameplayTagContainer*)
+> ```
+
+------
+
+### 结束当前激活的能力。可以在能力执行完毕或被中断时调用，确保清理和资源释放。
+
+> ```cpp
+> EndAbility(FGameplayAbilitySpecHandle, const FGameplayAbilityActorInfo*, const FGameplayAbilityActivationInfo, bool)
+> ```
+
+------
+
+### 取消当前激活的能力。可以用在需要中止能力的情况下，比如玩家被打断或主动取消。
+
+> ```cpp
+> CancelAbility()
+> ```
+
+------
+
+### 应用能力的冷却时间。通常在激活能力时调用，使得能力在冷却期内无法再次激活。
+
+> ```cpp
+> ApplyCooldown(FGameplayAbilitySpecHandle, const FGameplayAbilityActorInfo*, FGameplayAbilityActivationInfo)
+> ```
+
+------
+
+### 检查能力的成本是否足够（如法力值、体力等）。在激活前调用以确保能力能够被执行。
+
+> ```cpp
+> CheckCost(FGameplayAbilitySpecHandle, const FGameplayAbilityActorInfo*)
+> ```
+
+------
+
+### 应用能力的成本。通常在能力成功激活时调用，消耗对应的资源。
+
+> ```cpp
+> ApplyCost(FGameplayAbilitySpecHandle, const FGameplayAbilityActorInfo*, FGameplayAbilityActivationInfo)
+> ```
+
+------
+
+### 创建一个Gameplay Effect Spec，用于定义Effect的属性和应用规则。可以通过它来调整目标属性或状态。
+
+> ```cpp
+> GetGameplayEffectSpec(FGameplayEffect*, const FGameplayAbilitySpecHandle)
+> ```
+
+------
+
+### 将指定的Gameplay Effect应用到目标上。用于在Ability激活时对目标施加效果，如伤害或治疗。
+
+> ```cpp
+> ApplyGameplayEffectSpecToTarget(FGameplayEffectSpec*, UAbilitySystemComponent*)
+> ```
+
+------
+
+### 创建一个目标数据结构，用于定义能力的作用对象。可以是单个Actor，也可以是多个目标。
+
+> ```cpp
+> MakeTargetDataFromActor(AActor*)
+> ```
+
+------
+
+### 当能力被授予时触发的回调。可用于初始化或其他逻辑处理。
+
+> ```cpp
+> OnGiveAbility(FGameplayAbilityActorInfo*, FGameplayAbilitySpec*)
+> ```
+
+------
+
+### 当能力被移除时触发的回调。用于清理资源或重置状态。
+
+> ```cpp
+> OnRemoveAbility(FGameplayAbilityActorInfo*, FGameplayAbilitySpec*)
+> ```
+
+------
+
+### 绑定能力到输入组件，使得能力可以通过输入（如按键）激活。用于处理玩家输入和能力触发的关联。
+
+> ```cpp
+> BindAbilityActivationToInputComponent(UInputComponent*, FGameplayAbilityInputBinds)
+> ```
+
+------
+
+### 用于创建和执行能力任务（Ability Tasks），如计时、等待事件、移动等。Ability Tasks是实现复杂行为的重要工具。
+
+> ```cpp
+> UAbilityTask::CreateAbilityTask()
+> ```
+
+------
+
+### 等待目标数据（Target Data）的任务，用于处理需要目标选择的能力（如锁定敌人、指定位置）。
+
+> ```cpp
+> UAbilityTask_WaitTargetData::WaitTargetData()
+> ```
+
+------
+
+### 播放动画Montage并等待其结束。常用于执行带有动画效果的能力。
+
+> ```cpp
+> UAbilityTask_PlayMontageAndWait::PlayMontageAndWait()
+> ```
+
+------
+
+### 获取Ability的输入ID，用于与输入绑定。帮助识别哪种输入触发了该Ability。
+
+> ```cpp
+> GetInputID()
+> ```
+
+------
+
+### 当Ability对应的输入被按下时触发。用于响应玩家的输入行为。
+
+> ```cpp
+> InputPressed(FGameplayAbilitySpecHandle)
+> ```
+
+------
+
+### 当Ability对应的输入被释放时触发。用于检测玩家的输入释放事件。
+
+> ```cpp
+> InputReleased(FGameplayAbilitySpecHandle)
+> ```
+
+------
 
 
 
