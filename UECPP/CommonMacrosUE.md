@@ -11,7 +11,7 @@ ________________________________________________________________________________
 
 ___________________________________________________________________________________________
 
-### UE_LOG
+## UE_LOG
 
 <details>
 <summary>UE_LOG宏介绍</summary>
@@ -22,31 +22,37 @@ ________________________________________________________________________________
 
 </details>
 
-- 使用时在头文件或者源文件最上面引入头文件之后即可
-
-```CPP
-DECLARE_LOG_CATEGORY_CLASS(这里是自定义log名字, Log, All);
-```
-
-或者
-
-```CPP
-DECLARE_LOG_CATEGORY_EXTERN(这里是自定义log名字, Log, All);
-```
-
-- 参考网页
-
-  [知乎——虚幻UE_LOG使用教程](https://zhuanlan.zhihu.com/p/463724067)
-使用示例：
-
-```cpp
-DECLARE_LOG_CATEGORY_CLASS(MYlog, Log, All);
-```
-
+> - 使用时在头文件或者源文件最上面引入头文件之后即可
+>
+> ```CPP
+> DECLARE_LOG_CATEGORY_CLASS(这里是自定义log名字, Log, All);
+> ```
+>
+> - 或者
+>
+> ```CPP
+> DECLARE_LOG_CATEGORY_EXTERN(这里是自定义log名字, Log, All);
+> ```
+>
+> - 参考网页
+>
+>   [知乎——虚幻UE_LOG使用教程](https://zhuanlan.zhihu.com/p/463724067)
+>
+> - 使用示例：
+>
+> ```cpp
+> DECLARE_LOG_CATEGORY_CLASS(MYlog, Log, All);
+> ```
 
 ------
+### UE_LOG打印函数名
+>```CPP
+>UE_LOG(logTemp, Error, TEXT("要打印的函数是:%hs")，__FUNCTION__);
+>```
+>比如在函数A中那这个打印的就是 `要打印的函数是:A`
+------
 
-## UEC++中使用`GEngine`将消息打印到屏幕
+## UEC++中使用 `GEngine` 将消息打印到屏幕
 
 <details>
 <summary>介绍</summary>
