@@ -59,12 +59,30 @@ ________________________________________________________________________________
 
 ### 检查一个标签是否与另一个标签匹配，或者是否是该标签的子标签。使用 ：`MatchesTag`
 
+> ```cpp
+>bool bIsMatch = SomeTag.MatchesTag(OtherTag);
+> ```
+>
+> - 举例:
+> 
+>   > ```cpp
+>  > FGameplayTag SomeTag = FGameplayTag::RequestGameplayTag(FName("Character.Status.Stunned"));
+>   > FGameplayTag OtherTag = FGameplayTag::RequestGameplayTag(FName("Character.Status"));
+>  > 
+>   > bool bIsMatch = SomeTag.MatchesTag(OtherTag);
+>   > // 返回 true，因为 "Character.Status.Stunned" 是 "Character.Status" 的子标签。
+>   > ```
+
+------
+
+### `MatchesTagExact` 检查一个标签是否与另一个标签精确匹配，或者是否是该标签的子标签。
+
 > #### **需要注意这里是源码中的备注： `"A.1".MatchesTagExact("A") will return False`**
 >
 > #### 也就是说只能父查子节点，子查父用这个会返回 false！！！！！！！！！！！！！！！！！！
 >
 > ```cpp
-> bool bIsMatch = SomeTag.MatchesTag(OtherTag);
+> bool bIsMatch = SomeTag.MatchesTagExact(OtherTag);
 > ```
 >
 > - 举例:
@@ -73,13 +91,16 @@ ________________________________________________________________________________
 >   > FGameplayTag SomeTag = FGameplayTag::RequestGameplayTag(FName("Character.Status.Stunned"));
 >   > FGameplayTag OtherTag = FGameplayTag::RequestGameplayTag(FName("Character.Status"));
 >   > 
->   > bool bIsMatch = SomeTag.MatchesTag(OtherTag);
+>   > bool bIsMatch1 = SomeTag.MatchesTagExact(OtherTag);
+>   > // 返回 false，因为 "Character.Status.Stunned" 是 "Character.Status" 的子标签。
+>   > 
+>   > bool bIsMatch2 = OtherTag.MatchesTagExact(SomeTag);
 >   > // 返回 true，因为 "Character.Status.Stunned" 是 "Character.Status" 的子标签。
 >   > ```
 
 ------
 
-### 检查一个标签是否与一组标签中的任意一个匹配。：`MatchesAnyTags`
+### `MatchesAnyTags`检查一个标签是否与一组标签中的任意一个匹配。
 
 > ```c++
 > bool bIsMatch = SomeTag.MatchesAnyTags(TagContainer);
@@ -91,16 +112,16 @@ ________________________________________________________________________________
 >   FGameplayTagContainer TagContainer;
 >   TagContainer.AddTag(FGameplayTag::RequestGameplayTag(FName("Character.Status")));
 >   TagContainer.AddTag(FGameplayTag::RequestGameplayTag(FName("Character.Action.Jump")));
->         
+>             
 >   FGameplayTag SomeTag = FGameplayTag::RequestGameplayTag(FName("Character.Status.Stunned"));
->         
+>             
 >   bool bIsMatch = SomeTag.MatchesAnyTags(TagContainer);
 >   // 返回 true，因为 "Character.Status.Stunned" 是 "Character.Status" 的子标签。
 >   ```
 
 ------
 
-### 获取 `GameplayTag` 的名称 ：`GetTagName`
+### `GetTagName` 获取 `GameplayTag` 的名称
 
 > ```cpp
 > FName TagName = MyTag.GetTagName();
@@ -108,7 +129,7 @@ ________________________________________________________________________________
 
 ------
 
-### 创建一个 `GameplayTag` ：`RequestGameplayTag`
+### `RequestGameplayTag` 创建一个 `GameplayTag` 
 
 > ```c++
 > FGameplayTag MyTag = FGameplayTag::RequestGameplayTag(FName("Character.Status.Stunned"));
@@ -116,7 +137,7 @@ ________________________________________________________________________________
 
 ------
 
-### 创建一个 `GameplayTag` ：
+### 使用 `UGameplayTagsManager` 创建一个 `GameplayTag` 
 
 > ```CPP
 > UGameplayTagsManager::Get().AddNativeGameplayTag(FName("CombatSocket.LeftHand"), FString("CombatSocket LeftHand"));
