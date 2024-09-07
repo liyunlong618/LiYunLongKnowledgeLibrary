@@ -114,9 +114,9 @@ ________________________________________________________________________________
 >   FGameplayTagContainer TagContainer;
 >   TagContainer.AddTag(FGameplayTag::RequestGameplayTag(FName("Character.Status")));
 >   TagContainer.AddTag(FGameplayTag::RequestGameplayTag(FName("Character.Action.Jump")));
->                 
+>                   
 >   FGameplayTag SomeTag = FGameplayTag::RequestGameplayTag(FName("Character.Status.Stunned"));
->                 
+>                   
 >   bool bIsMatch = SomeTag.MatchesAnyTags(TagContainer);
 >   // 返回 true，因为 "Character.Status.Stunned" 是 "Character.Status" 的子标签。
 >   ```
@@ -154,6 +154,12 @@ ________________________________________________________________________________
 > ```CPP
 > AbilitySystemComponent->RegisterGameplayTagEvent(/*要监听的Tag*/,EGameplayTagEventType::NewOrRemoved/*监听类型一般是这个*/).AddUObject(this,&AAuraEnemy::HitReactTagChanged)/*后面这里是绑定的回调*/;
 > ```
+>
+> ```cpp
+> void AAuraEnemy::HitReactTagChanged(const FGameplayTag CallbackTag/*要监听的Tag*/, int32 NewCount/*当前Tag新的标签计数*/)
+> ```
+>
+> 使用案例参考：[GAS 057 敌人受击反应](./GAS_057.md)
 
 ------
 
