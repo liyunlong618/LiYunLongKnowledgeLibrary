@@ -10,9 +10,15 @@ ________________________________________________________________________________
 - [GameplayEffect](#gameplayeffect)
 - [目录](#目录)
   - [介绍](#介绍)
-  - [Modifiers](#modifiers)
-    - [ModifierMagnitude](#modifiermagnitude)
-      - [MagnitudeCalculationType](#magnitudecalculationtype)
+  - [`Modifiers`](#modifiers)
+    - [`ModifierMagnitude`](#modifiermagnitude)
+      - [`MagnitudeCalculationType`](#magnitudecalculationtype)
+    - [将一个 `Gameplay Effect` 应用到自身](#将一个-gameplay-effect-应用到自身)
+    - [将一个 `Gameplay Effect` 应用到指定的目标](#将一个-gameplay-effect-应用到指定的目标)
+    - [移除指定的活动 `Gameplay Effect` 通常用于取消持续性效果。](#移除指定的活动-gameplay-effect-通常用于取消持续性效果)
+    - [获取当前所有激活的 `Gameplay Effects`列表。用于调试或查询角色当前状态。](#获取当前所有激活的-gameplay-effects列表用于调试或查询角色当前状态)
+  - [监听 `持续GE添加` 的委托](#监听-持续ge添加-的委托)
+
 
 
 ------
@@ -139,7 +145,25 @@ ________________________________________________________________________________
 
 ------
 
+## 监听 `持续GE添加` 的委托
 
+> ##  `OnActiveGameplayEffectAddedDelegateToSelf` 
+>
+> - **下面是 `AbilitySystemComponent.h` 中的源码：**
+>
+>   ```CPP
+>   /** Delegate for when an effect is applied */
+>   	DECLARE_MULTICAST_DELEGATE_ThreeParams(FOnGameplayEffectAppliedDelegate, UAbilitySystemComponent*, const FGameplayEffectSpec&, FActiveGameplayEffectHandle);
+>   ```
+>
+>   ```CPP
+>   /** Called on both client and server whenever a duraton based GE is added (E.g., instant GEs do not trigger this). 每当添加基于持续时间的 GE 时都会调用客户端和服务器*/
+>   FOnGameplayEffectAppliedDelegate OnActiveGameplayEffectAddedDelegateToSelf;
+>   ```
+>
+>   [监听GameplayTag添加移除，也可以实现监听，但是可能会有滞后](./_GameplayTag_.md)
+
+------
 
 
 

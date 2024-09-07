@@ -17,6 +17,8 @@ ________________________________________________________________________________
     - [`RequestGameplayTag` 创建一个 `GameplayTag`](#requestgameplaytag-创建一个-gameplaytag)
     - [使用 `UGameplayTagsManager` 创建一个 `GameplayTag`](#使用-ugameplaytagsmanager-创建一个-gameplaytag)
     - [监听 `GameplayTag` 变化](#监听-gameplaytag-变化)
+  - [接下来，有一个注意点，虽然我们 `监听Tag变化的回调` 可以帮助我们知道何时开始技能冷却，但是，可能并没有那么准确，会有滞后性，但是 `GE的添加`回调 不会有滞后，所以为了监听的准确，在 `技能开始时` 需要 `监听GE` 的添加，`结束时` ，`监听Tag新计数`即可](#接下来有一个注意点虽然我们-监听tag变化的回调-可以帮助我们知道何时开始技能冷却但是可能并没有那么准确会有滞后性但是-ge的添加回调-不会有滞后所以为了监听的准确在-技能开始时-需要-监听ge-的添加结束时-监听tag新计数即可)
+
 
 
 ------
@@ -114,9 +116,9 @@ ________________________________________________________________________________
 >   FGameplayTagContainer TagContainer;
 >   TagContainer.AddTag(FGameplayTag::RequestGameplayTag(FName("Character.Status")));
 >   TagContainer.AddTag(FGameplayTag::RequestGameplayTag(FName("Character.Action.Jump")));
->                       
+>                           
 >   FGameplayTag SomeTag = FGameplayTag::RequestGameplayTag(FName("Character.Status.Stunned"));
->                       
+>                           
 >   bool bIsMatch = SomeTag.MatchesAnyTags(TagContainer);
 >   // 返回 true，因为 "Character.Status.Stunned" 是 "Character.Status" 的子标签。
 >   ```
@@ -164,6 +166,30 @@ ________________________________________________________________________________
 > **使用案例参考：**[GAS 057 敌人受击反应](./GAS_057.md)
 
 ------
+
+## 接下来，有一个注意点，虽然我们 `监听Tag变化的回调` 可以帮助我们知道何时开始技能冷却，但是，可能并没有那么准确，会有滞后性，但是 `GE的添加`回调 不会有滞后，所以为了监听的准确，在 `技能开始时` 需要 `监听GE` 的添加，`结束时` ，`监听Tag新计数`即可
+
+> 因为 `OnActiveGameplayEffectAddedDelegateToSelf` 直接监听到 `Gameplay Effect (GE)` 的 `添加事件` ，比通过标签变化回调的触发更及时和直接。
+>
+> 为什么需要绑定 `OnActiveGameplayEffectAddedDelegateToSelf`
+>
+> - ### **GE 添加的及时性**:
+>
+>   - 通过 `OnActiveGameplayEffectAddedDelegateToSelf`，你可以立即知道冷却 GE 何时被应用到 `AbilitySystemComponent` 上。这是最直接的方式来捕捉冷却开始的事件。
+>
+> - ### **冷却标签的延迟**:
+>
+>   - 虽然冷却 GE 会在应用时添加冷却标签，但标签的变化事件有时会稍有延迟，或者在标签的变化逻辑上受到其他条件的影响。
+>
+>   - 通过监听 GE 的添加，可以确保回调在冷却开始时立即响应，而不仅仅依赖于标签的增加。
+>
+> #### **查看 `ASC源码` 中对 `OnActiveGameplayEffectAddedDelegateToSelf`的备注为：`每当添加基于持续时间的 GE 时都会调用客户端和服务器`**
+
+------
+
+
+
+
 
 
 

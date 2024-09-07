@@ -17,6 +17,8 @@ ________________________________________________________________________________
     - [清除组件的所有能力](#清除组件的所有能力)
     - [获取当前可以激活的所有能力列表](#获取当前可以激活的所有能力列表)
     - [监听 `GameplayTag` 变化](#监听-gameplaytag-变化)
+  - [监听 `持续GE添加` 的委托](#监听-持续ge添加-的委托)
+
 
 
 ------
@@ -133,7 +135,25 @@ ________________________________________________________________________________
 
 ------
 
+## 监听 `持续GE添加` 的委托
 
+> ##  `OnActiveGameplayEffectAddedDelegateToSelf` 
+>
+> - **下面是 `AbilitySystemComponent.h` 中的源码：**
+>
+>   ```CPP
+>   /** Delegate for when an effect is applied */
+>   	DECLARE_MULTICAST_DELEGATE_ThreeParams(FOnGameplayEffectAppliedDelegate, UAbilitySystemComponent*, const FGameplayEffectSpec&, FActiveGameplayEffectHandle);
+>   ```
+>
+>   ```CPP
+>   /** Called on both client and server whenever a duraton based GE is added (E.g., instant GEs do not trigger this). 每当添加基于持续时间的 GE 时都会调用客户端和服务器*/
+>   FOnGameplayEffectAppliedDelegate OnActiveGameplayEffectAddedDelegateToSelf;
+>   ```
+>
+>   [监听GameplayTag添加移除，也可以实现监听，但是可能会有滞后](./_GameplayTag_.md)
+
+------
 
 
 
