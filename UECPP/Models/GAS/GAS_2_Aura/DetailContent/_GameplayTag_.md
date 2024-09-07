@@ -17,7 +17,9 @@ ________________________________________________________________________________
     - [`RequestGameplayTag` 创建一个 `GameplayTag`](#requestgameplaytag-创建一个-gameplaytag)
     - [使用 `UGameplayTagsManager` 创建一个 `GameplayTag`](#使用-ugameplaytagsmanager-创建一个-gameplaytag)
     - [监听 `GameplayTag` 变化](#监听-gameplaytag-变化)
-  - [接下来，有一个注意点，虽然我们 `监听Tag变化的回调` 可以帮助我们知道何时开始技能冷却，但是，可能并没有那么准确，会有滞后性，但是 `GE的添加`回调 不会有滞后，所以为了监听的准确，在 `技能开始时` 需要 `监听GE` 的添加，`结束时` ，`监听Tag新计数`即可](#接下来有一个注意点虽然我们-监听tag变化的回调-可以帮助我们知道何时开始技能冷却但是可能并没有那么准确会有滞后性但是-ge的添加回调-不会有滞后所以为了监听的准确在-技能开始时-需要-监听ge-的添加结束时-监听tag新计数即可)
+    - [`HasTagExact` 检查 `FGameplayTagContainer`中是否包含指定标签](#hastagexact-检查-fgameplaytagcontainer中是否包含指定标签)
+  - [有一个注意点，虽然我们 `监听Tag变化的回调` 可以帮助我们知道何时开始技能冷却，但是，可能并没有那么准确，会有滞后性，但是 `GE的添加`回调 不会有滞后，所以为了监听的准确，在 `技能开始时` 需要 `监听GE` 的添加，`结束时` ，`监听Tag新计数`即可](#有一个注意点虽然我们-监听tag变化的回调-可以帮助我们知道何时开始技能冷却但是可能并没有那么准确会有滞后性但是-ge的添加回调-不会有滞后所以为了监听的准确在-技能开始时-需要-监听ge-的添加结束时-监听tag新计数即可)
+
 
 
 
@@ -116,9 +118,9 @@ ________________________________________________________________________________
 >   FGameplayTagContainer TagContainer;
 >   TagContainer.AddTag(FGameplayTag::RequestGameplayTag(FName("Character.Status")));
 >   TagContainer.AddTag(FGameplayTag::RequestGameplayTag(FName("Character.Action.Jump")));
->                           
+>                             
 >   FGameplayTag SomeTag = FGameplayTag::RequestGameplayTag(FName("Character.Status.Stunned"));
->                           
+>                             
 >   bool bIsMatch = SomeTag.MatchesAnyTags(TagContainer);
 >   // 返回 true，因为 "Character.Status.Stunned" 是 "Character.Status" 的子标签。
 >   ```
@@ -167,7 +169,32 @@ ________________________________________________________________________________
 
 ------
 
-## 接下来，有一个注意点，虽然我们 `监听Tag变化的回调` 可以帮助我们知道何时开始技能冷却，但是，可能并没有那么准确，会有滞后性，但是 `GE的添加`回调 不会有滞后，所以为了监听的准确，在 `技能开始时` 需要 `监听GE` 的添加，`结束时` ，`监听Tag新计数`即可
+### `HasTagExact` 检查 `FGameplayTagContainer`中是否包含指定标签
+
+> ```CPP
+> FGameplayTagContainer AssetTags;
+> FGameplayTag CooldownTag = FGameplayTag::RequestGameplayTag(FName("Cooldown.Fire.FireBolt"));
+> 
+> AssetTags.HasTagExact(CooldownTag);/*这里是使用API检查*/
+> ```
+
+------
+
+
+
+
+
+
+
+
+
+
+
+
+
+------
+
+## 有一个注意点，虽然我们 `监听Tag变化的回调` 可以帮助我们知道何时开始技能冷却，但是，可能并没有那么准确，会有滞后性，但是 `GE的添加`回调 不会有滞后，所以为了监听的准确，在 `技能开始时` 需要 `监听GE` 的添加，`结束时` ，`监听Tag新计数`即可
 
 > 因为 `OnActiveGameplayEffectAddedDelegateToSelf` 直接监听到 `Gameplay Effect (GE)` 的 `添加事件` ，比通过标签变化回调的触发更及时和直接。
 >
