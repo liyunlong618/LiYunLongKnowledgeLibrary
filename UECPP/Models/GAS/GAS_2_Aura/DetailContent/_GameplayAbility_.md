@@ -225,11 +225,14 @@ ________________________________________________________________________________
 
 ------
 
+### 为技能添加动态标签 `DynamicAbilityTags`
 
+> ```CPP
+> //为技能规范 FGameplayAbilitySpec 添加Tag (自建的GA类型->配置好的Tag)
+> GA_Spec.DynamicAbilityTags.AddTag(GA->StartupInputTag);
+> ```
 
-
-
-
+------
 
 
 
