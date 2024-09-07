@@ -11,10 +11,12 @@ ________________________________________________________________________________
 - [目录](#目录)
   - [介绍](#介绍)
     - [检查一个标签是否与另一个标签匹配，或者是否是该标签的子标签。使用 ：`MatchesTag`](#检查一个标签是否与另一个标签匹配或者是否是该标签的子标签使用-matchestag)
-    - [检查一个标签是否与一组标签中的任意一个匹配。：`MatchesAnyTags`](#检查一个标签是否与一组标签中的任意一个匹配matchesanytags)
-    - [获取 `GameplayTag` 的名称 ：`GetTagName`](#获取-gameplaytag-的名称-gettagname)
-    - [创建一个 `GameplayTag` ：`RequestGameplayTag`](#创建一个-gameplaytag-requestgameplaytag)
-    - [创建一个 `GameplayTag` ：](#创建一个-gameplaytag-)
+    - [`MatchesTagExact` 检查一个标签是否与另一个标签精确匹配，或者是否是该标签的子标签。](#matchestagexact-检查一个标签是否与另一个标签精确匹配或者是否是该标签的子标签)
+    - [`MatchesAnyTags`检查一个标签是否与一组标签中的任意一个匹配。](#matchesanytags检查一个标签是否与一组标签中的任意一个匹配)
+    - [`GetTagName` 获取 `GameplayTag` 的名称](#gettagname-获取-gameplaytag-的名称)
+    - [`RequestGameplayTag` 创建一个 `GameplayTag`](#requestgameplaytag-创建一个-gameplaytag)
+    - [使用 `UGameplayTagsManager` 创建一个 `GameplayTag`](#使用-ugameplaytagsmanager-创建一个-gameplaytag)
+    - [监听 `GameplayTag` 变化](#监听-gameplaytag-变化)
 
 
 ------
@@ -112,9 +114,9 @@ ________________________________________________________________________________
 >   FGameplayTagContainer TagContainer;
 >   TagContainer.AddTag(FGameplayTag::RequestGameplayTag(FName("Character.Status")));
 >   TagContainer.AddTag(FGameplayTag::RequestGameplayTag(FName("Character.Action.Jump")));
->             
+>                 
 >   FGameplayTag SomeTag = FGameplayTag::RequestGameplayTag(FName("Character.Status.Stunned"));
->             
+>                 
 >   bool bIsMatch = SomeTag.MatchesAnyTags(TagContainer);
 >   // 返回 true，因为 "Character.Status.Stunned" 是 "Character.Status" 的子标签。
 >   ```
@@ -147,11 +149,13 @@ ________________________________________________________________________________
 
 ------
 
+### 监听 `GameplayTag` 变化
 
+> ```CPP
+> AbilitySystemComponent->RegisterGameplayTagEvent(/*要监听的Tag*/,EGameplayTagEventType::NewOrRemoved/*监听类型一般是这个*/).AddUObject(this,&AAuraEnemy::HitReactTagChanged)/*后面这里是绑定的回调*/;
+> ```
 
-
-
-
+------
 
 
 
