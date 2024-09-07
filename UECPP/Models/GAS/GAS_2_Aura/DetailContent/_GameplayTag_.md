@@ -118,9 +118,9 @@ ________________________________________________________________________________
 >   FGameplayTagContainer TagContainer;
 >   TagContainer.AddTag(FGameplayTag::RequestGameplayTag(FName("Character.Status")));
 >   TagContainer.AddTag(FGameplayTag::RequestGameplayTag(FName("Character.Action.Jump")));
->                             
+>                               
 >   FGameplayTag SomeTag = FGameplayTag::RequestGameplayTag(FName("Character.Status.Stunned"));
->                             
+>                               
 >   bool bIsMatch = SomeTag.MatchesAnyTags(TagContainer);
 >   // 返回 true，因为 "Character.Status.Stunned" 是 "Character.Status" 的子标签。
 >   ```
@@ -169,7 +169,7 @@ ________________________________________________________________________________
 
 ------
 
-### `HasTagExact` 检查 `FGameplayTagContainer`中是否包含指定标签
+### `HasTagExact` 检查 `FGameplayTagContainer` 中是否包含指定标签
 
 > ```CPP
 > FGameplayTagContainer AssetTags;
@@ -180,11 +180,13 @@ ________________________________________________________________________________
 
 ------
 
+### `单个Tag.GetSingleTagContainer();` 为 `指定单个Tag` 创建 `FGameplayTagContainer` 
 
+> ```CPP
+> 单个Tag.GetSingleTagContainer();
+> ```
 
-
-
-
+------
 
 
 
