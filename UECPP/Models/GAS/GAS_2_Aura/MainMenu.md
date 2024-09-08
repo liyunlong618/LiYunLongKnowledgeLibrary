@@ -301,7 +301,7 @@ ________________________________________________________________________________
 
 ### [GAS 116 使用GameplayAbilityCooldown制作技能CD](./DetailContent/GAS_116.md)
 
-### [GAS 117](./DetailContent/GAS_117.md)
+### [GAS 117 使用异步任务 `BlueprintAsyncActionBase` 制作蓝图节点](./DetailContent/GAS_117.md)
 
 ### [GAS 118](./DetailContent/GAS_118.md)
 
@@ -1566,8 +1566,15 @@ ________________________________________________________________________________
 ___________________________________________________________________________________________
 
 ##### 处理关键点
+1. ###### 创建 `异步任务节点` 的步骤
+   - ###### [使用异步任务的步骤](https://github.com/username/repo/blob/branch/DetailContent/GAS_117.md#使用异步任务的步骤整理)
+2. ###### `监听Tag计数的委托` 
+   - ###### `RegisterGameplayTagEvent`
+3. ###### `监听添加持续GE的委托`
+   - ###### `OnActiveGameplayEffectAddedDelegateToSelf`
+4. ###### 使用 `Timer` 处理 `技能CD的逻辑`
 
-### [GAS 117](./DetailContent/GAS_117.md)
+### [GAS 117 使用异步任务 `BlueprintAsyncActionBase` 制作蓝图节点](./DetailContent/GAS_117.md)
 
 ___________________________________________________________________________________________
 
