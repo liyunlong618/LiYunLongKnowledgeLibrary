@@ -317,7 +317,7 @@ ________________________________________________________________________________
 
 ### [GAS 121 梳理整个增加经验的逻辑；为不同敌人使用曲线，配置经验值奖励](./DetailContent/GAS_121.md)
 
-### [GAS 122](./DetailContent/GAS_122.md)
+### [GAS 122 创建被动技能GA；使用WaitGameplayEvent监听父Tag属性变化，指定Tag使用SetByCaller指定映射float，通过Payload发送接收数据](./DetailContent/GAS_122.md)
 
 ### [GAS 123](./DetailContent/GAS_123.md)
 
@@ -1616,7 +1616,11 @@ ________________________________________________________________________________
 
 ##### 处理关键点
 
-### [GAS 122](./DetailContent/GAS_122.md)
+1. ###### 使用 `AssignTagSetByCallerMagnitude` 绑定 `Tag` 和 `float`
+
+2. ###### 回顾 `AS` 的 `PostGameplayEffectExecute` 后处理函数中，判断属性修改
+
+### [GAS 122 创建被动技能GA；使用WaitGameplayEvent监听父Tag属性变化，指定Tag使用SetByCaller指定映射float，通过Payload发送接收数据](./DetailContent/GAS_122.md)
 
 ___________________________________________________________________________________________
 
