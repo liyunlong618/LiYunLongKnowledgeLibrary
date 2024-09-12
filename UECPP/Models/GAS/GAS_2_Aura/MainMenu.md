@@ -319,11 +319,11 @@ ________________________________________________________________________________
 
 ### [GAS 122 创建被动技能GA；使用WaitGameplayEvent监听父Tag属性变化，指定Tag使用SetByCaller指定映射float，通过Payload发送接收数据](./DetailContent/GAS_122.md)
 
-### [GAS 123](./DetailContent/GAS_123.md)
+### [GAS 123 C++中使用`UAbilitySystemBlueprintLibrary::SendGameplayEventToActor`发送GameplayEventTag给指定对象](./DetailContent/GAS_123.md)
 
-### [GAS 124](./DetailContent/GAS_124.md)
+### [GAS 124 创建玩家接口，解耦AS和PS，使用元属性在敌人死亡时传递float](./DetailContent/GAS_124.md)
 
-### [GAS 125](./DetailContent/GAS_125.md)
+### [GAS 125 重构接口GetCharacterLevel函数相关逻辑；处理升级触发逻辑](./DetailContent/GAS_125.md)
 
 ### [GAS 126](./DetailContent/GAS_126.md)
 
@@ -1624,21 +1624,15 @@ ________________________________________________________________________________
 
 ___________________________________________________________________________________________
 
-##### 处理关键点
-
-### [GAS 123](./DetailContent/GAS_123.md)
+### [GAS 123 C++中使用`UAbilitySystemBlueprintLibrary::SendGameplayEventToActor`发送GameplayEventTag给指定对象](./DetailContent/GAS_123.md)
 
 ___________________________________________________________________________________________
 
-##### 处理关键点
-
-### [GAS 124](./DetailContent/GAS_124.md)
+### [GAS 124 创建玩家接口，解耦AS和PS，使用元属性在敌人死亡时传递float](./DetailContent/GAS_124.md)
 
 ___________________________________________________________________________________________
 
-##### 处理关键点
-
-### [GAS 125](./DetailContent/GAS_125.md)
+### [GAS 125 重构接口GetCharacterLevel函数相关逻辑；处理升级触发逻辑](./DetailContent/GAS_125.md)
 
 ___________________________________________________________________________________________
 
