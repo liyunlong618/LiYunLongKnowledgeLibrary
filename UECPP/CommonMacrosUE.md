@@ -144,7 +144,7 @@ public:
 
 ------
 
-### `UFUNCTION` 相关：
+### `UFUNCTION` 相关：[UE5标识符详解 | 史上最全 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/717920216)
 
 - #### **默认值为 Self**：`UFUNCTION(meta = (DefaultToSelf = "WorldContextObiect")`
 
