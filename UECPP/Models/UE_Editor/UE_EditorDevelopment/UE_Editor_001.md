@@ -14,3 +14,7 @@ ________________________________________________________________________________
 ### 视频链接参考
 
 [虚幻引擎编辑器开发基础（一）_虚幻sequencer基础上再开发-CSDN博客](https://blog.csdn.net/qjh5606/article/details/118021112)
+
+[虚幻引擎脚本化操作 | 虚幻引擎 5.4 文档 | Epic Developer Community (epicgames.com)](https://dev.epicgames.com/documentation/zh-cn/unreal-engine/scripted-actions-in-unreal-engine)
+
+[【UE·Editor篇】做一个超好用的菜单栏扩展框架 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/441017278)
