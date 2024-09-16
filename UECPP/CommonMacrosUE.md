@@ -141,3 +141,37 @@ FORCEINLINE
 public:
 	FORCEINLINE bool IsCriticalHit() const { return bIsCriticalHit; }
 ```
+
+------
+
+### `UFUNCTION` 相关：
+
+- #### **默认值为 Self**：`UFUNCTION(meta = (DefaultToSelf = "WorldContextObiect")`
+
+  ```CPP
+  UFUNCTION(meta = (DefaultToSelf = "WorldContextObiect")
+  void TestFunction(const UObject* WorldContextObject);
+  ```
+
+  
+
+------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
