@@ -20,85 +20,187 @@ ________________________________________________________________________________
 <details>
 <summary>Puerts介绍</summary>
 
->Unreal Insights 是 Unreal Engine 提供的一款功能强大的性能分析工具，专门用于分析、调试和优化 Unreal Engine 4 和 Unreal Engine 5 项目中的各种性能问题。它为开发者提供了详细的性能数据，从而帮助他们识别和解决影响游戏体验的性能瓶颈。
+>
 >
 >### 和Lua的对比
 >
 >![image-20240917220016964](./Image/UE_TypeScripe_Puerts/image-20240917220016964.png)
 >
->
->
->1. **多线程分析**：
->
-> - Unreal Insights 能够记录和显示多线程执行的详细时间线，包括主线程（GameThread）、渲染线程（RenderThread）、RHI 线程（Render Hardware Interface），以及其他自定义线程的活动情况。它能帮助开发者分析每个线程的工作负载，找出性能瓶颈。
->2. **事件时间线**：
-> - 通过时间线视图，开发者可以查看整个应用程序在各个时间点上的活动，包括函数调用、任务执行、蓝图事件等。时间线可以按帧显示，并精确到微秒级别，便于深入分析特定的性能问题。
->3. **统计分析**：
-> - Unreal Insights 允许用户追踪和分析各种统计数据，包括 CPU 使用率、GPU 使用率、帧时间、内存消耗、网络流量等。这些统计数据可以帮助开发者监控游戏的整体性能，并找出可能需要优化的部分。
->4. **自定义事件和标记**：
-> - 开发者可以在代码中添加自定义事件和标记，通过 Unreal Insights 进行详细的性能跟踪。这有助于对特定功能或模块进行深入分析，例如加载时间、动画播放、物理计算等。
->5. **资源加载分析**：
-> - Unreal Insights 可以分析资源的加载情况，帮助开发者识别和优化资源加载时间。这对于减少加载时间和提高游戏启动速度尤其重要。
->6. **调用栈追踪**：
-> - 工具能够显示各个函数的调用栈信息，帮助开发者了解性能瓶颈是由哪些具体函数或模块导致的。通过展开调用栈，开发者可以看到每个函数的执行时间和调用次数。
->7. **内存使用分析**：
-> - Unreal Insights 提供详细的内存使用情况分析，帮助开发者理解内存分配模式和识别内存泄漏问题。
->8. **网络分析**：
-> - 对于网络游戏开发，Unreal Insights 还提供了网络流量分析功能，帮助开发者优化网络代码并降低带宽消耗。
->
->### 使用场景
->
->- **优化帧率**：开发者可以通过 Unreal Insights 分析帧时间，并识别出在一帧中耗时较长的任务，从而优化游戏的帧率表现。
->- **多线程调优**：了解各线程的工作负载和调度情况，帮助开发者更好地利用多核 CPU 资源，平衡各线程的负载。
->- **分析蓝图性能**：开发者可以通过工具追踪和分析蓝图事件的性能，识别和优化高消耗的蓝图节点。
->- **资源加载优化**：通过分析资源的加载时间和模式，开发者可以优化游戏的启动时间和关卡切换速度。
->
->### 总结
->
->Unreal Insights 是一款非常全面的性能分析工具，能够帮助 Unreal Engine 开发者深入了解游戏的运行情况，并识别出影响性能的瓶颈。通过它的多线程分析、事件时间线、统计数据追踪等功能，开发者可以精确定位问题所在，并采取针对性的优化措施，提高游戏的整体表现。
 
 ------
 
 </details>
 
-[UE性能分析找内鬼啦_链接](https://nvue.dev/article/25)
-
-## 两种使用方法：
-
-### 第一种：从路径找
-
-在 `UE_5.3/Engine/Binaries/Win64/` 文件夹下找到
-
-> ### `UnrealInsights.exe` 文件![](./Image/Unreal_Insights/1.png)
 
 
+### `Puerts` 安装方式：
 
-### 第二种：从项目内打开
+#### 第一步：下载：打开github下载压缩包
 
-> 项目内打开![](./Image/Unreal_Insights/2.png)
-
-------
-
-### 如果要查看蓝图函数(事件)
-
-> ### 需要勾选 `AssetLoadTime` 和 `统计命名事件`
+> [Tencent/puerts](https://github.com/Tencent/puerts)
+> 注意下版本，如果不会就下[releases版](https://github.com/Tencent/puerts/releases)
 >
-> ![](./Image/Unreal_Insights/3.png)
+> ![image-20240917221244037](./Image/UE_TypeScripe_Puerts/image-20240917221244037.png)![image-20240917232702433](./Image/UE_TypeScripe_Puerts/image-20240917232702433.png)
+
+#### 第二步：打开压缩包下的Ureal文件夹，会看到一个叫 `Puerts` 的文件夹，将这个文件夹拷贝到 "项目Plugins文件夹" 下
+
+> ![image-20240917221613152](./Image/UE_TypeScripe_Puerts/image-20240917221613152.png)![image-20240917221725011](./Image/UE_TypeScripe_Puerts/image-20240917221725011.png)![image-20240917221847122](./Image/UE_TypeScripe_Puerts/image-20240917221847122.png)
+
+#### 第三步：在命令行执行一下开启插件
+
+> 然后在 `Puerts` 目录里打开命令行执行：`node enable_puerts_module.js`
+>
+> ```typescript
+> node enable_puerts_module.js
+> ```
+>
+> ![image-20240917222301431](./Image/UE_TypeScripe_Puerts/image-20240917222301431.png)
+>
+> ![image-20240917222114943](./Image/UE_TypeScripe_Puerts/image-20240917222114943.png)
+
+**第四步：安装Node** [下载 | Node.js 中文网 (nodejs.cn)](https://nodejs.cn/download/)
+
+> [windows typescript环境搭建 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/362772800?utm_id=0)
+>
+> ![image-20240917232835338](./Image/UE_TypeScripe_Puerts/image-20240917232835338.png)
+
+#### 第五步：设置一下枚举类型
+
+> ![image-20240917232955240](./Image/UE_TypeScripe_Puerts/image-20240917232955240.png)
+
+#### 第六步：然后重新生成下项目：
+
+> ![image-20240917222526317](./Image/UE_TypeScripe_Puerts/image-20240917222526317.png)
+
+#### 第七步：为项目添加 `模块` 依赖
+
+> ```C#
+> PublicDependencyModuleNames.AddRange(new string[] { "Puerts","JsEnv" });
+> ```
+>
+> ![image-20240917233745265](./Image/UE_TypeScripe_Puerts/image-20240917233745265.png)
+
+#### 第八步：运行项目后可以看到图标
+
+> ![image-20240917233101080](./Image/UE_TypeScripe_Puerts/image-20240917233101080.png)
+>
+> ### 可以看到 **已经启用了插件**
+>
+> ![image-20240917233225148](./Image/UE_TypeScripe_Puerts/image-20240917233225148.png)
+
+#### 第九步：去到工程根目录运行 `npm init -y` 创建一个默认的 `package.json`
+
+> ```typescript
+> npm init -y
+> ```
+>
+> ![image-20240917234124024](./Image/UE_TypeScripe_Puerts/image-20240917234124024.png)
+
+#### 第十步：需要安装 `VSCode`
+
+> 在 `VSCode` 中安装如下插件：
+>
+> - `JavaScript and TypeScript Nightly`
+> - `JavaScript Debugger (Nightly)`
+> - `nodejs`
+>
+> ![image-20240917234801709](./Image/UE_TypeScripe_Puerts/image-20240917234801709.png)
+
+#### 在文件夹下创建ts文件
+
+> ![image-20240918020503394](./Image/UE_TypeScripe_Puerts/image-20240918020503394.png)![image-20240918020529909](./Image/UE_TypeScripe_Puerts/image-20240918020529909.png)
+>
+> ### 假如叫我这个名字 `TS_TTT.ts`
+>
+> 假如输入如下代码：
+>
+> ```typescript
+> import * as UE from 'ue';  // 引入 Unreal 引擎的模块
+> 
+> class TS_TTT extends UE.Character {
+>     // Unreal 引擎的生命周期函数，游戏开始时触发
+>     ReceiveBeginPlay(): void {
+>         console.log("11111111111111111111111111111111111111111111111111111111111");  // 输出到 Unreal 的日志
+>     }
+>     // Unreal 引擎的每帧调用函数
+>     ReceiveTick(deltaTime: number): void {
+>         // 每帧逻辑
+>     }
+> }
+> // 将 TypeScript 类导出为默认类
+> export default TS_TTT;
+> ```
+>
+> ## 需要注意：
+>
+> - **类名** 需要和 **文件名** 保持一致
+>
+>   ![image-20240918020721334](./Image/UE_TypeScripe_Puerts/image-20240918020721334.png)
+>
+> ![image-20240918020604744](./Image/UE_TypeScripe_Puerts/image-20240918020604744.png)
+
+#### 保存ts文件后，在引擎中会多出一个BP
+
+> ![image-20240918020933465](./Image/UE_TypeScripe_Puerts/image-20240918020933465.png)
+>
+> ### 将其拖入场景，手动实例化
+>
+> 因为在代码中 `BeginPlay` 时打印调试信息，所以运行游戏可以看到
+>
+> ![image-20240918021033685](./Image/UE_TypeScripe_Puerts/image-20240918021033685.png)![image-20240918021122643](./Image/UE_TypeScripe_Puerts/image-20240918021122643.png)
+>
+> 如果看不到，可以编辑一下ts文件再保存（可能是ts卡了，或者有延迟，多编辑保存几次）
+>
+> ### 确认可以打印后，此时修改ts文件内的信息，不用编译C++代码，BP的打印也会随之更改
+>
+> ![image-20240918021322363](./Image/UE_TypeScripe_Puerts/image-20240918021322363.png)![image-20240918021350375](./Image/UE_TypeScripe_Puerts/image-20240918021350375.png)
 
 ------
 
 
 
-![](./Image/Unreal_Insights/4.png)
 
-![](./Image/Unreal_Insights/5.png)
 
-![](./Image/Unreal_Insights/6.png)
 
-![](./Image/Unreal_Insights/7.png)
 
-### 快捷键
 
-- `左键` 拖拽/点击
-- `F` 键 自适应缩放，填充屏幕
-- `右键` 函数可以跳转去代码或者 `高亮`
+
+
+
+#### (这一步我也不知道有什么用？先留着)在 `TypeScripe` 文件夹下创建文件 `LearPuerTsQuickStart.ts`
+
+> ```ts
+> LearPuerTsQuickStart.ts
+> ```
+>
+> ![image-20240918000239290](./Image/UE_TypeScripe_Puerts/image-20240918000239290.png)
+>
+> ```typescript
+> import * as UE from 'ue'
+> import {$ref, $unref, $set, argv, on, toManualReleaseDelegate, releaseManualReleaseDelegate, blueprint} from 'puerts';
+> 
+> let GameMode = argv.getByName("GameMode") as UE.这里使用自己创建的GMCPP类去掉A的前缀;
+> let MyWorld = GameMode.GetWorld();
+> if(GameMode)
+> {
+>     UE.KismetSystemLibrary.PrintString(MyWorld,"脚本中获取到GameMode",true,true,new UE.LinearColor(1.0,0.0,0.0,1.0),5.0,"None");
+> }
+> ```
+
+
+
+
+
+参考文档：
+
+[UE4学习之路：Puerts安装和调试 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/456267138?utm_psn=1819538649764741120)
+
+[UE5 PuerTS学习与实践 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/632862773)
+
+[Puerts-Unreal使用手册 | PUER Typescript](https://puerts.github.io/docs/puerts/unreal/manual/)
+
+[UE5 从零搭建UE的puerts开发环境 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/679045148)
+
+[脚本调用引擎API | PUER Typescript (puerts.github.io)](https://puerts.github.io/docs/puerts/unreal/script_call_uclass/)
+
+[跟我用TypeScript做一个FPS游戏 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/346531865)
