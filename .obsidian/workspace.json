@@ -13,13 +13,74 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_131.md",
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_070.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "ab8cb8478d923eab",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_070.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c3f8ea50ac17df4e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_070.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7b12cb094ef9cf44",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_070.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5863bb46d1ae9d85",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_070.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e69e2e7664cf8950",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_070.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -48,7 +109,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "类型&",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +126,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -85,7 +147,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_131.md",
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_070.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +164,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_131.md",
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_070.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +187,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_131.md"
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_070.md"
               }
             }
           }
@@ -138,7 +200,9 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "3d-graph-new:Global 3D Graph": false,
+      "formatto-format:Format Document": false,
+      "vscode-editor:新建代码文件": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -147,8 +211,19 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "c50284a2ba454575",
+  "active": "e69e2e7664cf8950",
   "lastOpenFiles": [
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_133/image-20240918140542753.png",
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_133/image-20240918140541347.png",
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_133/image-20240918140146198.png",
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_133/image-20240918140049819.png",
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_133/image-20240918140019980.png",
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_133/image-20240918135942833.png",
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_133/image-20240918135806811.png",
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_133/image-20240918135719461.png",
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_133/image-20240918135655757.png",
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_133/image-20240918135631559.png",
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_133/image-20240918135513103.png",
     "UECPP/CommonMacrosUE.md",
     "UECPP/UE_Tips.md",
     "UECPP/Unreal_Insights.md",
@@ -174,22 +249,11 @@
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_065.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_064.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_063.md",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_062.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/图片链接待处理成相对链接",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/新建文件夹",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_078/3.png",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_078/2.png",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_078/1.png",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_078",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/新建文件夹",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_077/13.gif",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_077/2024-08-22 22-28-09_x264.gif",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/2024-08-22 22-28-09_x264.gif",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/2024-08-22 22-28-09_x264.gif.crdownload",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_077/12.png",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/temp111/GAS_063/5.png",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/temp/GAS_062/11.png",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/temp/GAS_062/10.png",
     "未命名.canvas"
   ]
 }
