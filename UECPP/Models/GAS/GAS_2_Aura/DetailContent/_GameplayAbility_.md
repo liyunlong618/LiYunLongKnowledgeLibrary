@@ -236,11 +236,19 @@ ________________________________________________________________________________
 
 
 
+# 待整理的：
+
+
+可以 `通过GA_Spec拿到Level`
 
 
 
+GA中获取技能消耗的GE
 
+- 使用API：`GetCostGameplayEffect` 可以获取 `Cost` 的 `GE`
+- 使用API：`GetCooldownGameplayEffect` 可以获取 `CD` 的 `GE`
 
+![img](./Image/_GameplayAbility_/25165450_766cfbfd-a19a-4550-a4eb-8b01719ac3ff.png)
 
 
 
