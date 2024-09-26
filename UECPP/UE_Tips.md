@@ -158,3 +158,47 @@ ________________________________________________________________________________
 在 `Printf` 中使用 `%.1f` ，可以保留float小数点右边一位小数
 
 ![image-20240923234213745](./Image/UE_Tips/image-20240923234213745-1727106141136-1.png)
+
+### 拿CSV表格数据
+
+1. #### **创建CSV结构体**
+
+   ```CPP
+   USTRUCT(BlueprintType)
+   struct FCSVCSV : public FTableRowBase
+   {
+       GENERATED_BODY()
+   
+       UPROPERTY(EditDefaultsOnly)
+       float float1 = 0.f;
+   
+       UPROPERTY(EditDefaultsOnly)
+       int32 num1 = 0.f;
+   
+       UPROPERTY(EditDefaultsOnly)
+       FString name = FString();
+   };
+   ```
+
+2. #### **蓝图继承该结构体，创建表格**
+
+3. #### **保存表格数据（蓝图中配置）**
+
+   ```CPP
+   public:
+       
+       UPROPERTY(EditDefaultsOnly,BlueprintReadOnly)
+       TObjectPtr<UDataTable> Infos;
+   ```
+
+4. #### **保存表格数据**
+
+   ```CPP
+   for (const FName& Name : Info->GetRowNames())
+   {
+   	const FCSVCSV* Csvcsv = Info->FindRow<FCSVCSV>(Name,FString());
+   }
+   ```
+
+   
+
