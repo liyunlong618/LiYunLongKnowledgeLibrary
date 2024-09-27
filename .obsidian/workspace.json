@@ -85,7 +85,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_001.md",
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_070.md",
                 "mode": "source",
                 "source": false
               }
@@ -121,7 +121,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tick",
+                "query": "ufunction(REF)",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -159,7 +159,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_001.md",
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_070.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -176,7 +176,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_001.md",
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_070.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -199,7 +199,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_001.md"
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_070.md"
               }
             }
           }
@@ -225,6 +225,8 @@
   },
   "active": "97c285b5523b679d",
   "lastOpenFiles": [
+    "UECPP/Models/GAS/GAS_2_Aura/MainMenu.md",
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_001.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_138.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_138/25165450_fad2a0de-4800-4721-b0e9-be0a5994cdfe.png",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_138/25165450_f8e1e4f3-8d8d-4995-cc8b-0f4f7889f4bb.gif",
@@ -263,8 +265,6 @@
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_071.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_069.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_068.md",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_067.md",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_065.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/图片链接待处理成相对链接",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/新建文件夹",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_078",
