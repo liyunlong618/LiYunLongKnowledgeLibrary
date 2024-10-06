@@ -4,95 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "fb34dcd1d96d4d8b",
+        "id": "4d8d22f9a6825c28",
         "type": "tabs",
         "children": [
           {
-            "id": "c50284a2ba454575",
+            "id": "949e9326e6f219f1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_070.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ab8cb8478d923eab",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_070.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c3f8ea50ac17df4e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_070.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7b12cb094ef9cf44",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_070.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5863bb46d1ae9d85",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_070.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e69e2e7664cf8950",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_001.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "97c285b5523b679d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_143.md",
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_046.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 6
+        ]
       }
     ],
     "direction": "vertical"
@@ -121,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "GetDescriptionByAbilityTag",
+                "query": "生成时公开",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -159,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_143.md",
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_046.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -176,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_143.md",
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_046.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -199,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_143.md"
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_046.md"
               }
             }
           }
@@ -221,22 +148,25 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "97c285b5523b679d",
+  "active": "949e9326e6f219f1",
   "lastOpenFiles": [
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_151/image-20241006233624626.png",
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_151/image-20241006233532351.png",
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_151/image-20241006233415994.png",
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_151/25165450_e68b8adb-4318-454a-9e06-b54dc76ce30a.png",
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_151/25165450_e68b8adb-4318-454a-9e06-b54dc76ce30a-1728228637947-12.png",
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_151/25165450_7d53a048-9ece-40bb-861f-91dff18f8923.png",
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_151/25165450_7d53a048-9ece-40bb-861f-91dff18f8923-1728228633195-10.png",
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_151/25165450_344fc8be-f031-468d-99ae-fd8fba423fb6.png",
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_151/25165450_344fc8be-f031-468d-99ae-fd8fba423fb6-1728228629254-8.png",
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_151/25165450_fcb07909-5db6-4d64-ab2a-de5b4ec3baa7.png",
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_151/25165450_fcb07909-5db6-4d64-ab2a-de5b4ec3baa7-1728228626067-6.png",
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_055.md",
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_143.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_070.md",
     "UECPP/Models/GAS/GAS_2_Aura/MainMenu.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_001.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_138.md",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_138/25165450_fad2a0de-4800-4721-b0e9-be0a5994cdfe.png",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_138/25165450_f8e1e4f3-8d8d-4995-cc8b-0f4f7889f4bb.gif",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_138/25165450_f69a19e1-cbb2-4be0-dadf-dc73771e1ee4.png",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_138/25165450_f588a176-9e78-462c-da4d-ef99cb78adde.png",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_138/25165450_e589ccca-9d6a-48e8-f911-6626a5a82af1.png",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_138/25165450_ee55e3d3-4893-4af2-8ea6-21645a704e68.png",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_138/25165450_dbc7a8b0-2ef5-4948-c87f-95c90984f893.png",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_138/25165450_d945cf14-2702-4f6c-e2d5-aabbc8b5b454.png",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_138/25165450_c6de304c-8b6b-4dc6-9842-7704debb820f.png",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_138/25165450_c6125879-bca6-40be-a214-b12649252339.png",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_138",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_138",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_138.md",
@@ -260,9 +190,6 @@
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_074.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_073.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_072.md",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_071.md",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_069.md",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_068.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/图片链接待处理成相对链接",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/新建文件夹",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_078",
