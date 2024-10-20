@@ -18,8 +18,33 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "ee1a38b916295179",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_155.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c5760fefd37ab04f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_155.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -48,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "1",
+                "query": "GetOnDeathDelegate",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_005.md",
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_155.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_005.md",
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_155.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_005.md"
+                "file": "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_155.md"
               }
             }
           }
@@ -148,8 +173,13 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "d9aa1783e20657d8",
+  "active": "c5760fefd37ab04f",
   "lastOpenFiles": [
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_155.md",
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_172/image-20241020164930905.png",
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_172",
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_172.md",
+    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_005.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_063.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_062.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_061.md",
@@ -163,7 +193,6 @@
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_151/25165450_7d53a048-9ece-40bb-861f-91dff18f8923-1728228633195-10.png",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_151/25165450_344fc8be-f031-468d-99ae-fd8fba423fb6.png",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_151/25165450_344fc8be-f031-468d-99ae-fd8fba423fb6-1728228629254-8.png",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_151/25165450_fcb07909-5db6-4d64-ab2a-de5b4ec3baa7.png",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_055.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_143.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_070.md",
@@ -186,10 +215,6 @@
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_081.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_080.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_079.md",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_078.md",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_077.md",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_076.md",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_075.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/图片链接待处理成相对链接",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/新建文件夹",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_078",
