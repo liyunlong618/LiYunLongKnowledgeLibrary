@@ -165,6 +165,29 @@ public:
 
 ------
 
+### 只有当bool在编辑器中勾选true时才会显示其他选项
+
+- #### 比如
+
+  ```CPP
+  //是否覆盖 测试时间 (这之后时间会停止)
+  UPROPERTY(EditAnywhere, Category = "Debug l Time l overrideTime")
+  bool bIsOverrideTime = false;
+  //覆盖的 测试时间(这之后时间会停止)
+  UPROPERTY(EditAnywhere, category = "Debug | Time | 0verrideTime", meta = (Editcondition = "bIsoverrideInitTime == true", EditconditionHides))
+  float OverrideTime = 0.f;
+  ```
+  
+  上述代码当 `"bIsoverrideInitTime == true"` 时才会显示 `float`
+  
+  下面是图示：
+  
+  ![image-20241111175745445](./Image/CommonMacrosUE/image-20241111175745445.png)![image-20241111175729299](./Image/CommonMacrosUE/image-20241111175729299.png)
+  
+  
+
+------
+
 
 
 
