@@ -50,6 +50,6 @@ ________________________________________________________________________________
 ## Python
 
 - #### [UE  Python插件 `PythonEditorScriptPlugin` 的使用方法](./Python/UE_Python_PythonEditorScriptPlugin.md)
-- #### [Python基础](./Python/PythonMenu.md)
+- #### [Python基础](./Python/PythonBasicsMenu.md)
 
 ## C++
