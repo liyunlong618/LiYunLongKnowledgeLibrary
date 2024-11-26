@@ -49,7 +49,8 @@ ________________________________________________________________________________
 
 ## Python
 
-- #### [UE  Python插件 `PythonEditorScriptPlugin` 的使用方法](./Python/UE_Python_PythonEditorScriptPlugin.md)
+- #### [UE  Python插件 `PythonEditorScriptPlugin` 的配置和启用](./Python/UE_Python_PythonEditorScriptPlugin.md)
+- [UE  Python使用 目录](./Python/UE_PythonMenu.md)
 - #### [Python基础](./Python/PythonBasicsMenu.md)
 
 ## C++

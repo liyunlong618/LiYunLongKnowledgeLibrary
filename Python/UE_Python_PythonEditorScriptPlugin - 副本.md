@@ -32,11 +32,17 @@ ________________________________________________________________________________
 
 [使用Python脚本化运行虚幻编辑器 | 虚幻引擎 5.5 文档 | Epic Developer Community | Epic Developer Community](https://dev.epicgames.com/documentation/zh-cn/unreal-engine/scripting-the-unreal-editor-using-python)
 
+参考链接：[Python in UE4 哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1PE411d7z8/?spm_id_from=333.880.my_history.page.click&vd_source=9e1e64122d802b4f7ab37bd325a89e6c)
+
 [在资源浏览器中选中资源_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1PE411d7z8/?p=10&spm_id_from=333.880.my_history.page.click&vd_source=9e1e64122d802b4f7ab37bd325a89e6c)
 
 ### `PythonEditorScriptPlugin` 应该是默认开启的，若未开启，需要开启
 
 >![image-20241121112354081](./Image/UE_Python_PythonEditorScriptPlugin/image-20241121112354081.png)
+>
+>UE4的话有三个都需要勾上
+>
+>![image-20241126155920776](./Image/UE_Python_PythonEditorScriptPlugin/image-20241126155920776.png)
 
 ### 运行 `Python` 脚本
 
