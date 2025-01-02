@@ -31,15 +31,15 @@
 
 ### 一、新建工程
 
-> ![image-20250102143238614](./Image/ALSv001/image-20250102143238614.png)
->
 > ![image-20250102143448880](./Image/ALSv001/image-20250102143448880.png)
 
 ------
 
 ### 二、迁移资产
 
-> 将 `Content\AdvancedLocomotionV4\CharacterAssets\MannequinSkeleton\AnimationExamples` 文件夹迁移到自建的`ALSV4`项目中
+> 将 `Content\AdvancedLocomotionV4\CharacterAssets\MannequinSkeleton\AnimationExamples` 文件夹
+>
+> 迁移到自建的`ALSV4`项目中
 >
 > ![image-20250102144830362](./Image/ALSv001/image-20250102144830362.png)
 >
@@ -55,7 +55,7 @@
 
 > ### 完成后需要重新打开项目，Config才会生效
 >
-> 重新打开后，打开 项目设置->输入 (可以看到已完成输入映射迁移)![image-20250102145727143](./Image/ALSv001/image-20250102145727143.png)
+> 重新打开后，打开 **项目设置->输入** (可以看到已完成输入映射迁移)![image-20250102145727143](./Image/ALSv001/image-20250102145727143.png)
 
 ------
 
