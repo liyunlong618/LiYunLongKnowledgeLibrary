@@ -1,4 +1,7 @@
-[【返回菜单】](../ALS_Menu.md)
+
+------
+
+###### [返回菜单](../ALS_Menu.md)
 
 ------
 
@@ -8,17 +11,34 @@
 
 ## 目录
 
-[TOC]
+- [ALSv001 项目设置](#alsv001-项目设置)
+  - [目录](#目录)
+    - [一、新建工程](#一新建工程)
+    - [二、迁移资产](#二迁移资产)
+    - [三、迁移Config目录下的输入映射](#三迁移config目录下的输入映射)
+    - [四、按照原有的文件结构，新建文件夹并配置部分关键资产](#四按照原有的文件结构新建文件夹并配置部分关键资产)
+      - [1.创建 `PlayerController`](#1创建-playercontroller)
+      - [2.创建 `Character`](#2创建-character)
+      - [3.创建并配置 `GameMode`](#3创建并配置-gamemode)
+    - [五、配置角色基类 `ALS_Base_CharacterBP` 的 `SkeletalMesh` `相机` `弹簧臂`](#五配置角色基类-als_base_characterbp-的-skeletalmesh-相机-弹簧臂)
+    - [六、删除多余文件](#六删除多余文件)
+      - [删完以后剩这些](#删完以后剩这些)
 
 ------
 
-- 链接：
+<details>
+<summary>视频链接</summary>
 
-
+> [01项目设置_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV12f4y1r71N?spm_id_from=333.788.videopod.episodes&vd_source=9e1e64122d802b4f7ab37bd325a89e6c&p=2)
 
 ------
 
-> ### 使用的版本：
+</details>
+
+------
+
+> ### 使用的版本
+>
 > 我这里使用 **UE4.26** 版本
 >
 > 先不考虑摄像机相关的功能，先学习动画
@@ -63,8 +83,8 @@
 
 > 在 `Content\AdvancedLocomotionV4\Blueprints` 文件夹下创建 文件夹
 >
-> - `CharacterLogic`(存放玩家控制器) 
-> - `GameModes` 
+> - `CharacterLogic`(存放玩家控制器)
+> - `GameModes`
 >
 > ------
 
@@ -109,6 +129,7 @@
 > - ![image-20250102154656275](./Image/ALSv001/image-20250102154656275.png)![image-20250102154746364](./Image/ALSv001/image-20250102154746364.png)
 
 ------
+
 ### 五、配置角色基类 `ALS_Base_CharacterBP` 的 `SkeletalMesh` `相机` `弹簧臂`
 
 > - 为角色基类 `ALS_Base_CharacterBP` 设置 `SkeletalMesh`![image-20250102155724015](./Image/ALSv001/image-20250102155724015.png)
@@ -127,7 +148,7 @@
 >
 > ![image-20250102155331248](./Image/ALSv001/image-20250102155331248.png)
 
-#### 删完以后剩这些：
+#### 删完以后剩这些
 
 ![image-20250102161308970](./Image/ALSv001/image-20250102161308970.png)
 
@@ -138,3 +159,9 @@
 ------
 
 [^1]: `Content\AdvancedLocomotionV4\Blueprints\GameModes`
+
+------
+
+[返回最上面](#返回菜单)
+
+------

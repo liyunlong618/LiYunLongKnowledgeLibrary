@@ -18,7 +18,7 @@
 <details>
 <summary>视频链接</summary>
 
-> wwwwwwwwwwwwwwwwwww
+> [05瞄准偏移_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV12f4y1r71N?spm_id_from=333.788.videopod.episodes&vd_source=9e1e64122d802b4f7ab37bd325a89e6c&p=6)
 
 ------
 
