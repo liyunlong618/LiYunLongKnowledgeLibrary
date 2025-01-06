@@ -32,21 +32,9 @@
 
 ------
 
-------
-
 ### XXXXXXXXXXXXX
 
 > xxxxxxxxxxxxxxxxxxxxxxxx
-
-------
-
-------
-
-### XXXXXXXXXXXXX
-
-> xxxxxxxxxxxxxxxxxxxxxxxx
-
-------
 
 ------
 
@@ -56,13 +44,15 @@
 
 ------
 
-------
-
 ### XXXXXXXXXXXXX
 
 > xxxxxxxxxxxxxxxxxxxxxxxx
 
 ------
+
+### XXXXXXXXXXXXX
+
+> xxxxxxxxxxxxxxxxxxxxxxxx
 
 ------
 
