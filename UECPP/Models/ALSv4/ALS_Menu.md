@@ -14,11 +14,11 @@ ________________________________________________________________________________
 
 - #### [ALSv002 骨架-骨骼-姿势-动画](./Detail/ALSv002.md)
 
-- #### [ALSv003 叠加动画原理](./Detail/ALSv003.md)
+- #### [ALSv003 叠加动画（BlendSpace）](./Detail/ALSv003.md)
 
 - #### [ALSv004 混合空间（BlendSpace）](./Detail/ALSv004.md)
 
-- #### [ALSv001项目设置](./Detail/ALSv005.md)
+- #### [ALSv005 瞄准偏移（AimOffset）](./Detail/ALSv005.md)
 
 - #### [ALSv001项目设置](./Detail/ALSv006.md)
 
