@@ -5,13 +5,16 @@
 
 ------
 
-# ALSv002 骨架-骨骼-姿势-动画
+# ALSv006 动画蓝图
 
 ------
 
 ## 目录
 
-[TOC]
+- [ALSv006 动画蓝图](#alsv006-动画蓝图)
+  - [目录](#目录)
+    - [动画蓝图的作用](#动画蓝图的作用)
+    - [动画序列转换为单帧动画](#动画序列转换为单帧动画)
 
 ------
 
@@ -26,53 +29,24 @@
 
 ------
 
-### XXXXXXXXXXXXX
+### 动画蓝图的作用
 
-> xxxxxxxxxxxxxxxxxxxxxxxx
-
-------
-
-------
-
-### XXXXXXXXXXXXX
-
-> xxxxxxxxxxxxxxxxxxxxxxxx
+> - 从角色（Character）上获取数据，根据数据处理状态变更
+>
+> - 输出：的是角色播放动画之后产生的姿势
+>
+> ![image-20250107013801111](./Image/ALSv006/image-20250107013801111.png)
 
 ------
 
-------
+### 动画序列转换为单帧动画
 
-### XXXXXXXXXXXXX
+> ![image-20250107014147953](./Image/ALSv006/image-20250107014147953.png)![image-20250107014221846](./Image/ALSv006/image-20250107014221846.png)![image-20250107014314805](./Image/ALSv006/image-20250107014314805.png)
+>
+> - #### 上图的 `float` 对应的是这里的值：
+>
+>   ![image-20250107014841758](./Image/ALSv006/image-20250107014841758.png)
 
-> xxxxxxxxxxxxxxxxxxxxxxxx
-
-------
-
-------
-
-### XXXXXXXXXXXXX
-
-> xxxxxxxxxxxxxxxxxxxxxxxx
-
-------
-
-------
-
-### XXXXXXXXXXXXX
-
-> xxxxxxxxxxxxxxxxxxxxxxxx
-
-------
-
-------
-
-### XXXXXXXXXXXXX
-
-> xxxxxxxxxxxxxxxxxxxxxxxx
-
-------
-
-XXXXXXXXXXXXX
 ___________________________________________________________________________________________
 
 [返回最上面](#返回菜单)
