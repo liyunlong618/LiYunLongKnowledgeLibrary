@@ -23,11 +23,11 @@ ________________________________________________________________________________
 
 #### [007_使用KeyShot渲染白膜展示](./3DMaxBase/3DMaxBaseV007.md)
 
-#### [008_标题](./3DMaxBase/3DMaxBaseV008.md)
+#### [008_AR场景建模](./3DMaxBase/3DMaxBaseV008.md)
 
-#### [009_标题](./3DMaxBase/3DMaxBaseV009.md)
+#### [009_建模需要注意的几个重要步骤](./3DMaxBase/3DMaxBaseV009.md)
 
-#### [010_标题](./3DMaxBase/3DMaxBaseV010.md)
+#### [010_透明贴图的使用和制作方法](./3DMaxBase/3DMaxBaseV010.md)
 
 ------
 

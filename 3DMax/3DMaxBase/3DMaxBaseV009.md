@@ -1,0 +1,60 @@
+___________________________________________________________________________________________
+###### [GoMenu](../3DMaxBasicsMenu.md)
+___________________________________________________________________________________________
+# 009_建模需要注意的几个重要步骤
+
+
+___________________________________________________________________________________________
+
+## 目录
+
+[TOC]
+
+
+------
+
+## 步骤流程：
+
+### 1. 检查单位是否为  cm
+
+### 2. 仔细观察原画
+
+- 观察各部位之间的比例
+
+### 3. 看不见的面需要删掉，注意不要让模型穿模！
+
+> ![Screenshot_2025-02-12-12-55-51-034_com.baidu.netdisk-edit](./Image/3DMaxBaseV009/Screenshot_2025-02-12-12-55-51-034_com.baidu.netdisk-edit.jpg)
+
+### 4. 拆分部分，将大块拆分为基本几何体
+
+### 5. 外侧边缘发亮的部分，可以对线使用切角（使用切角后一定要处理点，容易出问题）
+
+### 6. 避免出现多变面
+
+> ![Screenshot_2025-02-12-12-56-52-884_com.baidu.netdisk-edit](./Image/3DMaxBaseV009/Screenshot_2025-02-12-12-56-52-884_com.baidu.netdisk-edit.jpg)
+
+### 7. 对结构不产生影响的边要删掉！！！
+
+### 8. 不要出现扭曲面！
+
+> ![Screenshot_2025-02-12-12-57-49-914_com.baidu.netdisk-edit](./Image/3DMaxBaseV009/Screenshot_2025-02-12-12-57-49-914_com.baidu.netdisk-edit.jpg)
+
+### 9. 弧度结构扇形布线！
+
+> ![Screenshot_2025-02-12-12-58-24-499_com.baidu.netdisk-edit](./Image/3DMaxBaseV009/Screenshot_2025-02-12-12-58-24-499_com.baidu.netdisk-edit.jpg)
+
+### 10. 宁穿插勿挤出
+
+> ![Screenshot_2025-02-12-12-59-21-221_com.baidu.netdisk-edit](./Image/3DMaxBaseV009/Screenshot_2025-02-12-12-59-21-221_com.baidu.netdisk-edit.jpg)
+
+### 11. 穿插结构布线尽量对齐
+
+> ![Screenshot_2025-02-12-13-00-02-753_com.baidu.netdisk-edit](./Image/3DMaxBaseV009/Screenshot_2025-02-12-13-00-02-753_com.baidu.netdisk-edit.jpg)
+
+### 12. 垂直结构尽量做倾斜
+
+> ![Screenshot_2025-02-12-13-01-19-731_com.baidu.netdisk-edit](./Image/3DMaxBaseV009/Screenshot_2025-02-12-13-01-19-731_com.baidu.netdisk-edit.jpg)
+
+### 13. 建完模型反复比对原画修改！！！
+
+------
