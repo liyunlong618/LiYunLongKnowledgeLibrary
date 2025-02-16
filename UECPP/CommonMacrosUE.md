@@ -172,7 +172,7 @@ public:
 
   ```CPP
   //是否覆盖 测试时间 (这之后时间会停止)
-  UPROPERTY(EditAnywhere, Category = "Debug l Time l overrideTime")
+  UPROPERTY(EditAnywhere, Category = "Debug | Time | overrideTime")
   bool bIsOverrideTime = false;
   //覆盖的 测试时间(这之后时间会停止)
   UPROPERTY(EditAnywhere, category = "Debug | Time | 0verrideTime", meta = (Editcondition = "bIsoverrideInitTime == true", EditconditionHides))
