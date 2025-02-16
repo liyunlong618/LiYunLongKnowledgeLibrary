@@ -35,7 +35,7 @@ ________________________________________________________________________________
 
 #### [014_渲染AO](./3DMaxBase/3DMaxBaseV014.md)
 
-#### [015_XXXXXXX](./3DMaxBase/3DMaxBaseV015.md)
+#### [015_使用BodyPaint上材质的基础颜色](./3DMaxBase/3DMaxBaseV015.md)
 
 #### [016_XXXXXXX](./3DMaxBase/3DMaxBaseV016.md)
 
