@@ -69,7 +69,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -81,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": " **[ 光影 ]** 模式",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -102,7 +103,8 @@
               "title": "书签"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -168,7 +170,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3DMax/3DMaxBase/3DMaxBaseV012.md"
+                "file": "3DMax/3DMaxBase/3DMaxBaseV012.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
               "title": "3DMaxBaseV012 的大纲"
@@ -192,8 +197,9 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "7f73b5d63f12158c",
+  "active": "c5760fefd37ab04f",
   "lastOpenFiles": [
+    "3DMax/3DMaxBase/3DMaxBaseV002.md",
     "3DMax/3DMaxBasicsMenu.md",
     "_LibraryMainMenu_.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_077.md",
@@ -234,7 +240,6 @@
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_085.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_084.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_083.md",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_081.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/图片链接待处理成相对链接",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/新建文件夹",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_078",

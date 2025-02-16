@@ -31,7 +31,7 @@ ________________________________________________________________________________
 
 #### [012_使用RizomUV展UV](./3DMaxBase/3DMaxBaseV012.md)
 
-#### [013_XXXXXXX](./3DMaxBase/3DMaxBaseV013.md)
+#### [013_使用RizomUV处理UV再导入3Dmax摆放](./3DMaxBase/3DMaxBaseV013.md)
 
 #### [014_XXXXXXX](./3DMaxBase/3DMaxBaseV014.md)
 
