@@ -255,6 +255,10 @@ Shift+拖拽可以相同分辨率下原位置覆盖
 >![4](./Image/3DMaxBaseV015/4.jpg)
 >
 >![5](./Image/3DMaxBaseV015/5.jpg)
+>
+>下面是我的作业（仅供参考嗷，感觉我边缘有点溢色）
+>
+>![z1](./Image/3DMaxBaseV015/z1.png)![z2](./Image/3DMaxBaseV015/z2.png)![z3](./Image/3DMaxBaseV015/z3.png)![z4](./Image/3DMaxBaseV015/z4.png)![z5](./Image/3DMaxBaseV015/z5.png)
 
 ------
 
