@@ -11,13 +11,144 @@
             "id": "de72b1c5bfc1f9a0",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "3DMax/3DMaxBase/3DMaxBaseV008.md",
+                "mode": "preview",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "3DMaxBaseV008"
+            }
+          },
+          {
+            "id": "3b75fa724e20852a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3DMax/3DMaxBase/3DMaxBaseV007.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "3DMaxBaseV007"
+            }
+          },
+          {
+            "id": "43936e838efa6f07",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3DMax/3DMaxBasicsMenu.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "3DMaxBasicsMenu"
+            }
+          },
+          {
+            "id": "821d2413aa403601",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3DMax/3DMaxBase/3DMaxBaseV014.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "3DMaxBaseV014"
+            }
+          },
+          {
+            "id": "8f83fc86ba148159",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3DMax/3DMaxBasicsMenu.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "3DMaxBasicsMenu"
+            }
+          },
+          {
+            "id": "ce8ed1b013506cd2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3DMax/3DMaxBase/3DMaxBaseV007.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "3DMaxBaseV007"
+            }
+          },
+          {
+            "id": "771979feec616831",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3DMax/3DMaxBasicsMenu.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "3DMaxBasicsMenu"
+            }
+          },
+          {
+            "id": "b67fed47e4f323c3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3DMax/3DMaxBase/3DMaxBaseV015.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "3DMaxBaseV015"
+            }
+          },
+          {
+            "id": "0b91dc2030412e6a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3DMax/3DMaxBase/3DMaxBaseV015.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "3DMaxBaseV015"
+            }
+          },
+          {
+            "id": "73ec864044e5b8d7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3DMax/3DMaxBase/3DMaxBaseV015.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "3DMaxBaseV015"
             }
           }
-        ]
+        ],
+        "currentTab": 9
       }
     ],
     "direction": "vertical"
@@ -136,12 +267,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "3DMax/3DMaxBase/3DMaxBaseV015.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "3DMaxBaseV015 的大纲"
             }
           }
         ],
@@ -162,14 +294,21 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "de72b1c5bfc1f9a0",
+  "active": "73ec864044e5b8d7",
   "lastOpenFiles": [
+    "3DMax/3DMaxBase/3DMaxBaseV001.md",
+    "3DMax/3DMaxBasicsMenu.md",
+    "3DMax/3DMaxBase/3DMaxBaseV007.md",
     "3DMax/3DMaxBase/3DMaxBaseV014.md",
+    "3DMax/3DMaxBase/3DMaxBaseV008.md",
+    "3DMax/3DMaxBase/3DMaxBaseV004.md",
+    "3DMax/3DMaxBase/3DMaxBaseV003.md",
+    "3DMax/3DMaxBase/3DMaxBaseV005.md",
+    "3DMax/3DMaxBase/3DMaxBaseV009.md",
+    "3DMax/3DMaxBase/3DMaxBaseV012.md",
     "3DMax/3DMaxBase/3DMaxBaseV002.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_005.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_155.md",
-    "3DMax/3DMaxBase/3DMaxBaseV012.md",
-    "3DMax/3DMaxBasicsMenu.md",
     "_LibraryMainMenu_.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_077.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_172/image-20241020164930905.png",
@@ -196,15 +335,8 @@
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_138.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/Image/GAS_138",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_138",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_138.md",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/模板 - 副本.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_1382.gif.crdownload",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/2024-09-20_10-04-09.gif.crdownload",
-    "UECPP/CommonMacrosUE.md",
-    "UECPP/UE_Tips.md",
-    "UECPP/Unreal_Insights.md",
-    "UECPP/UE_VisualLog.md",
-    "UECPP/Models/GAS/GAS_2_Aura/DetailContent/GAS_085.md",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/图片链接待处理成相对链接",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/新建文件夹",
     "UECPP/Models/GAS/GAS_2_Aura/DetailContent/临时的/GAS_078",
