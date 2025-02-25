@@ -39,9 +39,9 @@ ________________________________________________________________________________
 
 #### [016_色相偏移、明暗绘制技巧、ID图渲染、渲染原画光源角度AO](./3DMaxBase/3DMaxBaseV016.md)
 
-#### [017_XXXXXXX](./3DMaxBase/3DMaxBaseV017.md)
+#### [017_结构线的画法、PS帮助处理各种纹理](./3DMaxBase/3DMaxBaseV017.md)
 
-#### [018_XXXXXXX](./3DMaxBase/3DMaxBaseV018.md)
+#### [018_3Dmax打包导出压缩包、使用八猴渲染模型的视频和图片](./3DMaxBase/3DMaxBaseV018.md)
 
 #### [019_XXXXXXX](./3DMaxBase/3DMaxBaseV019.md)
 

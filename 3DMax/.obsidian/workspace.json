@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3DMaxBasicsMenu.md",
+                "file": "3DMaxBase/3DMaxBaseV015.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3DMaxBasicsMenu"
+              "title": "3DMaxBaseV015"
             }
           }
         ],
@@ -68,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "手绘板",
+                "query": "魔棒",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -186,6 +186,8 @@
   },
   "active": "1b62a11933627caf",
   "lastOpenFiles": [
+    "Pasted image 20250226020608.png",
+    "3DMaxBasicsMenu.md",
     "3DMaxBase/3DMaxBaseV010.md"
   ]
 }
