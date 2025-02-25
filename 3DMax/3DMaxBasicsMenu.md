@@ -17,11 +17,11 @@ ________________________________________________________________________________
 
 #### [005_完成斧子的建模 和 `展UV`](./3DMaxBase/3DMaxBaseV005.md)
 
-#### [006_文件整理和错误排查](./3DMaxBase/3DMaxBaseV006.md)
+#### [006_文件整理和错误排查标准](./3DMaxBase/3DMaxBaseV006.md)
 
 #### [007_使用KeyShot渲染白膜展示](./3DMaxBase/3DMaxBaseV007.md)
 
-#### [008_AR场景建模](./3DMaxBase/3DMaxBaseV008.md)
+#### [008_AR场景建模、模型操作、模型减面](./3DMaxBase/3DMaxBaseV008.md)
 
 #### [009_建模需要注意的几个重要步骤](./3DMaxBase/3DMaxBaseV009.md)
 
