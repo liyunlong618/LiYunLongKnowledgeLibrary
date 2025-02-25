@@ -126,8 +126,8 @@ ________________________________________________________________________________
 >
 > ![image-20250226051642849](./Image/3DMaxBaseV018/image-20250226051642849.png)
 >
-> ![tbrender_001](./Image/3DMaxBaseV018/tbrender_001.png)
+> ![tbrender_001](./Image/3DMaxBaseV018/tbrender_001-1740518752418-1.png)
 >
-> ![1](./Image/3DMaxBaseV018/1-1740518437666-1.png)
+> ![tbrender](./Image/3DMaxBaseV018/tbrender.png)
 
 ------
