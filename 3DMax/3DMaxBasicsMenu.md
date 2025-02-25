@@ -37,7 +37,7 @@ ________________________________________________________________________________
 
 #### [015_使用BodyPaint上材质的基础颜色](./3DMaxBase/3DMaxBaseV015.md)
 
-#### [016_XXXXXXX](./3DMaxBase/3DMaxBaseV016.md)
+#### [016_色相偏移、明暗绘制技巧、ID图渲染、渲染原画光源角度AO](./3DMaxBase/3DMaxBaseV016.md)
 
 #### [017_XXXXXXX](./3DMaxBase/3DMaxBaseV017.md)
 
