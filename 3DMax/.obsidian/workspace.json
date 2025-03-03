@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3DMaxBase/3DMaxBaseV004.md",
-                "mode": "source",
+                "file": "3DMaxBase/3DMaxBaseV019.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3DMaxBaseV004"
+              "title": "3DMaxBaseV019"
             }
           }
         ],
@@ -200,6 +200,8 @@
   },
   "active": "b6f350f1c4df6541",
   "lastOpenFiles": [
+    "3DMaxBase/3DMaxBaseV005.md",
+    "3DMaxBase/3DMaxBaseV004.md",
     "3DMaxBase/3DMaxBaseV003.md",
     "3DMaxBase/3DMaxBaseV015.md",
     "Pasted image 20250226020608.png",

@@ -7,6 +7,9 @@ ________________________________________________________________________________
 
 ## 目录
 
+
+### [2007次世代生存笔记](./3DMaxBase/2007Note.md)
+
 #### [001_3DMax安装](./3DMaxBase/3DMaxBaseV001.md)
 
 #### [002_Max基础操作、快捷键](./3DMaxBase/3DMaxBaseV002.md)
@@ -49,9 +52,9 @@ ________________________________________________________________________________
 
 #### [021_履带、斜纹的制作方法、作品展示参考](./3DMaxBase/3DMaxBaseV021.md)
 
-#### [022_XXXXXXX](./3DMaxBase/3DMaxBaseV022.md)
+#### [022_高低模匹配三要素、PBR材质制作步骤、切UV技巧、PS修改法线瑕疵](./3DMaxBase/3DMaxBaseV022.md)
 
-#### [023_XXXXXXX](./3DMaxBase/3DMaxBaseV023.md)
+#### [023_材质分层介绍、使用SubStance上材质、锈迹、贴纸、喷绘字体、玻璃材质、渲染图片、导出贴图纹理](./3DMaxBase/3DMaxBaseV023.md)
 
 #### [024_XXXXXXX](./3DMaxBase/3DMaxBaseV024.md)
 
