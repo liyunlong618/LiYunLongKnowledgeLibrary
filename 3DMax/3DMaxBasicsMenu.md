@@ -56,11 +56,11 @@ ________________________________________________________________________________
 
 #### [023_材质分层介绍、使用SubStance上材质、锈迹、贴纸、喷绘字体、玻璃材质、渲染图片、导出贴图纹理](./3DMaxBase/3DMaxBaseV023.md)
 
-#### [024_XXXXXXX](./3DMaxBase/3DMaxBaseV024.md)
+#### [024_多边形建模技巧、高模制作的注意事项、3Dmax自动拓扑插件的使用](./3DMaxBase/3DMaxBaseV024.md)
 
-#### [025_XXXXXXX](./3DMaxBase/3DMaxBaseV025.md)
+#### [025_介绍一下`ZBrush`界面、快捷键、ZBrush雕刻褶皱](./3DMaxBase/3DMaxBaseV025.md)
 
-#### [026_XXXXXXX](./3DMaxBase/3DMaxBaseV026.md)
+#### [026_根据平滑组自动切UV自动摆UV、使用ZBrush低模变高模](./3DMaxBase/3DMaxBaseV026.md)
 
 #### [027_XXXXXXX](./3DMaxBase/3DMaxBaseV027.md)
 
