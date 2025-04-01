@@ -67,6 +67,12 @@ ________________________________________________________________________________
 
 - #### **[UE4特效](./UE_Effect/UE_Effect_Menu.md)**
 
-## 3DMax建模
+## 3DMax
 
-- #### **[3DMax基础学习-目录](./3DMax/3DMaxBasicsMenu.md)**
+###   建模
+
+- #### **[3DMax建模基础学习-目录](./3DMax/3DMaxBasicsMenu.md)**
+
+###   动画
+
+- #### **[3DMax动画基础学习-目录](./3DMax/3DMaxAnimationMenu.md)**
