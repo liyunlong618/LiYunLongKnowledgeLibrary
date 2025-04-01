@@ -16,9 +16,9 @@ ________________________________________________________________________________
 
 #### [003_XXXXXXX](./3DMaxAnimation/3DMaxAnimationv003.md)
 
-#### [004_XXXXXXX](./3DMaxAnimation/3DMaxAnimationv004.md)
+#### [004_摆人物Pose —— 马里奥](./3DMaxAnimation/3DMaxAnimationv004.md)
 
-#### [005_XXXXXXX](./3DMaxAnimation/3DMaxAnimationv005.md)
+#### [005_武士Pose姿势动态与张力的建议](./3DMaxAnimation/3DMaxAnimationv005.md)
 
 #### [006_XXXXXXX](./3DMaxAnimation/3DMaxAnimationv006.md)
 
