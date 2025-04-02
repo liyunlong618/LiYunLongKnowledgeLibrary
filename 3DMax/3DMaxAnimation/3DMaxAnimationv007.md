@@ -168,5 +168,10 @@ ________________________________________________________________________________
 > ![4](./Image/3DMaxAnimationv007/4.gif)![5](./Image/3DMaxAnimationv007/5.gif)![6](./Image/3DMaxAnimationv007/6.gif)
 
 ------
+## 存档备份
+> [3DMaxAnimationv007.zip](Save\3DMaxAnimationv007.zip)
+
+------
+
 
 [^1]: 人物走路是腿带动盆骨也就是胯部转向，所以走路时腿部带动的屁股，转向速度会略微滞后
