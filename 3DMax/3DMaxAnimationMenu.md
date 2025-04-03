@@ -24,7 +24,7 @@ ________________________________________________________________________________
 
 #### [007_女性走路动画 步骤拆解（1）](./3DMaxAnimation/3DMaxAnimationv007.md)
 
-#### [008_XXXXXXX](./3DMaxAnimation/3DMaxAnimationv008.md)
+#### [008_女性走路动画 步骤拆解（2）](./3DMaxAnimation/3DMaxAnimationv008.md)
 
 #### [009_XXXXXXX](./3DMaxAnimation/3DMaxAnimationv009.md)
 
