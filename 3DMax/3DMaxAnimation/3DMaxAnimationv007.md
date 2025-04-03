@@ -22,7 +22,7 @@ ________________________________________________________________________________
 > 2. 编辑选择集，重命名、添加或删除骨骼
 > 3. 使用大纲视图创建层级，隐藏或显示骨骼
 >
-> ![image-20250402014944765](./Image/3DMaxAnimationv006/image-20250402014944765.png)
+> ![image-20250402014944765](./Image/3DMaxAnimationv007/image-20250402014944765.png)
 
 ------
 
@@ -67,11 +67,11 @@ ________________________________________________________________________________
 >
 > ![image-20250403001022804](./Image/3DMaxAnimationv007/image-20250403001022804.png)
 
-> ![image-20250402040956316](./Image/3DMaxAnimationv006/image-20250402040956316.png)![image-20250402035938790](./Image/3DMaxAnimationv006/image-20250402035938790.png)![image-20250402040823960](./Image/3DMaxAnimationv006/image-20250402040823960.png)![image-20250402040213820](./Image/3DMaxAnimationv006/image-20250402040213820.png)![image-20250402040330220](./Image/3DMaxAnimationv006/image-20250402040330220.png)
+> ![image-20250402040956316](./Image/3DMaxAnimationv007/image-20250402040956316.png)![image-20250402035938790](./Image/3DMaxAnimationv007/image-20250402035938790.png)![image-20250402040823960](./Image/3DMaxAnimationv007/image-20250402040823960.png)![image-20250402040213820](./Image/3DMaxAnimationv007/image-20250402040213820.png)![image-20250402040330220](./Image/3DMaxAnimationv007/image-20250402040330220.png)
 
 ### 2.两脚交替的间帧（10帧左右）两脚错开、脚掌向外、小腿内扣
 
-> ![image-20250402040611805](./Image/3DMaxAnimationv006/image-20250402040611805.png)![image-20250402034429696](./Image/3DMaxAnimationv006/image-20250402034429696.png)
+> ![image-20250402040611805](./Image/3DMaxAnimationv007/image-20250402040611805.png)![image-20250402034429696](./Image/3DMaxAnimationv007/image-20250402034429696.png)
 
 ------
 
