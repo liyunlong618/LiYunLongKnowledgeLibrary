@@ -65,144 +65,59 @@ _____
 >    Info.bUseAsyncFadeOut = true; // 后台线程处理淡出
 > ```
 >
+
+_____
+
+## `DebugHeader.h`中封装功能`FSlateNotificationManager::AddNotification`
+
+> ```cpp
+> inline void SendNotification(const FString& Message, const float& FadeOutDuration = 7.f)
+> {
+>     FNotificationInfo Info(FText::FromString(Message));
+>     Info.FadeOutDuration = FadeOutDuration;
+>     FSlateNotificationManager::Get().AddNotification(Info);
+> }
+> ```
+
+_____
+
+## 创建成功时调用
+
+> ```cpp
+> void UQuickAssetAction::DuplicateAssets(int32 DuplicateNum)
+> {
+>     if (DuplicateNum <= 0)
+>     {
+>        SendMsgDiaLog(EAppMsgType::Ok, TEXT("数量必须大于0"));
+>        return;
+>     }
+>     TArray<FAssetData> SelectedAssetData = UEditorUtilityLibrary::GetSelectedAssetData();
+>     uint32 Counter = 0;
+>     for (const FAssetData& Data : SelectedAssetData)
+>     {
+>        for (int i = 0; i < DuplicateNum; ++i)
+>        {
+>           const FString SourceAssetPath = Data.GetSoftObjectPath().ToString();
+>           const FString NewDuplicateName = Data.AssetName.ToString() + TEXT("_") + FString::FromInt(i + 1);
+>           const FString NewPathName = FPaths::Combine(Data.PackagePath.ToString(), NewDuplicateName);
 > 
-
-_____
-
-## 标题
-
-> 内容内容内容内容内容内容
-
-_____
-
-## 标题
-
-> 内容内容内容内容内容内容
-
-_____
-
-## 标题
-
-> 内容内容内容内容内容内容
-
-_____
-
-## 标题
-
-> 内容内容内容内容内容内容
-
-_____
-
-## 标题
-
-> 内容内容内容内容内容内容
-
-_____
-
-## 标题
-
-> 内容内容内容内容内容内容
-
-_____
-
-## 标题
-
-> 内容内容内容内容内容内容
-
-_____
-
-## 标题
-
-> 内容内容内容内容内容内容
-
-_____
-
-## 标题
-
-> 内容内容内容内容内容内容
-
-_____
-
-## 标题
-
-> 内容内容内容内容内容内容
-
-_____
-
-## 标题
-
-> 内容内容内容内容内容内容
-
-_____
-
-## 标题
-
-> 内容内容内容内容内容内容
-
-_____
-
-## 标题
-
-> 内容内容内容内容内容内容
-
-_____
-
-## 标题
-
-> 内容内容内容内容内容内容
-
-_____
-
-## 标题
-
-> 内容内容内容内容内容内容
-
-_____
-
-## 标题
-
-> 内容内容内容内容内容内容
-
-_____
-
-## 标题
-
-> 内容内容内容内容内容内容
-
-_____
-
-## 标题
-
-> 内容内容内容内容内容内容
-
-_____
-
-## 标题
-
-> 内容内容内容内容内容内容
-
-_____
-
-## 标题
-
-> 内容内容内容内容内容内容
-
-_____
-
-## 标题
-
-> 内容内容内容内容内容内容
-
-_____
-
-## 标题
-
-> 内容内容内容内容内容内容
-
-_____
-
-## 标题
-
-> 内容内容内容内容内容内容
+>           if (UEditorAssetLibrary::DuplicateAsset(SourceAssetPath, NewPathName))
+>           {
+>              SendNotification(TEXT("成功创建对象[ ") + NewDuplicateName + TEXT(" ]"));
+>              ++Counter;
+>           }
+>           else
+>           {
+>              SendNotification(TEXT("创建对象[ ") + NewDuplicateName + TEXT(" ] 失败"));
+>           }
+>        }
+>     }
+>     if (Counter > 0)
+>     {
+>        Print(TEXT("成功创建对象[ ") + FString::FromInt(Counter) + TEXT(" ]个"), FColor::Green);
+>        PrintLog(TEXT("成功创建对象[ ") + FString::FromInt(Counter) + TEXT(" ]个"));
+>     }
+> }
+> ```
 
 _____
