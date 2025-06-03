@@ -1,6 +1,6 @@
 # **【使用Markdown】**
 ____________________________________
-<img src=".\\MarkdownCopyMenu_Image\\1.png" width="30%">
+![](./Image/MarkdownCopyMenu_Image/1.png)
 
 [**【使用Markdown】**](https://blog.csdn.net/qq_40818172/article/details/126260661)
 
