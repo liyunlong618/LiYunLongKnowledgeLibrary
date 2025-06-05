@@ -7,13 +7,7 @@ ________________________________________________________________________________
 
 ## 目录
 
-- [UE小知识点](#ue小知识点)
-  - [目录](#目录)
-    - [`GitHub` 拉取虚幻引擎源码](#github-拉取虚幻引擎源码)
-    - [代码优化](#代码优化)
-    - [检查目标对象是否实现了接口,使用 `Implements` 函数](#检查目标对象是否实现了接口使用-implements-函数)
-    - [接口的全局静态函数](#接口的全局静态函数)
-    - [使用 `懒加载单例模式`（Lazy Initialization Singleton Pattern）的两种方法](#使用-懒加载单例模式lazy-initialization-singleton-pattern的两种方法)
+[TOC]
 
 
 
@@ -254,7 +248,9 @@ ________________________________________________________________________________
 
 ------
 
-## 指针常量和常量指针最典型的例子
+## UE中`指针常量`和`常量指针`典型的例子
+
+源码中较为常用
 
 > **常量指针：**
 >
@@ -272,8 +268,8 @@ ________________________________________________________________________________
 >
 > ```cpp
 > AActor* const Actor = GetWorld()->SpawnActor(...);
-> Actor->SetActorLocation(...);  // ✅ 合法：修改对象内容
-> Actor = nullptr;               // ❌ 编译错误：指针本身不可修改
+> Actor->SetActorLocation(...);  				  // ✅ 合法：修改对象内容
+> Actor = nullptr;               				  // ❌ 编译错误：指针本身不可修改
 > 
 > const AActor* Actor = FindActorById(123);
 > FVector Location = Actor->GetActorLocation();  // ✅ 合法：读取对象内容
@@ -283,17 +279,69 @@ ________________________________________________________________________________
 
 ------
 
+## 软引用`TSoftObjectPtr`和`TSoftClassPtr`
 
+TObjectPtr，TSubCLassOf等等，硬引用在对象初始化时就加载进内存，一些暂时用不到的资源会占用内存；
 
+TSubObjectPtr，TSoftClassPtr等，在资源被使用的时候才被加载进内存，随时灵活加载，减小加载负担，缩短启动事件。
 
+### 常用API
 
+> ```cpp
+> // 如果被引用资源存在于内存中，将返回这个资源对象；
+> TSoftObjectPtr.Get();
+> 
+> // 判断路径为空
+> TSoftObjectPtr.IsNull();
+> 
+> // 判断资源是否已加载到内存中
+> // 注意：IsValid() 不可用于判断路径有效性（应使用 IsNull()）。
+> // 资源还没有被加载进内存，且该指针指向一个有效的Object才返回true。
+> TSoftObjectPtr.IsValid();
+> 
+> // 判断资源是否正在加载
+> // 当 Get() 返回 nullptr（资源未加载）且 ObjectID 有效（路径有效）时，返回 true。
+> // 资源还没有被加载进内存，且该指针指向一个有效的Object才返回true。
+> TSoftObjectPtr.IsPending();
+> 
+> // 判断加载完成
+> TSoftObjectPtr.Get() || TSoftObjectPtr.IsValid()
+> ```
+>
+> ```cpp
+> // 同步加载
+> // 强制加载并直接返回资源指针（失败返回 nullptr）。
+> TSoftObjectPtr.LoadSynchronous();
+> 
+> // 异步加载
+> // 示例:
+> FStreamableManager& Streamable = ...;
+>   Streamable.RequestAsyncLoad(TextureRef.ToSoftObjectPath(), [TextureRef]() 
+>   {
+>       if (TextureRef.IsValid()) 
+>       {
+>           UTexture2D* LoadedTexture = TextureRef.Get(); // 资源已就绪
+>       }
+>   });
+> ```
+>
+> | **状态**   | **方法**    | **返回条件**                                      |
+> | :--------- | :---------- | :------------------------------------------------ |
+> | 路径为空   | IsNull()    | 资源路径未设置或无效 (ObjectID 无效)              |
+> | 资源已加载 | IsValid()   | 资源在内存中且可用 (Get() 非空)                   |
+> | 资源加载中 | IsPending() | 路径有效但资源未加载 (Get() 为空且 ObjectID 有效) |
+> | 加载完成   | Get()       | 返回非空指针（同步/异步加载成功后）               |
 
+### **资源卸载**
 
+- 资源无引用时自动回收，或手动调用 `Unload()`
 
+> ```cpp
+> // 手动卸载
+> TSoftObjectPtr.Unload();
+> ```
 
-
-
-
+------
 
 
 
