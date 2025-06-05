@@ -89,55 +89,89 @@ ________________________________________________________________________________
 
 ------
 
-## 使用 `懒加载单例模式`（Lazy Initialization Singleton Pattern）的两种方法
+## 单例eg
 
-比如在A中申请结构体，在A源文件中，声明和定义一个结构体。在别的类中需要使用时，引用这个A的头文件即可
+### 单例Manager
 
-比如：
+> ```cpp
+> // .h
+> class  MyManager
+> {
+> public:
+>     
+>     static MyManager& Get()
+>     {
+>        return Manager;
+>     };
+> private:
+>     
+>     MyManager();
+>     
+>     ~MyManager() = default;
+>     
+>     MyManager(const MyManager&) = delete;
+>     
+>     static MyManager Manager;
+> };
+> // .cpp
+> 
+> // 头文件定义源文件声明静态变量,更安全正规
+> MyManager MyManager::MTManager;
+> 
+> MyManager::MyManager()
+> {
+> 	//构造中初始化配置
+> }
+> ```
 
-在A.cpp中
+### 使用 `懒加载单例模式`（Lazy Initialization Singleton Pattern）的两种方法
 
-- 这里有两种方式
-
-  - 一种是 `类内` 定义静态获取函数
-
-    > ```CPP
-    > struct AAA
-    > {
-    >  AAA()
-    >  {
-    >  }
-    >  bool b = false;
-    >  static const AAA& Get_AAA()/*创建一个外部获取的静态函数*/
-    > 	{
-    >  		static AAA a;/*该结构体的静态变量并返回*/
-    > 	 	return a;
-    > 	}
-    > };
-    > ```
-    >
-    > 调用时使用API：`AAA::Get_AAA().b`  即可拿到参数
-    >
-  
-  - 另一种是 `类外` 定义静态获取函数
-  
-    > ```CPP
-    > struct AAA
-    > {
-    >     AAA()
-    >     {
-    >     }
-    >     bool b = false;
-    > };
-    > static const AAA& Get_AAA()/*创建一个外部获取的静态函数*/
-    > {
-    >     static AAA a;/*该结构体的静态变量并返回*/
-    >     return a;
-    > }
-    > 
-    > ```
-    >
-    > 调用时使用API：`Get_AAA().b`  即可拿到参数
+> 比如在A中申请结构体，在A源文件中，声明和定义一个结构体。在别的类中需要使用时，引用这个A的头文件即可
+>
+> 比如：
+>
+> 在A.cpp中
+>
+> - 这里有两种方式
+>
+>   - 一种是 `类内` 定义静态获取函数
+>
+>     > ```CPP
+>     > struct AAA
+>     > {
+>     > AAA()
+>     > {
+>     > }
+>     > bool b = false;
+>     > static const AAA& Get_AAA()/*创建一个外部获取的静态函数*/
+>     > 	{
+>     > 		static AAA a;/*该结构体的静态变量并返回*/
+>     > 	 	return a;
+>     > 	}
+>     > };
+>     > ```
+>     >
+>     > 调用时使用API：`AAA::Get_AAA().b`  即可拿到参数
+>
+>   - 另一种是 `类外` 定义静态获取函数
+>
+>     > ```CPP
+>     > struct AAA
+>     > {
+>     >  AAA()
+>     >  {
+>     >  }
+>     >  bool b = false;
+>     > };
+>     > static const AAA& Get_AAA()/*创建一个外部获取的静态函数*/
+>     > {
+>     >  static AAA a;/*该结构体的静态变量并返回*/
+>     >  return a;
+>     > }
+>     > 
+>     > ```
+>     >
+>     > 调用时使用API：`Get_AAA().b`  即可拿到参数
 
 ------
 
