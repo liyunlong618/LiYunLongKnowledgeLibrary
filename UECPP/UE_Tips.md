@@ -370,7 +370,44 @@ TSubObjectPtr，TSoftClassPtr等，在资源被使用的时候才被加载进内
 
 ### eg
 
-> 
+> ```cpp
+> bool UFPAudioConfig::CheckAndLoadSoftObject(const FName& FindName, TSoftObjectPtr<UMetaSoundSource>& SoftSound)
+> {
+>     if (SoftSound.IsNull())
+>     {
+>        UE_LOG(LogTemp, Warning, TEXT("not find UMetaSoundSource path is null !!! FName :[%s]"), *FindName.ToString())
+>        return false;
+>     }
+>     if (SoftSound.IsPending())
+>     {
+>        if (SoftSound.IsValid())
+>        {
+>           // 已加载到内存
+>           return true;
+>        }
+>        else
+>        {
+>           // 正在异步加载中,这里使用同步加载暂不考虑,正常项目需要考虑
+>        }
+>     }
+>     else
+>     {
+>        UE_LOG(LogTemp, Log, TEXT("UMetaSoundSource not loaded need load FName :[%s]"), *FindName.ToString())
+>        if (UMetaSoundSource* MetaSoundSource = SoftSound.LoadSynchronous())
+>        {
+>           UE_LOG(LogTemp, Log, TEXT("UMetaSoundSource load successful! FName :[%s]"), *FindName.ToString())
+>           SoftSound = MetaSoundSource;
+>           return true;
+>        }
+>        else
+>        {
+>           UE_LOG(LogTemp, Log, TEXT("UMetaSoundSource LoadSynchronous faild FName :[%s]"), *FindName.ToString())
+>           return false;
+>        }
+>     }
+>     return false;
+> }
+> ```
 
 ### **资源卸载**
 
