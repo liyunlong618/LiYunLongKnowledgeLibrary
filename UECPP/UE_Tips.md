@@ -11,6 +11,8 @@ ________________________________________________________________________________
 
 
 
+#### [**创建自定义ini文件并在虚幻项目编辑中修改和打包**](./More/UE_MakeCustomINI.md)
+
 ___________________________________________________________________________________________
 
 ## `GitHub` 拉取虚幻引擎源码
@@ -350,13 +352,13 @@ TSubObjectPtr，TSoftClassPtr等，在资源被使用的时候才被加载进内
 > // 异步加载
 > // 示例:
 > FStreamableManager& Streamable = ...;
->   Streamable.RequestAsyncLoad(TextureRef.ToSoftObjectPath(), [TextureRef]() 
->   {
->       if (TextureRef.IsValid()) 
->       {
->           UTexture2D* LoadedTexture = TextureRef.Get(); // 资源已就绪
->       }
->   });
+> Streamable.RequestAsyncLoad(TextureRef.ToSoftObjectPath(), [TextureRef]() 
+> {
+>    if (TextureRef.IsValid()) 
+>    {
+>        UTexture2D* LoadedTexture = TextureRef.Get(); // 资源已就绪
+>    }
+> });
 > ```
 >
 > | **状态**   | **方法**    | **返回条件**                                      |
@@ -365,6 +367,10 @@ TSubObjectPtr，TSoftClassPtr等，在资源被使用的时候才被加载进内
 > | 资源已加载 | IsValid()   | 资源在内存中且可用 (Get() 非空)                   |
 > | 资源加载中 | IsPending() | 路径有效但资源未加载 (Get() 为空且 ObjectID 有效) |
 > | 加载完成   | Get()       | 返回非空指针（同步/异步加载成功后）               |
+
+### eg
+
+> 
 
 ### **资源卸载**
 
