@@ -32,7 +32,8 @@ ________________________________________________________________________________
 
 [【无废话30分钟】Lua快速入门教程 - 4K超清_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1vf4y1L7Rb/?spm_id_from=333.880.my_history.page.click)
 
-
+Lua基础语法
+[CSDN链接_Lua基础语法](https://blog.csdn.net/m0_74189279/article/details/148214407)
 
 
 ### 在网页端使用`Lua` ：[LuatOS 文档](https://wiki.luatos.com/)
