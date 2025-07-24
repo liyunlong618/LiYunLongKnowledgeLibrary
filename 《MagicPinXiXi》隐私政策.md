@@ -1,4 +1,4 @@
-# **《FruitParadise》隐私政策**
+# **《MagicPinXiXi》隐私政策**
 
 
 **最近更新：2025年7月24日**
