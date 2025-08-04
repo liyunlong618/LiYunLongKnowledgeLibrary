@@ -76,3 +76,41 @@ function M:SetButtonMaterial(DyanmicMaterialInstance)
     self.Button_28:SetStyle(FButtonStyle)
 end
 ```
+
+------
+
+## 绑定回调函数
+
+```lua
+function M:OnScoreChangedDelegate_Callback(Score)
+    self.AddToScore = Score - self.OldScore
+    self.OldScore = Score
+    local ScoreText = UE.UKismetTextLibrary.Conv_IntToText(Score, false, true, 1, 324)
+
+    self.ScoreTextBlock_75:SetText(ScoreText)
+    self:PlayAnimationForward(UE.ScoreTextChangedAnim, 1.0, false)
+    UE.UFPAudioSubsystem.NativePlayAudio(self, "AddGold")
+end
+
+function M:Construct()
+    local TileSubsystem = UE.ULuaLibrary.GetFPTileMatchingSubsystem(self)
+    if not TileSubsystem then
+        print("not found TileSubsystem")
+        return
+    end
+    TileSubsystem.OnScoreChangedDelegate:Add(self, self.OnScoreChangedDelegate_Callback)
+
+    print("TileSubsystem.OnScoreChangedDelegate.Add")
+end
+```
+
+
+
+------
+
+## 获取子系统，需要额外创建CPP方法
+
+```lua
+local TileSubsystem = UE.ULuaLibrary.GetFPTileMatchingSubsystem(self)
+```
+
