@@ -1,4 +1,4 @@
-___________________________________________________________________________________________
+XXXXXX___________________________________________________________________________________________
 ###### [GoLibraryMainMenu](../../../_LibraryMainMenu_.md)
 ___________________________________________________________________________________________
 
@@ -10,54 +10,63 @@ ________________________________________________________________________________
 
 ### 原理讲解部分
 
-- #### [ALSv001项目设置](./Detail/ALSv001.md)
+- #### [ALSv001项目设置](./ALSv4Learn/ALSv001.md)
 
-- #### [ALSv002 骨架-骨骼-姿势-动画](./Detail/ALSv002.md)
+- #### [ALSv002 骨架-骨骼-姿势-动画](./ALSv4Learn/ALSv002.md)
 
-- #### [ALSv003 叠加动画（BlendSpace）](./Detail/ALSv003.md)
+- #### [ALSv003 叠加动画（BlendSpace）](./ALSv4Learn/ALSv003.md)
 
-- #### [ALSv004 混合空间（BlendSpace）](./Detail/ALSv004.md)
+- #### [ALSv004 混合空间（BlendSpace）](./ALSv4Learn/ALSv004.md)
 
-- #### [ALSv005 瞄准偏移（AimOffset）](./Detail/ALSv005.md)
+- #### [ALSv005 瞄准偏移（AimOffset）](./ALSv4Learn/ALSv005.md)
 
-- #### [ALSv006 动画蓝图](./Detail/ALSv006.md)
+- #### [ALSv006 动画蓝图](./ALSv4Learn/ALSv006.md)
 
-- #### [ALSv001项目设置](./Detail/ALSv007.md)
+- #### [XXXXXX](./ALSv4Learn/ALSv007.md)
 
-- #### [ALSv001项目设置](./Detail/ALSv008.md)
+- #### [XXXXXX](./ALSv4Learn/ALSv008.md)
 
-- #### [ALSv001项目设置](./Detail/ALSv009.md)
+- #### [XXXXXX](./ALSv4Learn/ALSv009.md)
 
-- #### [ALSv001项目设置](./Detail/ALSv0010.md)
+- #### [XXXXXX](./ALSv4Learn/ALSv0010.md)
 
-- #### [ALSv001项目设置](./Detail/ALSv0011.md)
+- #### [XXXXXX](./ALSv4Learn/ALSv0011.md)
 
-- #### [ALSv001项目设置](./Detail/ALSv0012.md)
+- #### [XXXXXX](./ALSv4Learn/ALSv0012.md)
 
-### 复刻：参考[【UE5】【3C】ALSv4重构分析（一） : 更好的ALS学习体验 - 知乎](https://zhuanlan.zhihu.com/p/604888297?utm_medium=social&utm_psn=1859793028216135680&utm_source=wechat_session)
+## 高级运动系统复刻与解耦
 
-- #### [ALSv001项目设置](./Detail/ALSv001.md)
+> - 知乎文档参考：
+>
+>   [【UE5】【3C】ALSv4重构分析（一） : 更好的ALS学习体验 - 知乎](https://zhuanlan.zhihu.com/p/604888297?utm_medium=social&utm_psn=1859793028216135680&utm_source=wechat_session)
+>
+> - 视频参考：
+>
+>   [浅唱不会UE——高级运动系统解耦和复刻第一期_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1ja41197XQ/?spm_id_from=333.788.videopod.episodes&vd_source=9e1e64122d802b4f7ab37bd325a89e6c&p=2)
 
-- #### [ALSv002 骨架-骨骼-姿势-动画](./Detail/ALSv002.md)
 
-- #### [ALSv001项目设置](./Detail/ALSv003.md)
+- #### [XXXXXX](./ALSv4Reproduce/ALSv4Reproduce_v001.md)
 
-- #### [ALSv001项目设置](./Detail/ALSv004.md)
+- #### [XXXXXX](./ALSv4Reproduce/ALSv4Reproduce_v002.md)
 
-- #### [ALSv001项目设置](./Detail/ALSv005.md)
+- #### [XXXXXX](./ALSv4Reproduce/ALSv4Reproduce_v003.md)
 
-- #### [ALSv001项目设置](./Detail/ALSv006.md)
+- #### [XXXXXX](./ALSv4Reproduce/ALSv4Reproduce_v004.md)
 
-- #### [ALSv001项目设置](./Detail/ALSv007.md)
+- #### [XXXXXX](./ALSv4Reproduce/ALSv4Reproduce_v005.md)
 
-- #### [ALSv001项目设置](./Detail/ALSv008.md)
+- #### [XXXXXX](./ALSv4Reproduce/ALSv4Reproduce_v006.md)
 
-- #### [ALSv001项目设置](./Detail/ALSv009.md)
+- #### [XXXXXX](./ALSv4Reproduce/ALSv4Reproduce_v007.md)
 
-- #### [ALSv001项目设置](./Detail/ALSv0010.md)
+- #### [XXXXXX](./ALSv4Reproduce/ALSv4Reproduce_v008.md)
 
-- #### [ALSv001项目设置](./Detail/ALSv0011.md)
+- #### [XXXXXX](./ALSv4Reproduce/ALSv4Reproduce_v009.md)
 
-- #### [ALSv001项目设置](./Detail/ALSv0012.md)
+- #### [XXXXXX](./ALSv4Reproduce/ALSv4Reproduce_v0010.md)
+
+- #### [XXXXXX](./ALSv4Reproduce/ALSv4Reproduce_v0011.md)
+
+- #### [XXXXXX](./ALSv4Reproduce/ALSv4Reproduce_v0012.md)
 
 ------
