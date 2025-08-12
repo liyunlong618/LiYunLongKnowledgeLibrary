@@ -19,7 +19,7 @@ _____
 
 ## 引入模块，为了使用`UEditorUtilityLibrary`和`UEditorAssetLibrary`
 
-详细可以参考这个[CSDN链接：UE4模块系统详解](https://blog.csdn.net/pp1191375192/article/details/103139304/)
+详细可以参考这个[CSDN链接：UE4模块系统详解](https://blog.csdn.net/pp1191375192/article/details/103139304/) [知乎 Unreal Engine 编辑器拓展 -- 1、Asset Actions](https://zhuanlan.zhihu.com/p/29819015360)
 
 > ```c#
 > "Blutility",
