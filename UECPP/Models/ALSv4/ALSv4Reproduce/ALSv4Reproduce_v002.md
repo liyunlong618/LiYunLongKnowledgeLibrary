@@ -104,19 +104,19 @@
 
 ### 修改移动组件配置
 
-| 移动组件参数：   | 英文 | 修改为： | 作用 |
-| ---------------- | ---- | -------- | ---- |
-| 最大速度         |      | 1500.f   |      |
-| 制动摩擦因子     |      | 0.f      |      |
-| 蹲伏胶囊提半高   |      | 60cm     |      |
-| 最小模拟行走速度 |      | 25cm/s   |      |
-| 蹲伏时可走出平台 |      | true     |      |
-| 到达半径阈值     |      | 20cm     |      |
-| 到达额外高度     |      | 0cm      |      |
-| 平台检查阈值     |      | 0cm      |      |
-| 空气控制         |      | 0.15     |      |
-| 可蹲伏           |      | true     |      |
-| 可飞行           |      | true     |      |
+| 中文名           | 英文字段                             | 默认值     | 修改为：                                   | 含义 / 作用（简明）                                          | 对游戏手感的影响                                             | 常见建议 / 注意事项                                          |
+| ---------------- | ------------------------------------ | :--------: | :----------------------------------------: | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 最大加速度       | `Max Acceleration`                   | `2048.0`   | `1500.f`                                   | 角色在地面上因输入被加速的**加速度值**（引擎单位：cm/s²）。控制从当前速度到目标速度改变的快慢。 | 值越大，角色从静止到达到目标速度越快（更“灵敏 / 瞬移感”）；值低则起步显得缓慢、拖沓。 | 例如 FPS 常用较高值（1000–5000 cm/s²）；平台/慢速游戏用小值。注意：与 `Max Walk Speed`、摩擦等配合决定最终曲线。([Epic Games Developers](https://dev.epicgames.com/documentation/en-us/unreal-engine/setting-up-character-movement?utm_source=chatgpt.com)) |
+| 制动摩擦因子     | `Braking Friction Factor`            | `2.0`      | `0.f`                                      | 用于缩放“制动摩擦（BrakingFriction）”的系数。制动摩擦为速度相关的摩擦阻力（当没有加速度输入或超过最大速度时生效）。 | 值越大，松开输入后越快被“摩擦”停下（更快停止、短滑行）；值为 0 时摩擦制动不生效（只依赖常量制动减速度）。 | 如果想更自然的滑行/惯性感可减小；若想瞬停（锐利操控）可增大并配合 `Use Separate Braking Friction`/`BrakingFriction`。实际制动效果是 `BrakingFriction * BrakingFrictionFactor`。([Epic Games Developers](https://dev.epicgames.com/documentation/en-us/unreal-engine/API/Runtime/Engine/GameFramework/UCharacterMovementComponent/BrakingFriction?utm_source=chatgpt.com)) |
+| 蹲伏胶囊半高     | `Crouched Half Height`               | `40.0 cm`  | `60cm`                                     | 角色 Capsule 在**蹲伏时**的半高度（单位 cm）。控制蹲下后的碰撞高度。 | 影响能否通过低矮通道、镜头/摄像机位置与模型是否会“下陷”到地面。 | 修改时注意摄像机/网格偏移（可能要调整 Mesh 相对 Capsule 的位置），改动过大会造成角色嵌地或卡住。([Epic Developer Community Forums](https://forums.unrealengine.com/t/where-is-the-set-crouched-half-height/435783?utm_source=chatgpt.com)) |
+| 最小模拟行走速度 | `Min Analog Walk Speed`              | `0.0 cm/s` | `25cm/s`                                   | 在使用模拟输入（比如手柄摇杆）时，**最小的地面速度目标值**（单位 cm/s）。当摇杆很小倾斜时仍会被加速到这个速度。 | 防止摇杆轻微倾斜导致非常低速移动（会让动画/移动不同步、出现“抖动”）；设置后轻微输入也能保证最低移动速度。 | 对于需要摇杆“死区”或平滑手感的游戏很有用。把它设为合适的步态同步速度（示例：25cm/s 对应慢走）。([Epic Games Developers](https://dev.epicgames.com/documentation/en-us/unreal-engine/python-api/class/CharacterMovementComponent?application_version=5.0&utm_source=chatgpt.com), [Epic Developer Community Forums](https://forums.unrealengine.com/t/minimum-movement-speed/19759?utm_source=chatgpt.com)) |
+| 蹲伏时可走出平台 | `Can Walk Off Ledges When Crouching` | ❌   | ✅                                    | 是否允许在**蹲伏状态下**从平台边缘走下（布尔）。             | `true`：蹲伏时遇到平台边缘会继续向下走/掉下；`false`：会停住或被当作“不可走出”。 | 如果你希望蹲伏更保守（避免误掉落），设为 `false`。否则设 `true` 以保证行为与站立时一致。([Epic Developer Community Forums](https://forums.unrealengine.com/t/why-cant-my-character-walk-off-ledges/287641?utm_source=chatgpt.com)) |
+| 到达半径阈值     | `Perch Radius Threshold`             | `0.0 cm` | `20cm`                                     | 判定“能否站在（perch）/小平台上”的最大半径阈值（cm）。用于角色在接近小台阶/凸起时的检测。 | 值较大时，角色更容易“站上”狭窄或小的凸起；值较小会在小凸起处被视为“边缘/掉落”而不能站稳。 | 配合 `Perch Additional Height` 与 `Ledge Check Threshold` 调整，防止角色在微小地形上悬空或卡住。([Epic Developer Community Forums](https://forums.unrealengine.com/t/player-capsule-collision-not-fall-down/74637?utm_source=chatgpt.com)) |
+| 到达额外高度     | `Perch Additional Height`            | `40.0 cm` | `0cm`                                      | 在判定能否 perching/站上小台阶时额外加上的高度容差（cm）。   | 增大可以让角色更容易“跨上”稍高的台阶；值为 0 则严格按碰撞高度判断。 | 对于有很多小台阶/不平地形的场景，可以适当给一点余量以避免卡脚。([Epic Developer Community Forums](https://forums.unrealengine.com/t/player-capsule-collision-not-fall-down/74637?utm_source=chatgpt.com)) |
+| 平台检查阈值     | `Ledge Check Threshold`              | `4.0 cm` | `0cm`                                      | 用于 ledge 检测的高度/距离阈值（cm），决定何时将表面当作“ledge/边缘”进行特殊处理。 | 阈值影响角色在接触边缘时是否被判定为可走、可 perching 或被卡住。 | 小值会更严格，易停在边缘；大值可能误判导致不想要的跨越。与上面两个参数一并调试。([Epic Developer Community Forums](https://forums.unrealengine.com/t/player-capsule-collision-not-fall-down/74637?utm_source=chatgpt.com)) |
+| 空中控制         | `Air Control`                        | `0.05` | `0.15`                                     | 在空中（Falling）时玩家能对水平移动方向/速度进行的控制强度（通常 0～1，单位无量纲）。1 = 等同地面控制，大于 1 会更强。 | 值越大，空中可以更灵活改变方向（更“鼠标/按键敏感”）。值越小，跳跃后轨迹更受惯性/重力支配。 | 平台动作游戏常给较高空中控制（0.5–1.0），写实物理风格可用较低（0–0.3）。`>1` 会让空中移动比地面还快，需谨慎。([Epic Developer Community Forums](https://forums.unrealengine.com/t/does-character-air-control-1-do-anything/386770?utm_source=chatgpt.com)) |
+| 可游泳           | `Can Swim`                           | ❌    | 是否允许进入 `Swimming` 移动模式（布尔）。 | 开启后角色可进入游泳状态并使用水中移动逻辑；否则遇水会按落下/阻塞处理。 | 如果场景没有水体可以关闭；有水体时配合 `Water` 体积与游泳速度参数使用。([Epic Games Developers](https://dev.epicgames.com/documentation/en-us/unreal-engine/setting-up-character-movement?utm_source=chatgpt.com)) |
+| 可飞行           | `Can Fly`                            | ❌   | ✅                                    | 是否允许进入 `Flying` 移动模式（布尔）。                     | 开启则能切换到飞行/漫游模式，使用飞行移动逻辑；否则无法飞行。 | 常用于 NPC 或有飞行玩法的角色；要注意网络同步与状态切换边界。([Epic Games Developers](https://dev.epicgames.com/documentation/en-us/unreal-engine/setting-up-character-movement?utm_source=chatgpt.com)) |
 
 
 
@@ -130,7 +130,7 @@
 
 ### 人物取消勾选 `UseControlRotationYaw` 
 
-因为我们是独立的摄像机系统
+因为我们是**独立的摄像机系统**
 
 ![image-20250813125244061](./Image/ALSv4Reproduce_v002/image-20250813125244061.png)
 
