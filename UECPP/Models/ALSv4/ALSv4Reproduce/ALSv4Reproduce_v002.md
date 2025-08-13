@@ -262,7 +262,7 @@
 
 - 第三人称锚点参数设置
 
-![image-20250813190826611](./Image/ALSv4Reproduce_v002/image-20250813190826611.png)![BPGraphScreenshot_2025Y-08M-14D-01h-13m-46s-604_00](./Image/ALSv4Reproduce_v002/BPGraphScreenshot_2025Y-08M-14D-01h-13m-46s-604_00.png)
+![image-20250813190826611](./Image/ALSv4Reproduce_v002/image-20250813190826611.png)![BPGraphScreenshot_2025Y-08M-14D-01h-15m-26s-578_00](./Image/ALSv4Reproduce_v002/BPGraphScreenshot_2025Y-08M-14D-01h-15m-26s-578_00.png)
 
 ------
 
