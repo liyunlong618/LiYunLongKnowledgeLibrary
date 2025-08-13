@@ -26,9 +26,7 @@
 
 ------
 
-## XXXXXXXXXXXXX
-
-xxxxxxxxxxxxxxxxxxxxxxxx
+> ## 这一期需要对3C进行简单耦合
 
 ------
 

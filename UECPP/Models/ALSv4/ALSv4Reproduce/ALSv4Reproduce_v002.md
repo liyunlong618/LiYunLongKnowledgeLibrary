@@ -276,6 +276,8 @@
 
 #### 2.在骨骼里面配置
 
+#### ![image-20250814021750387](./Image/ALSv4Reproduce_v002/image-20250814021750387.png)![image-20250814021854724](./Image/ALSv4Reproduce_v002/image-20250814021854724.png)
+
 
 
 ### `插槽`和`网格体`插槽的区别？![image-20250813183805890](./Image/ALSv4Reproduce_v002/image-20250813183805890.png)
