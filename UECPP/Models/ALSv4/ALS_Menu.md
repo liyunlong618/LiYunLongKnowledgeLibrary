@@ -47,7 +47,7 @@ ________________________________________________________________________________
 
 - #### [ALSv4复刻v001 删除要复刻的文件；介绍虚拟骨骼和项目Debug操作](./ALSv4Reproduce/ALSv4Reproduce_v001.md)
 
-- #### [XXXXXX](./ALSv4Reproduce/ALSv4Reproduce_v002.md)
+- #### [ALSv4复刻v002 新建GM/PC/Character/PlayerCameraManager/接口](./ALSv4Reproduce/ALSv4Reproduce_v002.md)
 
 - #### [XXXXXX](./ALSv4Reproduce/ALSv4Reproduce_v003.md)
 
