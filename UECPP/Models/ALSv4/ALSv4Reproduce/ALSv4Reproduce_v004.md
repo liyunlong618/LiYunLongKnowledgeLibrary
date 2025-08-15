@@ -32,9 +32,9 @@
 
 1. `ALS_PlayerCameraManager`中新增`FRotator`类型变量，命名为`DebufViewRotation`
    - 默认值设置为：`FRotator`：
-     - `Roll：0.f`
-     - `Pitch：-5.f`
-     - `Yaw：180.f`
+     - `X：0.f`
+     - `Y：-5.f`
+     - `Z：180.f`
 2. 使用`Lerp`修改，使`DebufViewRotation`影响`TargetCameraRotation`变量
 3. `Lerp`的`Alpha`使用`Override_Debug`曲线，之前在摄像机中添加的[跳转](./ALSv4Reproduce_v003.md#在相机的骨骼网格体中添加曲线)
 
@@ -51,7 +51,7 @@
    - `FRotator`类型，命名为：`CameraRotation`
    - `FVector`类型，命名为：`LagSpeed`
    - 返回值为`FVector`类型
-3. `CalculateAxisLndependentLag`中新建`FRotator`类型局部变量储存`CameraRotationYaw`
+3. `CalculateAxisLndependentLag`中新建`FRotator`类型**局部变量**储存`CameraRotationYaw`
 4. `CalculateAxisLndependentLag`中，分别使用`CurrentLocation`、`TargetLocation`、`CameraRotation`、`LagSpeed`计算插值，再局部变换在转换为世界变换？然后旋转向量，作为返回值
 5. `CustomCameraBehavior`中继续使用`SmoothTargetPivot`过渡到`3P_PivotTarget`，`LagSpeed`分别使用三条`摄像机SkeletalMesh`中添加的曲线[跳转](./ALSv4Reproduce_v003.md#在相机的骨骼网格体中添加曲线)：
    - `PivotLagSpeed_X`
@@ -84,7 +84,8 @@
    - `CameraOffset_Z`
 2. 还需要加上`PivotLocation`的基础位置
 3. 结果需要混合`Debug`模式下的位置
-4. 新建`FVector`类型变量，命名为：`TargetCameraLocation`
+4. 新建`FVector`类型变量，命名为：`DebugViewOffset`，默认值为`FVector(325.f, 0.f, 50.f)`
+5. 新建`FVector`类型变量，命名为：`TargetCameraLocation`
 
 ![image-20250815185232225](./Image/ALSv4Reproduce_v004/image-20250815185232225.png)![BPGraphScreenshot_2025Y-08M-15D-18h-56m-58s-128_00](./Image/ALSv4Reproduce_v004/BPGraphScreenshot_2025Y-08M-15D-18h-56m-58s-128_00.png)
 

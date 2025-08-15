@@ -125,6 +125,8 @@
 
 将相机旋转插值旋转到控制器旋转的角度
 
+1. 创建`FRotator`类型变量，命名为：`TargetCameraRotation`
+
 ![image-20250814033059658](./Image/ALSv4Reproduce_v003/image-20250814033059658.png)
 
 ------
@@ -133,7 +135,7 @@
 
 1. 命名为：`GetCameraBehaviorParam`
    用于：获取动画蓝图里面修改的曲线信息
-2. 给到旋转插值使用的`Speed`
+2. 将摄像机中的曲线：`RotationLagSpeed`给到旋转插值使用的`Speed`
 
 ![BPGraphScreenshot_2025Y-08M-14D-03h-34m-53s-647_00](./Image/ALSv4Reproduce_v003/BPGraphScreenshot_2025Y-08M-14D-03h-34m-53s-647_00.png)![image-20250814164302003](./Image/ALSv4Reproduce_v003/image-20250814164302003.png)
 
