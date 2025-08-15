@@ -42,8 +42,9 @@
 2. 创建两个变量(目的是将`摄像机ABP`和`玩家控制器`/`玩家控制角色`/`摄像机`进行耦合)
    - `PlayerController`类型，命名为：`PlayerController`
    - `Pawn`类型，命名为：`ControlledPawn`
+3. 别忘了配置给`摄像机的SkeletalMesh`
 
-![image-20250814023536507](./Image/ALSv4Reproduce_v003/image-20250814023536507.png)
+![image-20250814023536507](./Image/ALSv4Reproduce_v003/image-20250814023536507.png)![image-20250815204530839](./Image/ALSv4Reproduce_v003/image-20250815204530839.png)
 
 ------
 
@@ -96,23 +97,25 @@
 
 ## 在相机的骨骼网格体中添加曲线
 
-| 曲线                | 用途（需要后面补充） |
-| ------------------- | -------------------- |
-| `CameraOffset_X`    |                      |
-| `CameraOffset_Y`    |                      |
-| `CameraOffset_Z`    |                      |
-| `Override_Debug`    |                      |
-| `PivotLagSpeed_X`   |                      |
-| `PivotLagSpeed_Y`   |                      |
-| `PivotLagSpeed_Z`   |                      |
-| `PivotOffset_X`     |                      |
-| `PivotOffset_Y`     |                      |
-| `PivotOffset_Z`     |                      |
-| `RotationLagSpeed`  |                      |
-| `State_Debug`       | Debug状态            |
-| `State_Default`     | 默认状态             |
-| `State_FirstPerson` | 第一人称状态         |
-| `State_Ragdoll`     | 布娃娃状态           |
+| 曲线                 | 用途（需要后面补充） | 使用时机                                           |
+| -------------------- | -------------------- | -------------------------------------------------- |
+| `CameraOffset_X`     |                      |                                                    |
+| `CameraOffset_Y`     |                      |                                                    |
+| `CameraOffset_Z`     |                      |                                                    |
+| `Override_Debug`     |                      |                                                    |
+| `PivotLagSpeed_X`    |                      |                                                    |
+| `PivotLagSpeed_Y`    |                      |                                                    |
+| `PivotLagSpeed_Z`    |                      |                                                    |
+| `PivotOffset_X`      |                      |                                                    |
+| `PivotOffset_Y`      |                      |                                                    |
+| `PivotOffset_Z`      |                      |                                                    |
+| `RotationLagSpeed`   |                      |                                                    |
+| `State_Debug`        | Debug状态            |                                                    |
+| `State_Default`      | 默认状态             |                                                    |
+| `State_FirstPerson`  | 第一人称状态         |                                                    |
+| `State_Ragdoll`      | 布娃娃状态           |                                                    |
+| `Weight_ADS`         | 第三人称曲线         |                                                    |
+| `Weight_FirstPerson` | 第一人称曲线         | 返回摄像机位置时，用来Lerp，区分第一人称和第三人称 |
 
 ![image-20250814032527788](./Image/ALSv4Reproduce_v003/image-20250814032527788.png)
 
@@ -132,7 +135,7 @@
    用于：获取动画蓝图里面修改的曲线信息
 2. 给到旋转插值使用的`Speed`
 
-![BPGraphScreenshot_2025Y-08M-14D-03h-34m-53s-647_00](./Image/ALSv4Reproduce_v003/BPGraphScreenshot_2025Y-08M-14D-03h-34m-53s-647_00.png)![image-20250814033739657](./Image/ALSv4Reproduce_v003/image-20250814033739657.png)
+![BPGraphScreenshot_2025Y-08M-14D-03h-34m-53s-647_00](./Image/ALSv4Reproduce_v003/BPGraphScreenshot_2025Y-08M-14D-03h-34m-53s-647_00.png)![image-20250814164302003](./Image/ALSv4Reproduce_v003/image-20250814164302003.png)
 
 [返回最上面](#返回菜单)
 

@@ -51,7 +51,7 @@ ________________________________________________________________________________
 
 - #### [ALSv4复刻v003 对3C进行简单耦合;摄像机ABP中添加曲线](./ALSv4Reproduce/ALSv4Reproduce_v003.md)
 
-- #### [XXXXXX](./ALSv4Reproduce/ALSv4Reproduce_v004.md)
+- #### [ALSv4复刻v004 计算摄像机锚点和偏移并处理Debug层混合](./ALSv4Reproduce/ALSv4Reproduce_v004.md)
 
 - #### [XXXXXX](./ALSv4Reproduce/ALSv4Reproduce_v005.md)
 
