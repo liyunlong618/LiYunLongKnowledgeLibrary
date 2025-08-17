@@ -53,7 +53,7 @@ ________________________________________________________________________________
 
 - #### [ALSv4复刻v004 计算摄像机锚点和偏移并处理Debug层混合](./ALSv4Reproduce/ALSv4Reproduce_v004.md)
 
-- #### [XXXXXX](./ALSv4Reproduce/ALSv4Reproduce_v005.md)
+- #### [ALSv4复刻v005 创建调试Debug、输入映射、**目前的摄像机系统分步骤解释**](./ALSv4Reproduce/ALSv4Reproduce_v005.md)
 
 - #### [XXXXXX](./ALSv4Reproduce/ALSv4Reproduce_v006.md)
 
