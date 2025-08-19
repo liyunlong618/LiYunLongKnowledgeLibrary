@@ -64,7 +64,7 @@ ________________________________________________________________________________
 
 - #### [ALSv4复刻v006 玩家角色Tick中获取和计算状态信息](./ALSv4Reproduce/ALSv4Reproduce_v006.md)
 
-- #### [XXXXXX](./ALSv4Reproduce/ALSv4Reproduce_v007.md)
+- #### [ALSv4复刻v007 **简述项目枚举的作用**；新建接口传递玩家BP数据和状态到玩家ABP](./ALSv4Reproduce/ALSv4Reproduce_v007.md)
 
 - #### [XXXXXX](./ALSv4Reproduce/ALSv4Reproduce_v008.md)
 
