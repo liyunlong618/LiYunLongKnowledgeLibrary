@@ -11,7 +11,13 @@
 
 ## 目录
 
-[TOC]
+- [ALSv4复刻v006 玩家角色Tick中获取和计算状态信息](#alsv4复刻v006-玩家角色tick中获取和计算状态信息)
+	- [目录](#目录)
+	- [角色基类`ALS_Base_CharacterBP`的Tick中获取玩家状态信息](#角色基类als_base_characterbp的tick中获取玩家状态信息)
+		- [创建并在Tick中调用方法`SetEssentialValue`计算相关的参数](#创建并在tick中调用方法setessentialvalue计算相关的参数)
+	- [在SetEssentialValue中计算速度、是否移动的布尔、上一次移动的速度角度](#在setessentialvalue中计算速度是否移动的布尔上一次移动的速度角度)
+	- [将函数和变量按分类进行整理](#将函数和变量按分类进行整理)
+
 
 ------
 
