@@ -115,7 +115,7 @@
 9. 创建`float`类型变量，命名为：`AnimYawRate`(当前帧的Yaw轴旋转速率)，上一帧的Yaw旋转减去这一帧的旋转再除以时间
 10. 然后别忘了去`CacheValues`方法里面，更新`PreviousAnimYaw`(上一帧的Yaw轴旋转)
 
-![image-20250819165522127](./Image/ALSv4Reproduce_v006/image-20250819165522127.png)![image-20250819165636301](./Image/ALSv4Reproduce_v006/image-20250819165636301.png)
+![image-20250819214710597](./Image/ALSv4Reproduce_v006/image-20250819214710597.png)![image-20250819165636301](./Image/ALSv4Reproduce_v006/image-20250819165636301.png)
 
 ------
 
