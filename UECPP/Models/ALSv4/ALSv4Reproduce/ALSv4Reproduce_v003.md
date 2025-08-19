@@ -97,25 +97,25 @@
 
 ## 在相机的骨骼网格体中添加曲线
 
-| 曲线                 | 用途（需要后面补充） | 使用时机                                           |
-| -------------------- | -------------------- | -------------------------------------------------- |
-| `CameraOffset_X`     |                      |                                                    |
-| `CameraOffset_Y`     |                      |                                                    |
-| `CameraOffset_Z`     |                      |                                                    |
-| `Override_Debug`     |                      |                                                    |
-| `PivotLagSpeed_X`    |                      |                                                    |
-| `PivotLagSpeed_Y`    |                      |                                                    |
-| `PivotLagSpeed_Z`    |                      |                                                    |
-| `PivotOffset_X`      |                      |                                                    |
-| `PivotOffset_Y`      |                      |                                                    |
-| `PivotOffset_Z`      |                      |                                                    |
-| `RotationLagSpeed`   |                      |                                                    |
-| `State_Debug`        | Debug状态            |                                                    |
-| `State_Default`      | 默认状态             |                                                    |
-| `State_FirstPerson`  | 第一人称状态         |                                                    |
-| `State_Ragdoll`      | 布娃娃状态           |                                                    |
-| `Weight_ADS`         | 第三人称曲线         |                                                    |
-| `Weight_FirstPerson` | 第一人称曲线         | 返回摄像机位置时，用来Lerp，区分第一人称和第三人称 |
+| 曲线                 | 用途（需要后面补充）                                   | 使用时机                                                     |
+| -------------------- | ------------------------------------------------------ | ------------------------------------------------------------ |
+| `CameraOffset_X`     | 相机凝视点 + 这个偏移量X，用来计算最终偏移后的相机位置 | `ALS_PlayerCameraManager::BlueprintUpdateCamera`             |
+| `CameraOffset_Y`     | 相机凝视点 + 这个偏移量Y，用来计算最终偏移后的相机位置 | `ALS_PlayerCameraManager::BlueprintUpdateCamera`             |
+| `CameraOffset_Z`     | 相机凝视点 + 这个偏移量Z，用来计算最终偏移后的相机位置 | `ALS_PlayerCameraManager::BlueprintUpdateCamera`             |
+| `Override_Debug`     | 是否开启Debug模式混合                                  | 需要计算Debug视角混合的场景，一般为相机最终结果计算前最后一步 |
+| `PivotLagSpeed_X`    | `相机凝视点`插值的速度X                                |                                                              |
+| `PivotLagSpeed_Y`    | `相机凝视点`插值的速度Y                                |                                                              |
+| `PivotLagSpeed_Z`    | `相机凝视点`插值的速度Z                                |                                                              |
+| `PivotOffset_X`      | `相机凝视点`偏移量X                                    |                                                              |
+| `PivotOffset_Y`      | `相机凝视点`偏移量Y                                    |                                                              |
+| `PivotOffset_Z`      | `相机凝视点`偏移量Z                                    |                                                              |
+| `RotationLagSpeed`   | 从当前相机角度，插值到`ControlRotation`的速度          | 旋转滞后系统（防眩晕设计）RotationLagSpeed由动画曲线控制，不同状态（奔跑/瞄准）采用不同滞后系数 |
+| `State_Debug`        | Debug状态                                              |                                                              |
+| `State_Default`      | 默认状态                                               |                                                              |
+| `State_FirstPerson`  | 第一人称状态                                           |                                                              |
+| `State_Ragdoll`      | 布娃娃状态                                             |                                                              |
+| `Weight_ADS`         | 第三人称曲线                                           |                                                              |
+| `Weight_FirstPerson` | 第一人称曲线                                           | 返回摄像机位置时，用来Lerp，区分第一人称和第三人称           |
 
 ![image-20250814032527788](./Image/ALSv4Reproduce_v003/image-20250814032527788.png)
 

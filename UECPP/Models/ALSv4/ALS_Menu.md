@@ -44,6 +44,8 @@ ________________________________________________________________________________
 >
 >   [浅唱不会UE——高级运动系统解耦和复刻第一期_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1ja41197XQ/?spm_id_from=333.788.videopod.episodes&vd_source=9e1e64122d802b4f7ab37bd325a89e6c&p=2)
 
+### 摄像机系统
+
 
 - #### [ALSv4复刻v001 删除要复刻的文件；介绍虚拟骨骼和项目Debug操作](./ALSv4Reproduce/ALSv4Reproduce_v001.md)
 
@@ -55,7 +57,12 @@ ________________________________________________________________________________
 
 - #### [ALSv4复刻v005 创建调试Debug、输入映射、**目前的摄像机系统分步骤解释**](./ALSv4Reproduce/ALSv4Reproduce_v005.md)
 
-- #### [XXXXXX](./ALSv4Reproduce/ALSv4Reproduce_v006.md)
+
+
+### 角色六向运动
+
+
+- #### [ALSv4复刻v006 玩家角色Tick中获取和计算状态信息](./ALSv4Reproduce/ALSv4Reproduce_v006.md)
 
 - #### [XXXXXX](./ALSv4Reproduce/ALSv4Reproduce_v007.md)
 
