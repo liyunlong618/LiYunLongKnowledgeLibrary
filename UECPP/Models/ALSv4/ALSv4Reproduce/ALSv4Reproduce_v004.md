@@ -11,7 +11,23 @@
 
 ## 目录
 
-[TOC]
+- [ALSv4复刻v004 计算摄像机锚点和偏移并处理Debug层混合](#alsv4复刻v004-计算摄像机锚点和偏移并处理debug层混合)
+  - [目录](#目录)
+  - [Debug视角相关逻辑](#debug视角相关逻辑)
+  - [从玩家蓝图获取摄像机锚点变换信息`计算过渡信息`储存在`ALS_PlayerCameraManager`中](#从玩家蓝图获取摄像机锚点变换信息计算过渡信息储存在als_playercameramanager中)
+  - [计算`凝视点`位置`PivotLocation`](#计算凝视点位置pivotlocation)
+  - [接下来在`凝视点`位置`PivotLocation`基础上加上摄像机臂的偏移，叠加Debug偏移层最终计算出`摄像机位置`](#接下来在凝视点位置pivotlocation基础上加上摄像机臂的偏移叠加debug偏移层最终计算出摄像机位置)
+  - [接下来要进行射线检测计算当摄像机被墙阻挡时的偏移后位置](#接下来要进行射线检测计算当摄像机被墙阻挡时的偏移后位置)
+  - [返回摄像机相关参数并用于`BlueprintUpdateCamera`](#返回摄像机相关参数并用于blueprintupdatecamera)
+  - [接下来去摄像机ABP`ALS_PlayerCameraBehavior`中修改曲线](#接下来去摄像机abpals_playercamerabehavior中修改曲线)
+  - [修改子类SkeletalMesh并配置到GM测试](#修改子类skeletalmesh并配置到gm测试)
+  - [这里有一个穿墙相关的可以看下](#这里有一个穿墙相关的可以看下)
+  - [涉及到的问题：](#涉及到的问题)
+    - [插值`Lerp`的计算方式](#插值lerp的计算方式)
+    - [插值到`InterpTo`的计算方式](#插值到interpto的计算方式)
+    - [关于节点`UnrotateVector`和`Rotate Vector`](#关于节点unrotatevector和rotate-vector)
+    - [在动画蓝图ABP中使用`ModifyCurve`修改曲线时，最好隐藏Alpha引脚](#在动画蓝图abp中使用modifycurve修改曲线时最好隐藏alpha引脚)
+
 
 ------
 

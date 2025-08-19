@@ -11,7 +11,44 @@
 
 ## 目录
 
-[TOC]
+- [ALSv4复刻v002 新建`GM`/`PC`/`Character`/`PlayerCameraManager`/`接口`](#alsv4复刻v002-新建gmpccharacterplayercameramanager接口)
+  - [目录](#目录)
+  - [一、新建`GM`/`PC`/`Character`](#一新建gmpccharacter)
+      - [新建一个GM，配置到世界场景设置\`](#新建一个gm配置到世界场景设置)
+    - [新建`PC`](#新建pc)
+    - [新建`Character`](#新建character)
+    - [新建子类继承自`ALS_Base_CharacterBP`](#新建子类继承自als_base_characterbp)
+  - [二、修改人物基类`ALS_Base_CharacterBP`](#二修改人物基类als_base_characterbp)
+    - [胶囊体](#胶囊体)
+    - [设置Mesh](#设置mesh)
+    - [修改移动组件配置](#修改移动组件配置)
+    - [`ALS_Base_CharacterBP`上添加ActorTag](#als_base_characterbp上添加actortag)
+    - [人物取消勾选 `UseControlRotationYaw`](#人物取消勾选-usecontrolrotationyaw)
+  - [三、新建CameraManager类](#三新建cameramanager类)
+  - [摄像机系统概述](#摄像机系统概述)
+  - [创建蓝图接口`ALS_Camera_BPI`](#创建蓝图接口als_camera_bpi)
+    - [`ALS_Base_CharacterBP`中重写接口方法](#als_base_characterbp中重写接口方法)
+    - [`ALS_Base_CharacterBP`中创建相机系统相关变量并配置初始值](#als_base_characterbp中创建相机系统相关变量并配置初始值)
+  - [子类重写三个接口方法](#子类重写三个接口方法)
+    - [`BPI_Get_3P_PivotTarget`](#bpi_get_3p_pivottarget)
+      - [其中`GetSocketLocation`获取的是世界坐标的位置，这个需要注意下](#其中getsocketlocation获取的是世界坐标的位置这个需要注意下)
+    - [`BPI_Get_FP_CameraTarget`](#bpi_get_fp_cameratarget)
+    - [`BPI_Get_3P_TraceParams`](#bpi_get_3p_traceparams)
+  - [涉及到的问题：](#涉及到的问题)
+    - [两种使用曲线的方式](#两种使用曲线的方式)
+      - [1.直接创建曲线使用](#1直接创建曲线使用)
+      - [2.在骨骼里面配置](#2在骨骼里面配置)
+      - [](#)
+    - [`插槽`和`网格体`插槽的区别？](#插槽和网格体插槽的区别)
+- [这个问题需要等有时间请教下！！！！！！！！！！！！！！！！](#这个问题需要等有时间请教下)
+    - [骨骼空间(又叫局部空间)、组件空间、世界空间三者区别？](#骨骼空间又叫局部空间组件空间世界空间三者区别)
+    - [UE动画系统的核心流程](#ue动画系统的核心流程)
+    - [为什么是 Component Space？](#为什么是-component-space)
+    - [Local Space 的用途](#local-space-的用途)
+    - [验证方法](#验证方法)
+    - [例外情况](#例外情况)
+    - [总结](#总结)
+
 
 ------
 

@@ -11,7 +11,17 @@
 
 ## 目录
 
-[TOC]
+- [ALSv4复刻v003 对3C进行简单耦合;摄像机ABP中添加曲线](#alsv4复刻v003-对3c进行简单耦合摄像机abp中添加曲线)
+  - [目录](#目录)
+  - [为摄像机创建动画蓝图`ALS_PlayerCameraBehavior`](#为摄像机创建动画蓝图als_playercamerabehavior)
+  - [在`ALS_Player_Controller`控制玩家时，为`摄像机ABP`中的变量`PlayerController`和`ControlledPawn`赋值](#在als_player_controller控制玩家时为摄像机abp中的变量playercontroller和controlledpawn赋值)
+  - [`ALS_PlayerCameraManager`中重写方法`BlueprintUpdateCamera`](#als_playercameramanager中重写方法blueprintupdatecamera)
+    - [`BlueprintUpdateCamera`中的逻辑：](#blueprintupdatecamera中的逻辑)
+      - [新建计算相机参数的函数](#新建计算相机参数的函数)
+  - [在相机的骨骼网格体中添加曲线](#在相机的骨骼网格体中添加曲线)
+  - [`CustomCameraBehavior`方法中使用插值计算当前旋转值](#customcamerabehavior方法中使用插值计算当前旋转值)
+  - [`ALS_PlayerCameraManager`中创建纯函数，返回摄像机ABP的曲线参数](#als_playercameramanager中创建纯函数返回摄像机abp的曲线参数)
+
 
 ------
 

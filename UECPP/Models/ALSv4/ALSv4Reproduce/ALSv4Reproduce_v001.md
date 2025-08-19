@@ -11,7 +11,37 @@
 
 ## 目录
 
-[TOC]
+- [ALSv4复刻v001 删除要复刻的文件；介绍虚拟骨骼和项目Debug操作](#alsv4复刻v001-删除要复刻的文件介绍虚拟骨骼和项目debug操作)
+  - [目录](#目录)
+    - [3C相关UP推荐](#3c相关up推荐)
+  - [介绍一下文件夹结构](#介绍一下文件夹结构)
+  - [下面开始删除要复刻的文件](#下面开始删除要复刻的文件)
+    - [删除AnimModifiers下的所有动画修改器](#删除animmodifiers下的所有动画修改器)
+    - [删除AnimNotifys下的所有动画修改器](#删除animnotifys下的所有动画修改器)
+    - [删除CameraSystem下的`动画蓝图`和`摄像机曲线`](#删除camerasystem下的动画蓝图和摄像机曲线)
+    - [删除摄像机曲线](#删除摄像机曲线)
+    - [删除CharacterLogic下的所有蓝图和AI文件夹](#删除characterlogic下的所有蓝图和ai文件夹)
+    - [删除GameModes下的GM](#删除gamemodes下的gm)
+    - [删除Interfaces下的四个接口](#删除interfaces下的四个接口)
+    - [删除Libraries下的蓝图函数库](#删除libraries下的蓝图函数库)
+    - [删除Misc下的摄相机抖动文件](#删除misc下的摄相机抖动文件)
+    - [删除MannequinSkeleton下的ALS\_AnimBP](#删除mannequinskeleton下的als_animbp)
+    - [删除Actions下的蒙太奇文件](#删除actions下的蒙太奇文件)
+    - [删除AimOffsets下的瞄准偏移](#删除aimoffsets下的瞄准偏移)
+    - [删除InAir的Detail下的混合空间](#删除inair的detail下的混合空间)
+    - [删除Locomotion和Detail下的混合空间](#删除locomotion和detail下的混合空间)
+    - [删除`ALS_Mannequin_Skeleton`人物骨骼中的曲线](#删除als_mannequin_skeleton人物骨骼中的曲线)
+  - [删除完毕](#删除完毕)
+  - [介绍一下虚拟骨骼](#介绍一下虚拟骨骼)
+    - [创建虚拟骨骼](#创建虚拟骨骼)
+  - [还有一些没删除的东西，比如：](#还有一些没删除的东西比如)
+  - [简单介绍一下ALSv4的相关操作](#简单介绍一下alsv4的相关操作)
+    - [Y可视化调试介绍](#y可视化调试介绍)
+      - [蓝色箭头为当前玩家Mesh朝向](#蓝色箭头为当前玩家mesh朝向)
+      - [橙色箭头为按键映射输入方向](#橙色箭头为按键映射输入方向)
+      - [紫色箭头为当前移动的加速度](#紫色箭头为当前移动的加速度)
+    - [U混合系统查看`观察到混合过程`](#u混合系统查看观察到混合过程)
+
 
 ------
 
