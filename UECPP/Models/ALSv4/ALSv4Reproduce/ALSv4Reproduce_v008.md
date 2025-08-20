@@ -5,7 +5,7 @@
 
 ------
 
-# ALSv4复刻v00x 标题
+# ALSv4复刻v008 通过监听MovementMode更新玩家状态；新增跳跃状态并在执行后修改`MovementState`
 
 ------
 
@@ -26,116 +26,113 @@
 
 ------
 
-## XXXXXXXXXXXXX
+## 通过`InputAction`触发跳跃
 
-xxxxxxxxxxxxxxxxxxxxxxxx
+当然肯定是不能这么简单，需要加限制条件
 
-------
+![BPGraphScreenshot_2025Y-08M-21D-01h-59m-27s-990_00](./Image/ALSv4Reproduce_v008/BPGraphScreenshot_2025Y-08M-21D-01h-59m-27s-990_00.png)
 
-## XXXXXXXXXXXXX
+### 先这样连接
 
-xxxxxxxxxxxxxxxxxxxxxxxx
-
-------
-
-## XXXXXXXXXXXXX
-
-xxxxxxxxxxxxxxxxxxxxxxxx
+![BPGraphScreenshot_2025Y-08M-21D-02h-59m-17s-552_00](./Image/ALSv4Reproduce_v008/BPGraphScreenshot_2025Y-08M-21D-02h-59m-17s-552_00.png)
 
 ------
 
-## XXXXXXXXXXXXX
+## 重写`OnMovementModeChanged`方法
 
-xxxxxxxxxxxxxxxxxxxxxxxx
-
-------
-
-## XXXXXXXXXXXXX
-
-xxxxxxxxxxxxxxxxxxxxxxxx
+当`NewMovementMode == Walking`状态时，需要修改`MovementState`为`Grounded`，但是ALS是通过接口来设置的，所以需要新增方法
 
 ------
 
-## XXXXXXXXXXXXX
+## `ALS_Character_BPI`中新建方法修改玩家BP中枚举状态
 
-xxxxxxxxxxxxxxxxxxxxxxxx
+**下面新增的接口方法，分组为`CharacterState`**
 
-------
+1. 新增接口方法：`BPI_SetMovementState`
+   - 传入`ALS_MovementState`类型变量，命名为：`NewMovementState`
+2. 新增接口方法：`BPI_SetMovementAction`
+   - 传入`ALS_MovementAction`类型变量，命名为：`NewMovementAction`
+3. 新增接口方法：`BPI_SetRotationMode`
+   - 传入`ALS_RotationMode`类型变量，命名为：`NewRotationMode`
+4. 新增接口方法：`BPI_SetGait`
+   - 传入`ALS_Gait`类型变量，命名为：`NewGait`
+5. 新增接口方法：`BPI_SetViewMode`
+   - 传入`ALS_ViewMode`类型变量，命名为：`NewViewMode`
+6. 新增接口方法：`BPI_SetOverlayState`
+   - 传入`ALS_OverlayState`类型变量，命名为：`NewOverlayState`
+7. 角色基类`ALS_Base_CharacterBP`中重写刚创建的接口方法
 
-## XXXXXXXXXXXXX
+### 重写的接口方法中其实是这样的逻辑（但是ALS的作者使用了通配符和宏抽象）
 
-xxxxxxxxxxxxxxxxxxxxxxxx
-
-------
-
-## XXXXXXXXXXXXX
-
-xxxxxxxxxxxxxxxxxxxxxxxx
-
-------
-
-## XXXXXXXXXXXXX
-
-xxxxxxxxxxxxxxxxxxxxxxxx
-
-------
-
-## XXXXXXXXXXXXX
-
-xxxxxxxxxxxxxxxxxxxxxxxx
+![BPGraphScreenshot_2025Y-08M-21D-02h-22m-07s-727_00](./Image/ALSv4Reproduce_v008/BPGraphScreenshot_2025Y-08M-21D-02h-22m-07s-727_00.png)
 
 ------
 
-## XXXXXXXXXXXXX
+## `OnMovementModeChanged`时，根据`MovementMode`状态，修改`MovementState`
 
-xxxxxxxxxxxxxxxxxxxxxxxx
-
-------
-
-## XXXXXXXXXXXXX
-
-xxxxxxxxxxxxxxxxxxxxxxxx
+![BPGraphScreenshot_2025Y-08M-21D-02h-18m-36s-858_00](./Image/ALSv4Reproduce_v008/BPGraphScreenshot_2025Y-08M-21D-02h-18m-36s-858_00.png)
 
 ------
 
-## XXXXXXXXXXXXX
+## 在`蓝图宏库`中使用通配符和宏抽象赋值逻辑
 
-xxxxxxxxxxxxxxxxxxxxxxxx
+在这个路径下，创建蓝图宏库，继承自`UObject`，命名为：`ALS_MacroLibrary`
 
-------
+```
+/Blueprints/Librarys/
+```
 
-## XXXXXXXXXXXXX
+![image-20250821022633172](./Image/ALSv4Reproduce_v008/image-20250821022633172.png)![image-20250821022722851](./Image/ALSv4Reproduce_v008/image-20250821022722851.png)
 
-xxxxxxxxxxxxxxxxxxxxxxxx
 
-------
 
-## XXXXXXXXXXXXX
+### `ALS_MacroLibrary`中新建宏，命名为`ML_IsDifferentByte`
 
-xxxxxxxxxxxxxxxxxxxxxxxx
+逻辑为：
 
-------
+![image-20250821023318962](./Image/ALSv4Reproduce_v008/image-20250821023318962.png)![image-20250821023244488](./Image/ALSv4Reproduce_v008/image-20250821023244488.png)
 
-## XXXXXXXXXXXXX
 
-xxxxxxxxxxxxxxxxxxxxxxxx
 
-------
+#### 上面的方法UE4可以用UE5就不太行了，因为字节好像API被移除了
 
-## XXXXXXXXXXXXX
+##### 所以解决方法就是不用通配符，改为使用字节类型Byte
 
-xxxxxxxxxxxxxxxxxxxxxxxx
+![BPGraphScreenshot_2025Y-08M-21D-02h-45m-15s-277_00](./Image/ALSv4Reproduce_v008/BPGraphScreenshot_2025Y-08M-21D-02h-45m-15s-277_00.png)![BPGraphScreenshot_2025Y-08M-21D-02h-47m-22s-294_00](./Image/ALSv4Reproduce_v008/BPGraphScreenshot_2025Y-08M-21D-02h-47m-22s-294_00.png)
 
 ------
 
-## XXXXXXXXXXXXX
+### `ALS_MacroLibrary`中新建宏，命名为`ML_SetPreviousandNewValues`
 
-xxxxxxxxxxxxxxxxxxxxxxxx
+#### 使用引用修改`Set By-Ref Var`宏
+
+![BPGraphScreenshot_2025Y-08M-21D-02h-53m-55s-138_00](./Image/ALSv4Reproduce_v008/BPGraphScreenshot_2025Y-08M-21D-02h-53m-55s-138_00.png)
 
 ------
 
-XXXXXXXXXXXXX
+## 使用`ML_SetPreviousandNewValues`修改值
+
+![BPGraphScreenshot_2025Y-08M-21D-03h-01m-32s-790_00](./Image/ALSv4Reproduce_v008/BPGraphScreenshot_2025Y-08M-21D-03h-01m-32s-790_00.png)
+
 ------
+
+## gif此时添加log运行跳跃测试状态`MovementState`切换
+
+![1](./Image/ALSv4Reproduce_v008/1.gif)
+
+------
+
+## 状态切换的原因是：
+
+落地会在`UCharacterMovementComponent::PhysFalling`中触发修改逻辑
+
+->`Processlanded`
+
+->`SetPostLandedPhysics`中调用`SetMovementMode`修改`MovementMode`
+
+[之前在这里监听了CharacterMovementComponent中的MovementMode修改](#OnMovementModeChanged时，根据MovementMode状态，修改MovementState)，所以修改`MovementMode`会导致`MovementState`的修改
+
+![image-20250821031001009](./Image/ALSv4Reproduce_v008/image-20250821031001009.png)
 
 [返回最上面](#返回菜单)
 

@@ -66,7 +66,7 @@ ________________________________________________________________________________
 
 - #### [ALSv4复刻v007 **简述项目枚举的作用**；新建接口传递玩家BP数据和状态到玩家ABP](./ALSv4Reproduce/ALSv4Reproduce_v007.md)
 
-- #### [XXXXXX](./ALSv4Reproduce/ALSv4Reproduce_v008.md)
+- #### [ALSv4复刻v008 通过监听MovementMode更新玩家状态；新增跳跃状态并在执行后修改`MovementState`](./ALSv4Reproduce/ALSv4Reproduce_v008.md)
 
 - #### [XXXXXX](./ALSv4Reproduce/ALSv4Reproduce_v009.md)
 
