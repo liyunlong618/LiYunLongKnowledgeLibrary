@@ -11,7 +11,12 @@
 
 ## 目录
 
-[TOC]
+- [ALSv4复刻v010 准备使用表格`MovementModelTable`](#alsv4复刻v010-准备使用表格movementmodeltable)
+	- [目录](#目录)
+	- [接下来开始复刻6向状态机](#接下来开始复刻6向状态机)
+	- [准备使用表格`MovementModelTable`](#准备使用表格movementmodeltable)
+	- [角色基类中新增方法`OnBeginPlay`](#角色基类中新增方法onbeginplay)
+
 
 ------
 
