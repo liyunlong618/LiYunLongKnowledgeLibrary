@@ -5,7 +5,7 @@
 
 ------
 
-# ALSv4复刻v011 Tikc组相关和显式确立Tick时序
+# ALSv4复刻v011 显式确立Tick时序；角色基类`OnBeginPlay`中初始化数据；在`Tick`中更新`Gait`状态
 
 ------
 
@@ -26,11 +26,13 @@
 
 ------
 
-## 角色基类的`OnBeginPlay`中调用`SkeletamMesh`的`AddTickPrerequisiteActor`方法
+## 角色基类的`OnBeginPlay`中
+
+### 第一步保证`SkeletalMesh`的Tick时序在Actor之后
 
 `UActorComponent::AddTickPrerequisiteActor`的作用是：确保**`当前组件`**的 `Tick`函数在**`指定Actor`**的 `Tick`函数之后 执行
 
-
+涉及到`TickGroup`相关
 
 
 <details>
@@ -277,115 +279,88 @@
 
 </details>
 
+![BPGraphScreenshot_2025Y-08M-25D-01h-17m-36s-162_00](./Image/ALSv4Reproduce_v011/BPGraphScreenshot_2025Y-08M-25D-01h-17m-36s-162_00.png)
 
 
 
-------
+### 第二步获取`SkeletalMesh`的ABP动画实例
 
-## XXXXXXXXXXXXX
+保存为AnimInstance类型变量，命名为：`MainAnimInstance`
 
-xxxxxxxxxxxxxxxxxxxxxxxx
 
-------
 
-## XXXXXXXXXXXXX
+### 第三步初始化表格获取表格中的曲线数据
 
-xxxxxxxxxxxxxxxxxxxxxxxx
+#### 创建一个方法和变量
 
-------
+**分组为`MovementSystem`**
 
-## XXXXXXXXXXXXX
+- `SetMovementModel`方法，用来获取表格数据
+- `DataTableRowHandle`类型变量，命名为：`MovementModel`，用来存储表格和指定的行名
+- `ALS_MovementSettingsState`类型变量，命名为：`MovementData`，用来存储找到的行的结构体
 
-xxxxxxxxxxxxxxxxxxxxxxxx
+![BPGraphScreenshot_2025Y-08M-25D-01h-27m-44s-154_00](./Image/ALSv4Reproduce_v011/BPGraphScreenshot_2025Y-08M-25D-01h-27m-44s-154_00.png)![image-20250825015249083](./Image/ALSv4Reproduce_v011/image-20250825015249083.png)
 
-------
 
-## XXXXXXXXXXXXX
 
-xxxxxxxxxxxxxxxxxxxxxxxx
+### 第四步创建变量使用变量初始化
 
-------
+**分组为`Input`**
 
-## XXXXXXXXXXXXX
+- `ALS_Gait`类型变量，命名为：`DesiredGait`，用来存储**期望的步态**
+  - 默认值设为`Walking`
+- `ALS_RotationMode`类型变量，命名为：`DesiredRotationMode`，用来存储**期望的旋转模式**，
+  - 默认值设为`LookingDirection`
+- `ALS_Stance`类型变量，命名为：`DesiredStance`，用来存储**期望的蹲伏模式**，
+  - 然后根据`DesiredStance`执行是否蹲伏
+  - 这个只是用来测试初始为蹲伏状态，因为这个期望值会走默认值，但是并没有序列化
 
-xxxxxxxxxxxxxxxxxxxxxxxx
+![BPGraphScreenshot_2025Y-08M-25D-01h-48m-26s-409_00](./Image/ALSv4Reproduce_v011/BPGraphScreenshot_2025Y-08M-25D-01h-48m-26s-409_00.png)![image-20250825014923801](./Image/ALSv4Reproduce_v011/image-20250825014923801.png)![image-20250825015214448](./Image/ALSv4Reproduce_v011/image-20250825015214448.png)
 
-------
 
-## XXXXXXXXXXXXX
 
-xxxxxxxxxxxxxxxxxxxxxxxx
+### 第五步初始化人物属性和设定初始值
 
-------
+1. `Rotator`类型变量，命名为：`TargetRotation`，用来存储
 
-## XXXXXXXXXXXXX
+2. 初始化之前`EssentialInformation`分组下的
 
-xxxxxxxxxxxxxxxxxxxxxxxx
+   这两个值是记录上一帧的数据，在初始化时需要重置为当前值，否则会为`FRotator(0, 0, 0)`导致逻辑问题
 
-------
+   [跳转创建时](./ALSv4Reproduce_v006.md#在setessentialvalue中计算速度是否移动的布尔上一次移动的速度角度)
 
-## XXXXXXXXXXXXX
+   - `LastVelocityRotation`
+   - `LastAccelerationRotation`
 
-xxxxxxxxxxxxxxxxxxxxxxxx
+![image-20250825020208889](./Image/ALSv4Reproduce_v011/image-20250825020208889.png)![BPGraphScreenshot_2025Y-08M-25D-02h-02m-16s-733_00](./Image/ALSv4Reproduce_v011/BPGraphScreenshot_2025Y-08M-25D-02h-02m-16s-733_00.png)
 
-------
-
-## XXXXXXXXXXXXX
-
-xxxxxxxxxxxxxxxxxxxxxxxx
-
-------
-
-## XXXXXXXXXXXXX
-
-xxxxxxxxxxxxxxxxxxxxxxxx
+### 这样OnBeginplay中的逻辑就写完了
 
 ------
 
-## XXXXXXXXXXXXX
+## 接下来我们要在Tick中更新数据
 
-xxxxxxxxxxxxxxxxxxxxxxxx
+创建方法，命名为：`UpdateCharacterMovement`
 
-------
+### `UpdateCharacterMovement`中更新步态
 
-## XXXXXXXXXXXXX
+1. 创建`ALS_Gait`类型局部变量，命名为：`AllowGait`，允许的步态
+   - 创建方法`GetAllowedGait`用于更新`AllowGait`
+     - 需要先判定`Stance`，（**不能冲刺，若期望冲刺需要返回`Running`**）
+       - 若为蹲伏状态，不能冲刺，其他状态不做限制
+       - 若为站立状态，需要判断`RotationMode`
+         - `VelocityDirection`或者`LookingDirection`状态，冲刺需要判定使用下面创建的`CanSprint`方法
+         - 若为`Aiming`瞄准状态，也不能冲刺
+     - 创建方法`CanSprint`用于判定当前状态是否可以**冲刺**
+       - （1）需要判断是否有输入，没有输入直接返回false
+       - （2）有输入的情况下需要判断`RotationMode`：
+         - `VelocityDirection`下，需要判断输入值是否`> 0.9f`，也就是输入有效，才返回true
+         - `LookingDirection`下，稍微复杂，需要判断摄像机角度（相机朝向）和人物加速度方向（运动方向）夹角是否小于阈值（这里是**`50.f`**），若小于夹角才能冲刺（这个属于游戏机制设定，视项目而定）
+         - `Aiming`下直接返回false，瞄准状态不能冲刺
+2. 创建`ALS_Gait`类型局部变量，命名为：`ActualGait`，实际步态
+3. 最后别忘了在Tick时调用`UpdateCharacterMovement`，**(如果`MovementState`为`Ground`)**
 
-xxxxxxxxxxxxxxxxxxxxxxxx
-
-------
-
-## XXXXXXXXXXXXX
-
-xxxxxxxxxxxxxxxxxxxxxxxx
-
-------
-
-## XXXXXXXXXXXXX
-
-xxxxxxxxxxxxxxxxxxxxxxxx
-
-------
-
-## XXXXXXXXXXXXX
-
-xxxxxxxxxxxxxxxxxxxxxxxx
-
-------
-
-## XXXXXXXXXXXXX
-
-xxxxxxxxxxxxxxxxxxxxxxxx
-
-------
-
-## XXXXXXXXXXXXX
-
-xxxxxxxxxxxxxxxxxxxxxxxx
-
-------
-
-XXXXXXXXXXXXX
-------
+![BPGraphScreenshot_2025Y-08M-25D-03h-43m-10s-831_00](./Image/ALSv4Reproduce_v011/BPGraphScreenshot_2025Y-08M-25D-03h-43m-10s-831_00.png)![BPGraphScreenshot_2025Y-08M-25D-03h-49m-01s-001_00](./Image/ALSv4Reproduce_v011/BPGraphScreenshot_2025Y-08M-25D-03h-49m-01s-001_00.png)![BPGraphScreenshot_2025Y-08M-25D-03h-50m-49s-513_00](./Image/ALSv4Reproduce_v011/BPGraphScreenshot_2025Y-08M-25D-03h-50m-49s-513_00.png)![image-20250825035424367](./Image/ALSv4Reproduce_v011/image-20250825035424367.png)
 
 [返回最上面](#返回菜单)
 

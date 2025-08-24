@@ -72,7 +72,7 @@ ________________________________________________________________________________
 
 - #### [ALSv4复刻v010 准备使用表格`MovementModelTable`](./ALSv4Reproduce/ALSv4Reproduce_v010.md)
 
-- #### [XXXXXX](./ALSv4Reproduce/ALSv4Reproduce_v011.md)
+- #### [ALSv4复刻v011 显式确立Tick时序；角色基类`OnBeginPlay`中初始化数据；在`Tick`中更新`Gait`状态](./ALSv4Reproduce/ALSv4Reproduce_v011.md)
 
 - #### [XXXXXX](./ALSv4Reproduce/ALSv4Reproduce_v012.md)
 
